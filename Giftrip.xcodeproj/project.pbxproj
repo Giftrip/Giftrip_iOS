@@ -1,0 +1,911 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7777A14F58B87A751E5A4957 /* Pods_Giftrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9536DFD7786B9EF7F5123A93 /* Pods_Giftrip.framework */; };
+		B19554A3EE5BC3C5484F3624 /* Pods_Giftrip_GiftripTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30DDB4014B2BC55BE9072224 /* Pods_Giftrip_GiftripTests.framework */; };
+		F2429BC0262D5D3B009FD306 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F2429BBF262D5D3B009FD306 /* .swiftlint.yml */; };
+		F2429BC8262D5DB8009FD306 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2429BC7262D5DB8009FD306 /* R.generated.swift */; };
+		F2429BF1262D60A1009FD306 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2429BF0262D60A1009FD306 /* Preview.swift */; };
+		F2618514262D4C4F00EA707C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2618513262D4C4F00EA707C /* AppDelegate.swift */; };
+		F261851D262D4C5100EA707C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F261851C262D4C5100EA707C /* Assets.xcassets */; };
+		F2618520262D4C5100EA707C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F261851E262D4C5100EA707C /* LaunchScreen.storyboard */; };
+		F261852B262D4C5100EA707C /* GiftripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261852A262D4C5100EA707C /* GiftripTests.swift */; };
+		F2618536262D4C5100EA707C /* GiftripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2618535262D4C5100EA707C /* GiftripUITests.swift */; };
+		F2A46432262D753F00D4238E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46431262D753F00D4238E /* BaseViewController.swift */; };
+		F2A46445262D759100D4238E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46444262D759100D4238E /* SplashViewController.swift */; };
+		F2A4644A262D75A400D4238E /* SplashViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46449262D75A400D4238E /* SplashViewReactor.swift */; };
+		F2A4644F262D75AD00D4238E /* LoginViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4644E262D75AD00D4238E /* LoginViewReactor.swift */; };
+		F2A46455262D75C400D4238E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46454262D75C400D4238E /* LoginViewController.swift */; };
+		F2A4646A262D76AE00D4238E /* PhoneAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46469262D76AE00D4238E /* PhoneAuthViewController.swift */; };
+		F2A4646F262D76BF00D4238E /* PhoneAuthViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4646E262D76BF00D4238E /* PhoneAuthViewReactor.swift */; };
+		F2A46474262D778500D4238E /* InputInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46473262D778500D4238E /* InputInfoViewController.swift */; };
+		F2A46479262D779300D4238E /* InputInfoViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46478262D779300D4238E /* InputInfoViewReactor.swift */; };
+		F2A4647E262D791E00D4238E /* GiftripStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4647D262D791E00D4238E /* GiftripStep.swift */; };
+		F2A46484262D79F000D4238E /* IntroViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46483262D79F000D4238E /* IntroViewReactor.swift */; };
+		F2A4648C262D7A0300D4238E /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4648B262D7A0300D4238E /* IntroViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F2618527262D4C5100EA707C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2618508262D4C4F00EA707C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F261850F262D4C4F00EA707C;
+			remoteInfo = Giftrip;
+		};
+		F2618532262D4C5100EA707C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2618508262D4C4F00EA707C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F261850F262D4C4F00EA707C;
+			remoteInfo = Giftrip;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		30DDB4014B2BC55BE9072224 /* Pods_Giftrip_GiftripTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Giftrip_GiftripTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89F50BA64AC3BF9CE28923D1 /* Pods-Giftrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giftrip.debug.xcconfig"; path = "Target Support Files/Pods-Giftrip/Pods-Giftrip.debug.xcconfig"; sourceTree = "<group>"; };
+		9536DFD7786B9EF7F5123A93 /* Pods_Giftrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Giftrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD9FA1D50A63A2057F853D66 /* Pods-Giftrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giftrip.release.xcconfig"; path = "Target Support Files/Pods-Giftrip/Pods-Giftrip.release.xcconfig"; sourceTree = "<group>"; };
+		DE0E70E245A6EB2B17207E15 /* Pods-Giftrip-GiftripTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giftrip-GiftripTests.debug.xcconfig"; path = "Target Support Files/Pods-Giftrip-GiftripTests/Pods-Giftrip-GiftripTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F1F3FE96D5D2CC71ED6DC7AB /* Pods-Giftrip-GiftripTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giftrip-GiftripTests.release.xcconfig"; path = "Target Support Files/Pods-Giftrip-GiftripTests/Pods-Giftrip-GiftripTests.release.xcconfig"; sourceTree = "<group>"; };
+		F2429BBF262D5D3B009FD306 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
+		F2429BC7262D5DB8009FD306 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		F2429BF0262D60A1009FD306 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
+		F2618510262D4C4F00EA707C /* Giftrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giftrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2618513262D4C4F00EA707C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F261851C262D4C5100EA707C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F261851F262D4C5100EA707C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F2618521262D4C5100EA707C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2618526262D4C5100EA707C /* GiftripTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiftripTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F261852A262D4C5100EA707C /* GiftripTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftripTests.swift; sourceTree = "<group>"; };
+		F261852C262D4C5100EA707C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2618531262D4C5100EA707C /* GiftripUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiftripUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2618535262D4C5100EA707C /* GiftripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftripUITests.swift; sourceTree = "<group>"; };
+		F2618537262D4C5100EA707C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2A46431262D753F00D4238E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F2A46444262D759100D4238E /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		F2A46449262D75A400D4238E /* SplashViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewReactor.swift; sourceTree = "<group>"; };
+		F2A4644E262D75AD00D4238E /* LoginViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewReactor.swift; sourceTree = "<group>"; };
+		F2A46454262D75C400D4238E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F2A46469262D76AE00D4238E /* PhoneAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthViewController.swift; sourceTree = "<group>"; };
+		F2A4646E262D76BF00D4238E /* PhoneAuthViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthViewReactor.swift; sourceTree = "<group>"; };
+		F2A46473262D778500D4238E /* InputInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputInfoViewController.swift; sourceTree = "<group>"; };
+		F2A46478262D779300D4238E /* InputInfoViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputInfoViewReactor.swift; sourceTree = "<group>"; };
+		F2A4647D262D791E00D4238E /* GiftripStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftripStep.swift; sourceTree = "<group>"; };
+		F2A46483262D79F000D4238E /* IntroViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewReactor.swift; sourceTree = "<group>"; };
+		F2A4648B262D7A0300D4238E /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F261850D262D4C4F00EA707C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7777A14F58B87A751E5A4957 /* Pods_Giftrip.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2618523262D4C5100EA707C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B19554A3EE5BC3C5484F3624 /* Pods_Giftrip_GiftripTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F261852E262D4C5100EA707C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		680D6BF665AD60975C95A718 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89F50BA64AC3BF9CE28923D1 /* Pods-Giftrip.debug.xcconfig */,
+				DD9FA1D50A63A2057F853D66 /* Pods-Giftrip.release.xcconfig */,
+				DE0E70E245A6EB2B17207E15 /* Pods-Giftrip-GiftripTests.debug.xcconfig */,
+				F1F3FE96D5D2CC71ED6DC7AB /* Pods-Giftrip-GiftripTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		93BAC323D6565BF7CB2BE19F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9536DFD7786B9EF7F5123A93 /* Pods_Giftrip.framework */,
+				30DDB4014B2BC55BE9072224 /* Pods_Giftrip_GiftripTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2618507262D4C4F00EA707C = {
+			isa = PBXGroup;
+			children = (
+				F2618512262D4C4F00EA707C /* Giftrip */,
+				F2618529262D4C5100EA707C /* GiftripTests */,
+				F2618534262D4C5100EA707C /* GiftripUITests */,
+				F2618511262D4C4F00EA707C /* Products */,
+				680D6BF665AD60975C95A718 /* Pods */,
+				93BAC323D6565BF7CB2BE19F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F2618511262D4C4F00EA707C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2618510262D4C4F00EA707C /* Giftrip.app */,
+				F2618526262D4C5100EA707C /* GiftripTests.xctest */,
+				F2618531262D4C5100EA707C /* GiftripUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2618512262D4C4F00EA707C /* Giftrip */ = {
+			isa = PBXGroup;
+			children = (
+				F2429BF0262D60A1009FD306 /* Preview.swift */,
+				F2618564262D545500EA707C /* Source */,
+				F2618565262D547400EA707C /* Resource */,
+				F2618566262D547D00EA707C /* SupportFile */,
+			);
+			path = Giftrip;
+			sourceTree = "<group>";
+		};
+		F2618529262D4C5100EA707C /* GiftripTests */ = {
+			isa = PBXGroup;
+			children = (
+				F261852A262D4C5100EA707C /* GiftripTests.swift */,
+				F261852C262D4C5100EA707C /* Info.plist */,
+			);
+			path = GiftripTests;
+			sourceTree = "<group>";
+		};
+		F2618534262D4C5100EA707C /* GiftripUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F2618535262D4C5100EA707C /* GiftripUITests.swift */,
+				F2618537262D4C5100EA707C /* Info.plist */,
+			);
+			path = GiftripUITests;
+			sourceTree = "<group>";
+		};
+		F2618564262D545500EA707C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F2618513262D4C4F00EA707C /* AppDelegate.swift */,
+				F2A4642C262D73DC00D4238E /* Flow */,
+				F2618570262D54C200EA707C /* View */,
+				F2618571262D54C700EA707C /* ViewController */,
+				F2618575262D54E400EA707C /* Model */,
+				F2618572262D54CB00EA707C /* Service */,
+				F2618573262D54D300EA707C /* Network */,
+				F2618574262D54DD00EA707C /* Util */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F2618565262D547400EA707C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F261851C262D4C5100EA707C /* Assets.xcassets */,
+				F261851E262D4C5100EA707C /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F2618566262D547D00EA707C /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				F2618521262D4C5100EA707C /* Info.plist */,
+				F2429BC7262D5DB8009FD306 /* R.generated.swift */,
+				F2429BBF262D5D3B009FD306 /* .swiftlint.yml */,
+			);
+			path = SupportFile;
+			sourceTree = "<group>";
+		};
+		F2618570262D54C200EA707C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2A46431262D753F00D4238E /* BaseViewController.swift */,
+				F2A46430262D752C00D4238E /* Splash */,
+				F2A46482262D79BA00D4238E /* Intro */,
+				F2A4642E262D751400D4238E /* Login */,
+				F2A4642D262D751200D4238E /* Signup */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2618571262D54C700EA707C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F2618572262D54CB00EA707C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F2618573262D54D300EA707C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F2618574262D54DD00EA707C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		F2618575262D54E400EA707C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2A4642C262D73DC00D4238E /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				F2A4647D262D791E00D4238E /* GiftripStep.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		F2A4642D262D751200D4238E /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				F2A46469262D76AE00D4238E /* PhoneAuthViewController.swift */,
+				F2A4646E262D76BF00D4238E /* PhoneAuthViewReactor.swift */,
+				F2A46473262D778500D4238E /* InputInfoViewController.swift */,
+				F2A46478262D779300D4238E /* InputInfoViewReactor.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		F2A4642E262D751400D4238E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F2A46454262D75C400D4238E /* LoginViewController.swift */,
+				F2A4644E262D75AD00D4238E /* LoginViewReactor.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F2A46430262D752C00D4238E /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				F2A46444262D759100D4238E /* SplashViewController.swift */,
+				F2A46449262D75A400D4238E /* SplashViewReactor.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		F2A46482262D79BA00D4238E /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				F2A4648B262D7A0300D4238E /* IntroViewController.swift */,
+				F2A46483262D79F000D4238E /* IntroViewReactor.swift */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F261850F262D4C4F00EA707C /* Giftrip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F261853A262D4C5100EA707C /* Build configuration list for PBXNativeTarget "Giftrip" */;
+			buildPhases = (
+				5EBE8BBFB2AD74E1D6500490 /* [CP] Check Pods Manifest.lock */,
+				F261857C262D561400EA707C /* R.swift */,
+				F261857D262D561F00EA707C /* SwiftLint */,
+				F261850C262D4C4F00EA707C /* Sources */,
+				F261850D262D4C4F00EA707C /* Frameworks */,
+				F261850E262D4C4F00EA707C /* Resources */,
+				201FC71CAE7A7A4B824F7B54 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Giftrip;
+			productName = Giftrip;
+			productReference = F2618510262D4C4F00EA707C /* Giftrip.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F2618525262D4C5100EA707C /* GiftripTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F261853D262D4C5100EA707C /* Build configuration list for PBXNativeTarget "GiftripTests" */;
+			buildPhases = (
+				50AF9E029B21410948643DC0 /* [CP] Check Pods Manifest.lock */,
+				F2618522262D4C5100EA707C /* Sources */,
+				F2618523262D4C5100EA707C /* Frameworks */,
+				F2618524262D4C5100EA707C /* Resources */,
+				7E9DB3E80CABC385DC809849 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2618528262D4C5100EA707C /* PBXTargetDependency */,
+			);
+			name = GiftripTests;
+			productName = GiftripTests;
+			productReference = F2618526262D4C5100EA707C /* GiftripTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F2618530262D4C5100EA707C /* GiftripUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2618540262D4C5100EA707C /* Build configuration list for PBXNativeTarget "GiftripUITests" */;
+			buildPhases = (
+				F261852D262D4C5100EA707C /* Sources */,
+				F261852E262D4C5100EA707C /* Frameworks */,
+				F261852F262D4C5100EA707C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2618533262D4C5100EA707C /* PBXTargetDependency */,
+			);
+			name = GiftripUITests;
+			productName = GiftripUITests;
+			productReference = F2618531262D4C5100EA707C /* GiftripUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2618508262D4C4F00EA707C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					F261850F262D4C4F00EA707C = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					F2618525262D4C5100EA707C = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = F261850F262D4C4F00EA707C;
+					};
+					F2618530262D4C5100EA707C = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = F261850F262D4C4F00EA707C;
+					};
+				};
+			};
+			buildConfigurationList = F261850B262D4C4F00EA707C /* Build configuration list for PBXProject "Giftrip" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F2618507262D4C4F00EA707C;
+			productRefGroup = F2618511262D4C4F00EA707C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F261850F262D4C4F00EA707C /* Giftrip */,
+				F2618525262D4C5100EA707C /* GiftripTests */,
+				F2618530262D4C5100EA707C /* GiftripUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F261850E262D4C4F00EA707C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2429BC0262D5D3B009FD306 /* .swiftlint.yml in Resources */,
+				F2618520262D4C5100EA707C /* LaunchScreen.storyboard in Resources */,
+				F261851D262D4C5100EA707C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2618524262D4C5100EA707C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F261852F262D4C5100EA707C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		201FC71CAE7A7A4B824F7B54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Giftrip/Pods-Giftrip-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Giftrip/Pods-Giftrip-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Giftrip/Pods-Giftrip-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50AF9E029B21410948643DC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Giftrip-GiftripTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EBE8BBFB2AD74E1D6500490 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Giftrip-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E9DB3E80CABC385DC809849 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Giftrip-GiftripTests/Pods-Giftrip-GiftripTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Giftrip-GiftripTests/Pods-Giftrip-GiftripTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Giftrip-GiftripTests/Pods-Giftrip-GiftripTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F261857C262D561400EA707C /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		F261857D262D561F00EA707C /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F261850C262D4C4F00EA707C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2A4648C262D7A0300D4238E /* IntroViewController.swift in Sources */,
+				F2A4646F262D76BF00D4238E /* PhoneAuthViewReactor.swift in Sources */,
+				F2618514262D4C4F00EA707C /* AppDelegate.swift in Sources */,
+				F2A46432262D753F00D4238E /* BaseViewController.swift in Sources */,
+				F2429BF1262D60A1009FD306 /* Preview.swift in Sources */,
+				F2429BC8262D5DB8009FD306 /* R.generated.swift in Sources */,
+				F2A4647E262D791E00D4238E /* GiftripStep.swift in Sources */,
+				F2A46455262D75C400D4238E /* LoginViewController.swift in Sources */,
+				F2A4644A262D75A400D4238E /* SplashViewReactor.swift in Sources */,
+				F2A46445262D759100D4238E /* SplashViewController.swift in Sources */,
+				F2A46479262D779300D4238E /* InputInfoViewReactor.swift in Sources */,
+				F2A46474262D778500D4238E /* InputInfoViewController.swift in Sources */,
+				F2A4644F262D75AD00D4238E /* LoginViewReactor.swift in Sources */,
+				F2A46484262D79F000D4238E /* IntroViewReactor.swift in Sources */,
+				F2A4646A262D76AE00D4238E /* PhoneAuthViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2618522262D4C5100EA707C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F261852B262D4C5100EA707C /* GiftripTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F261852D262D4C5100EA707C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2618536262D4C5100EA707C /* GiftripUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F2618528262D4C5100EA707C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F261850F262D4C4F00EA707C /* Giftrip */;
+			targetProxy = F2618527262D4C5100EA707C /* PBXContainerItemProxy */;
+		};
+		F2618533262D4C5100EA707C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F261850F262D4C4F00EA707C /* Giftrip */;
+			targetProxy = F2618532262D4C5100EA707C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F261851E262D4C5100EA707C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F261851F262D4C5100EA707C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F2618538262D4C5100EA707C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F2618539262D4C5100EA707C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F261853B262D4C5100EA707C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89F50BA64AC3BF9CE28923D1 /* Pods-Giftrip.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7278J676A8;
+				INFOPLIST_FILE = Giftrip/SupportFile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flash21.Giftrip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F261853C262D4C5100EA707C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD9FA1D50A63A2057F853D66 /* Pods-Giftrip.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7278J676A8;
+				INFOPLIST_FILE = Giftrip/SupportFile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flash21.Giftrip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F261853E262D4C5100EA707C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE0E70E245A6EB2B17207E15 /* Pods-Giftrip-GiftripTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7278J676A8;
+				INFOPLIST_FILE = GiftripTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flash21.GiftripTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Giftrip.app/Giftrip";
+			};
+			name = Debug;
+		};
+		F261853F262D4C5100EA707C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1F3FE96D5D2CC71ED6DC7AB /* Pods-Giftrip-GiftripTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7278J676A8;
+				INFOPLIST_FILE = GiftripTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flash21.GiftripTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Giftrip.app/Giftrip";
+			};
+			name = Release;
+		};
+		F2618541262D4C5100EA707C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7278J676A8;
+				INFOPLIST_FILE = GiftripUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flash21.GiftripUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Giftrip;
+			};
+			name = Debug;
+		};
+		F2618542262D4C5100EA707C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7278J676A8;
+				INFOPLIST_FILE = GiftripUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flash21.GiftripUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Giftrip;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F261850B262D4C4F00EA707C /* Build configuration list for PBXProject "Giftrip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2618538262D4C5100EA707C /* Debug */,
+				F2618539262D4C5100EA707C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F261853A262D4C5100EA707C /* Build configuration list for PBXNativeTarget "Giftrip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F261853B262D4C5100EA707C /* Debug */,
+				F261853C262D4C5100EA707C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F261853D262D4C5100EA707C /* Build configuration list for PBXNativeTarget "GiftripTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F261853E262D4C5100EA707C /* Debug */,
+				F261853F262D4C5100EA707C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2618540262D4C5100EA707C /* Build configuration list for PBXNativeTarget "GiftripUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2618541262D4C5100EA707C /* Debug */,
+				F2618542262D4C5100EA707C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F2618508262D4C4F00EA707C /* Project object */;
+}
