@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7777A14F58B87A751E5A4957 /* Pods_Giftrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9536DFD7786B9EF7F5123A93 /* Pods_Giftrip.framework */; };
 		B19554A3EE5BC3C5484F3624 /* Pods_Giftrip_GiftripTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30DDB4014B2BC55BE9072224 /* Pods_Giftrip_GiftripTests.framework */; };
+		F22ACDA6262FE47E0070781D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22ACDA5262FE47D0070781D /* AuthService.swift */; };
+		F22ACDB3262FF4B70070781D /* GiftripAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22ACDB2262FF4B70070781D /* GiftripAPI.swift */; };
 		F2429BC0262D5D3B009FD306 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F2429BBF262D5D3B009FD306 /* .swiftlint.yml */; };
 		F2429BC8262D5DB8009FD306 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2429BC7262D5DB8009FD306 /* R.generated.swift */; };
 		F2429BF1262D60A1009FD306 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2429BF0262D60A1009FD306 /* Preview.swift */; };
@@ -53,6 +55,8 @@
 		DD9FA1D50A63A2057F853D66 /* Pods-Giftrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giftrip.release.xcconfig"; path = "Target Support Files/Pods-Giftrip/Pods-Giftrip.release.xcconfig"; sourceTree = "<group>"; };
 		DE0E70E245A6EB2B17207E15 /* Pods-Giftrip-GiftripTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giftrip-GiftripTests.debug.xcconfig"; path = "Target Support Files/Pods-Giftrip-GiftripTests/Pods-Giftrip-GiftripTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F1F3FE96D5D2CC71ED6DC7AB /* Pods-Giftrip-GiftripTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giftrip-GiftripTests.release.xcconfig"; path = "Target Support Files/Pods-Giftrip-GiftripTests/Pods-Giftrip-GiftripTests.release.xcconfig"; sourceTree = "<group>"; };
+		F22ACDA5262FE47D0070781D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		F22ACDB2262FF4B70070781D /* GiftripAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftripAPI.swift; sourceTree = "<group>"; };
 		F2429BBF262D5D3B009FD306 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		F2429BC7262D5DB8009FD306 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		F2429BF0262D60A1009FD306 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
@@ -230,6 +234,7 @@
 		F2618572262D54CB00EA707C /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				F22ACDA5262FE47D0070781D /* AuthService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				F2A46498262DA07200D4238E /* BaseAPI.swift */,
+				F22ACDB2262FF4B70070781D /* GiftripAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -549,11 +555,13 @@
 				F2429BF1262D60A1009FD306 /* Preview.swift in Sources */,
 				F2429BC8262D5DB8009FD306 /* R.generated.swift in Sources */,
 				F2A4647E262D791E00D4238E /* GiftripStep.swift in Sources */,
+				F22ACDB3262FF4B70070781D /* GiftripAPI.swift in Sources */,
 				F2A464B5262DA6F600D4238E /* AuthPlugin.swift in Sources */,
 				F2A464BB262E65F300D4238E /* Token.swift in Sources */,
 				F2A464A1262DA07900D4238E /* Network.swift in Sources */,
 				F2A46499262DA07200D4238E /* BaseAPI.swift in Sources */,
 				F2A464A7262DA1A200D4238E /* RequestLoggingPlugin.swift in Sources */,
+				F22ACDA6262FE47E0070781D /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

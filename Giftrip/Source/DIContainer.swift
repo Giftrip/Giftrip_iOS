@@ -23,14 +23,26 @@ class DIContainer {
     
     func register() {
         // Service 등록
+        self.container.register(AuthService.self) { _ in
+            return AuthService()
+        }
+        
+        self.container.register(Network<GiftripAPI>.self) { (resolver) in
+            Network<GiftripAPI>(
+                plugins: [
+                    RequestLoggingPlugin(),
+                    AuthPlugin(authService: resolver.resolve(AuthService.self) ?? AuthService())
+                ]
+            )
+        }
         
         // ViewController 등록
-        self.container.register(SplashViewController.self) { resolver in
-            let reactor = SplashViewReactor()
-            let controller = SplashViewController(reactor: reactor)
-            
-            return controller
-        }
+//        self.container.register(SplashViewController.self) { resolver in
+//            let reactor = SplashViewReactor()
+//            let controller = SplashViewController(reactor: reactor)
+//            
+//            return controller
+//        }
         
 //        self.container.register(<#T##serviceType: Service.Type##Service.Type#>, factory: <#T##(Resolver) -> Service#>)
     }

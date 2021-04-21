@@ -8,7 +8,7 @@
 import RxSwift
 import Moya
 
-final class Network<API: TargetType>: MoyaProvider<API> {
+class Network<API: TargetType>: MoyaProvider<API> {
     init(plugins: [PluginType] = []) {
         let session = MoyaProvider<API>.defaultAlamofireSession()
         session.sessionConfiguration.timeoutIntervalForRequest = 10
