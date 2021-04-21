@@ -18,17 +18,15 @@
 		F261852B262D4C5100EA707C /* GiftripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261852A262D4C5100EA707C /* GiftripTests.swift */; };
 		F2618536262D4C5100EA707C /* GiftripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2618535262D4C5100EA707C /* GiftripUITests.swift */; };
 		F2A46432262D753F00D4238E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46431262D753F00D4238E /* BaseViewController.swift */; };
-		F2A46445262D759100D4238E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46444262D759100D4238E /* SplashViewController.swift */; };
-		F2A4644A262D75A400D4238E /* SplashViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46449262D75A400D4238E /* SplashViewReactor.swift */; };
-		F2A4644F262D75AD00D4238E /* LoginViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4644E262D75AD00D4238E /* LoginViewReactor.swift */; };
-		F2A46455262D75C400D4238E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46454262D75C400D4238E /* LoginViewController.swift */; };
-		F2A4646A262D76AE00D4238E /* PhoneAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46469262D76AE00D4238E /* PhoneAuthViewController.swift */; };
-		F2A4646F262D76BF00D4238E /* PhoneAuthViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4646E262D76BF00D4238E /* PhoneAuthViewReactor.swift */; };
-		F2A46474262D778500D4238E /* InputInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46473262D778500D4238E /* InputInfoViewController.swift */; };
-		F2A46479262D779300D4238E /* InputInfoViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46478262D779300D4238E /* InputInfoViewReactor.swift */; };
 		F2A4647E262D791E00D4238E /* GiftripStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4647D262D791E00D4238E /* GiftripStep.swift */; };
-		F2A46484262D79F000D4238E /* IntroViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46483262D79F000D4238E /* IntroViewReactor.swift */; };
-		F2A4648C262D7A0300D4238E /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4648B262D7A0300D4238E /* IntroViewController.swift */; };
+		F2A46499262DA07200D4238E /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46498262DA07200D4238E /* BaseAPI.swift */; };
+		F2A464A1262DA07900D4238E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464A0262DA07900D4238E /* Network.swift */; };
+		F2A464A7262DA1A200D4238E /* RequestLoggingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464A6262DA1A200D4238E /* RequestLoggingPlugin.swift */; };
+		F2A464B5262DA6F600D4238E /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464B4262DA6F600D4238E /* AuthPlugin.swift */; };
+		F2A464BB262E65F300D4238E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464BA262E65F300D4238E /* Token.swift */; };
+		F2A464C0262E682300D4238E /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464BF262E682300D4238E /* ModelType.swift */; };
+		F2A464C8262E6A2800D4238E /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464C7262E6A2800D4238E /* BaseModel.swift */; };
+		F2A464D0262E76D600D4238E /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464CF262E76D600D4238E /* DIContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,17 +68,15 @@
 		F2618535262D4C5100EA707C /* GiftripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftripUITests.swift; sourceTree = "<group>"; };
 		F2618537262D4C5100EA707C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2A46431262D753F00D4238E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		F2A46444262D759100D4238E /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		F2A46449262D75A400D4238E /* SplashViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewReactor.swift; sourceTree = "<group>"; };
-		F2A4644E262D75AD00D4238E /* LoginViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewReactor.swift; sourceTree = "<group>"; };
-		F2A46454262D75C400D4238E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		F2A46469262D76AE00D4238E /* PhoneAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthViewController.swift; sourceTree = "<group>"; };
-		F2A4646E262D76BF00D4238E /* PhoneAuthViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthViewReactor.swift; sourceTree = "<group>"; };
-		F2A46473262D778500D4238E /* InputInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputInfoViewController.swift; sourceTree = "<group>"; };
-		F2A46478262D779300D4238E /* InputInfoViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputInfoViewReactor.swift; sourceTree = "<group>"; };
 		F2A4647D262D791E00D4238E /* GiftripStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftripStep.swift; sourceTree = "<group>"; };
-		F2A46483262D79F000D4238E /* IntroViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewReactor.swift; sourceTree = "<group>"; };
-		F2A4648B262D7A0300D4238E /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		F2A46498262DA07200D4238E /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		F2A464A0262DA07900D4238E /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		F2A464A6262DA1A200D4238E /* RequestLoggingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLoggingPlugin.swift; sourceTree = "<group>"; };
+		F2A464B4262DA6F600D4238E /* AuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
+		F2A464BA262E65F300D4238E /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		F2A464BF262E682300D4238E /* ModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
+		F2A464C7262E6A2800D4238E /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		F2A464CF262E76D600D4238E /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				F2618513262D4C4F00EA707C /* AppDelegate.swift */,
+				F2A464CF262E76D600D4238E /* DIContainer.swift */,
 				F2A4642C262D73DC00D4238E /* Flow */,
 				F2618570262D54C200EA707C /* View */,
 				F2618571262D54C700EA707C /* ViewController */,
@@ -218,11 +215,6 @@
 		F2618570262D54C200EA707C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F2A46431262D753F00D4238E /* BaseViewController.swift */,
-				F2A46430262D752C00D4238E /* Splash */,
-				F2A46482262D79BA00D4238E /* Intro */,
-				F2A4642E262D751400D4238E /* Login */,
-				F2A4642D262D751200D4238E /* Signup */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -230,6 +222,7 @@
 		F2618571262D54C700EA707C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F2A46431262D753F00D4238E /* BaseViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -244,6 +237,9 @@
 		F2618573262D54D300EA707C /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F2A464A0262DA07900D4238E /* Network.swift */,
+				F2A46493262D96D600D4238E /* API */,
+				F2A464A5262DA18A00D4238E /* Plugin */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -258,6 +254,9 @@
 		F2618575262D54E400EA707C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F2A464BF262E682300D4238E /* ModelType.swift */,
+				F2A464C7262E6A2800D4238E /* BaseModel.swift */,
+				F2A464BA262E65F300D4238E /* Token.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -270,42 +269,21 @@
 			path = Flow;
 			sourceTree = "<group>";
 		};
-		F2A4642D262D751200D4238E /* Signup */ = {
+		F2A46493262D96D600D4238E /* API */ = {
 			isa = PBXGroup;
 			children = (
-				F2A46469262D76AE00D4238E /* PhoneAuthViewController.swift */,
-				F2A4646E262D76BF00D4238E /* PhoneAuthViewReactor.swift */,
-				F2A46473262D778500D4238E /* InputInfoViewController.swift */,
-				F2A46478262D779300D4238E /* InputInfoViewReactor.swift */,
+				F2A46498262DA07200D4238E /* BaseAPI.swift */,
 			);
-			path = Signup;
+			path = API;
 			sourceTree = "<group>";
 		};
-		F2A4642E262D751400D4238E /* Login */ = {
+		F2A464A5262DA18A00D4238E /* Plugin */ = {
 			isa = PBXGroup;
 			children = (
-				F2A46454262D75C400D4238E /* LoginViewController.swift */,
-				F2A4644E262D75AD00D4238E /* LoginViewReactor.swift */,
+				F2A464A6262DA1A200D4238E /* RequestLoggingPlugin.swift */,
+				F2A464B4262DA6F600D4238E /* AuthPlugin.swift */,
 			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		F2A46430262D752C00D4238E /* Splash */ = {
-			isa = PBXGroup;
-			children = (
-				F2A46444262D759100D4238E /* SplashViewController.swift */,
-				F2A46449262D75A400D4238E /* SplashViewReactor.swift */,
-			);
-			path = Splash;
-			sourceTree = "<group>";
-		};
-		F2A46482262D79BA00D4238E /* Intro */ = {
-			isa = PBXGroup;
-			children = (
-				F2A4648B262D7A0300D4238E /* IntroViewController.swift */,
-				F2A46483262D79F000D4238E /* IntroViewReactor.swift */,
-			);
-			path = Intro;
+			path = Plugin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -563,21 +541,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2A4648C262D7A0300D4238E /* IntroViewController.swift in Sources */,
-				F2A4646F262D76BF00D4238E /* PhoneAuthViewReactor.swift in Sources */,
+				F2A464D0262E76D600D4238E /* DIContainer.swift in Sources */,
+				F2A464C8262E6A2800D4238E /* BaseModel.swift in Sources */,
 				F2618514262D4C4F00EA707C /* AppDelegate.swift in Sources */,
 				F2A46432262D753F00D4238E /* BaseViewController.swift in Sources */,
+				F2A464C0262E682300D4238E /* ModelType.swift in Sources */,
 				F2429BF1262D60A1009FD306 /* Preview.swift in Sources */,
 				F2429BC8262D5DB8009FD306 /* R.generated.swift in Sources */,
 				F2A4647E262D791E00D4238E /* GiftripStep.swift in Sources */,
-				F2A46455262D75C400D4238E /* LoginViewController.swift in Sources */,
-				F2A4644A262D75A400D4238E /* SplashViewReactor.swift in Sources */,
-				F2A46445262D759100D4238E /* SplashViewController.swift in Sources */,
-				F2A46479262D779300D4238E /* InputInfoViewReactor.swift in Sources */,
-				F2A46474262D778500D4238E /* InputInfoViewController.swift in Sources */,
-				F2A4644F262D75AD00D4238E /* LoginViewReactor.swift in Sources */,
-				F2A46484262D79F000D4238E /* IntroViewReactor.swift in Sources */,
-				F2A4646A262D76AE00D4238E /* PhoneAuthViewController.swift in Sources */,
+				F2A464B5262DA6F600D4238E /* AuthPlugin.swift in Sources */,
+				F2A464BB262E65F300D4238E /* Token.swift in Sources */,
+				F2A464A1262DA07900D4238E /* Network.swift in Sources */,
+				F2A46499262DA07200D4238E /* BaseAPI.swift in Sources */,
+				F2A464A7262DA1A200D4238E /* RequestLoggingPlugin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
