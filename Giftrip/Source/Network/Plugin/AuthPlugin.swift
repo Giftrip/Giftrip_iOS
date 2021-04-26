@@ -20,15 +20,23 @@ struct AuthPlugin: PluginType {
     
     func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
         guard
-            let token = authService.currentAccessToken?.token,
+            var token = authService.currentToken,
             let target = target as? AuthorizedTargetType,
             target.needsAuth
         else {
             return request
         }
         
+        if token.refreshToken!.expiredAt > Date() {
+            authService.logout()
+            return request // logout후 request 요청을 중단(취소)할 방법을 찾아야함
+        } else if token.accessToken.expiredAt > Date() {
+            authService.renewalToken()
+            token = authService.currentToken!
+        }
+        
         var request = request
-        request.addValue("Bearer " + token, forHTTPHeaderField: "Authorization")
+        request.addValue("Bearer \(token.accessToken.token)", forHTTPHeaderField: "Authorization")
         return request
     }
 }

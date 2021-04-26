@@ -10,29 +10,63 @@ import Moya
 
 enum GiftripAPI {
     
-    case login
-    case signup
+    // MARK: - userController
+    case changePw(_ password: String)
+    case getMyInfo
+    case editMyInfo(_ name: String)
     
 }
 
 extension GiftripAPI: BaseAPI {
     var path: String {
-        
+        switch self {
+        case .changePw:
+            return "/auth/changePw"
+        case .getMyInfo:
+            return "/user/getMyInfo"
+        case .editMyInfo:
+            return "/user/editMyInfo"
+        }
     }
     
-    var method: Method {
-        
+    var method: Moya.Method {
+        switch self {
+//        case :
+//            return .post
+            
+        case .getMyInfo:
+            return .get
+            
+        case .changePw, .editMyInfo:
+            return .patch
+        }
     }
     
-    var headers: [String : String]? {
-        
+    var headers: [String: String]? {
+        return ["Accept": "application/json"]
     }
     
-    var task: Task {
-        
-    }
+//    var task: Task {
+//        switch self {
+//        case :
+//
+//        }
+//    }
     
     var parameters: [String: Any]? {
-        var params: [String: Any] = [:]
+        switch self {
+        case let .changePw(password):
+            return [
+                "pw": password
+            ]
+            
+        case let .editMyInfo(name):
+            return [
+                "name": name
+            ]
+            
+        default:
+            return nil
+        }
     }
 }
