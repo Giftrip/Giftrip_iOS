@@ -11,6 +11,8 @@
 		B19554A3EE5BC3C5484F3624 /* Pods_Giftrip_GiftripTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30DDB4014B2BC55BE9072224 /* Pods_Giftrip_GiftripTests.framework */; };
 		F22ACDA6262FE47E0070781D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22ACDA5262FE47D0070781D /* AuthService.swift */; };
 		F22ACDB3262FF4B70070781D /* GiftripAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22ACDB2262FF4B70070781D /* GiftripAPI.swift */; };
+		F22ACDB8263022180070781D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22ACDB7263022180070781D /* User.swift */; };
+		F22ACDBE263025000070781D /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22ACDBD263025000070781D /* ResponseData.swift */; };
 		F2350A7426340B9E000C523B /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350A7326340B9E000C523B /* AuthAPI.swift */; };
 		F2429BC0262D5D3B009FD306 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F2429BBF262D5D3B009FD306 /* .swiftlint.yml */; };
 		F2429BC8262D5DB8009FD306 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2429BC7262D5DB8009FD306 /* R.generated.swift */; };
@@ -28,7 +30,7 @@
 		F2A464B5262DA6F600D4238E /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464B4262DA6F600D4238E /* AuthPlugin.swift */; };
 		F2A464BB262E65F300D4238E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464BA262E65F300D4238E /* Token.swift */; };
 		F2A464C0262E682300D4238E /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464BF262E682300D4238E /* ModelType.swift */; };
-		F2A464C8262E6A2800D4238E /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464C7262E6A2800D4238E /* BaseModel.swift */; };
+		F2A464C8262E6A2800D4238E /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464C7262E6A2800D4238E /* ResponseModel.swift */; };
 		F2A464D0262E76D600D4238E /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464CF262E76D600D4238E /* DIContainer.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		F1F3FE96D5D2CC71ED6DC7AB /* Pods-Giftrip-GiftripTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giftrip-GiftripTests.release.xcconfig"; path = "Target Support Files/Pods-Giftrip-GiftripTests/Pods-Giftrip-GiftripTests.release.xcconfig"; sourceTree = "<group>"; };
 		F22ACDA5262FE47D0070781D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F22ACDB2262FF4B70070781D /* GiftripAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftripAPI.swift; sourceTree = "<group>"; };
+		F22ACDB7263022180070781D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F22ACDBD263025000070781D /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
 		F2350A7326340B9E000C523B /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		F2429BBF262D5D3B009FD306 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		F2429BC7262D5DB8009FD306 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -81,7 +85,7 @@
 		F2A464B4262DA6F600D4238E /* AuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
 		F2A464BA262E65F300D4238E /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		F2A464BF262E682300D4238E /* ModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
-		F2A464C7262E6A2800D4238E /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		F2A464C7262E6A2800D4238E /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		F2A464CF262E76D600D4238E /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +134,15 @@
 				30DDB4014B2BC55BE9072224 /* Pods_Giftrip_GiftripTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F22ACDBC263024DF0070781D /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				F2A464C7262E6A2800D4238E /* ResponseModel.swift */,
+				F22ACDBD263025000070781D /* ResponseData.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		F2618507262D4C4F00EA707C = {
@@ -261,9 +274,10 @@
 		F2618575262D54E400EA707C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F22ACDBC263024DF0070781D /* Response */,
 				F2A464BF262E682300D4238E /* ModelType.swift */,
-				F2A464C7262E6A2800D4238E /* BaseModel.swift */,
 				F2A464BA262E65F300D4238E /* Token.swift */,
+				F22ACDB7263022180070781D /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -551,9 +565,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2A464D0262E76D600D4238E /* DIContainer.swift in Sources */,
-				F2A464C8262E6A2800D4238E /* BaseModel.swift in Sources */,
+				F2A464C8262E6A2800D4238E /* ResponseModel.swift in Sources */,
 				F2618514262D4C4F00EA707C /* AppDelegate.swift in Sources */,
 				F2A46432262D753F00D4238E /* BaseViewController.swift in Sources */,
+				F22ACDB8263022180070781D /* User.swift in Sources */,
 				F2A464C0262E682300D4238E /* ModelType.swift in Sources */,
 				F2429BF1262D60A1009FD306 /* Preview.swift in Sources */,
 				F2429BC8262D5DB8009FD306 /* R.generated.swift in Sources */,
@@ -565,6 +580,7 @@
 				F2350A7426340B9E000C523B /* AuthAPI.swift in Sources */,
 				F2A46499262DA07200D4238E /* BaseAPI.swift in Sources */,
 				F2A464A7262DA1A200D4238E /* RequestLoggingPlugin.swift in Sources */,
+				F22ACDBE263025000070781D /* ResponseData.swift in Sources */,
 				F22ACDA6262FE47E0070781D /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
