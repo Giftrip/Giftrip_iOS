@@ -13,6 +13,7 @@
 		F22ACDB3262FF4B70070781D /* GiftripAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22ACDB2262FF4B70070781D /* GiftripAPI.swift */; };
 		F22ACDB8263022180070781D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22ACDB7263022180070781D /* User.swift */; };
 		F22ACDBE263025000070781D /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22ACDBD263025000070781D /* ResponseData.swift */; };
+		F22ACDE026314D940070781D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22ACDDF26314D940070781D /* UserService.swift */; };
 		F2350A7426340B9E000C523B /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350A7326340B9E000C523B /* AuthAPI.swift */; };
 		F2429BC0262D5D3B009FD306 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F2429BBF262D5D3B009FD306 /* .swiftlint.yml */; };
 		F2429BC8262D5DB8009FD306 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2429BC7262D5DB8009FD306 /* R.generated.swift */; };
@@ -62,6 +63,7 @@
 		F22ACDB2262FF4B70070781D /* GiftripAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftripAPI.swift; sourceTree = "<group>"; };
 		F22ACDB7263022180070781D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F22ACDBD263025000070781D /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
+		F22ACDDF26314D940070781D /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		F2350A7326340B9E000C523B /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		F2429BBF262D5D3B009FD306 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		F2429BC7262D5DB8009FD306 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				F22ACDA5262FE47D0070781D /* AuthService.swift */,
+				F22ACDDF26314D940070781D /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 			files = (
 				F2A464D0262E76D600D4238E /* DIContainer.swift in Sources */,
 				F2A464C8262E6A2800D4238E /* ResponseModel.swift in Sources */,
+				F22ACDE026314D940070781D /* UserService.swift in Sources */,
 				F2618514262D4C4F00EA707C /* AppDelegate.swift in Sources */,
 				F2A46432262D753F00D4238E /* BaseViewController.swift in Sources */,
 				F22ACDB8263022180070781D /* User.swift in Sources */,

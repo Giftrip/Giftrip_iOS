@@ -27,20 +27,22 @@ class DIContainer {
             return AuthService()
         }
         
-        self.container.register(Network<GiftripAPI>.self) { (resolver) in
-            Network<GiftripAPI>(
-                plugins: [
-                    RequestLoggingPlugin(),
-                    AuthPlugin(authService: resolver.resolve(AuthService.self) ?? AuthService())
-                ]
-            )
+        let network = Network<GiftripAPI>(
+            plugins: [
+                RequestLoggingPlugin(),
+                AuthPlugin(authService: self.container.resolve(AuthService.self)!)
+            ]
+        )
+        
+        self.container.register(UserService.self) { resolver in
+            return UserService(network: network)
         }
         
         // ViewController 등록
 //        self.container.register(SplashViewController.self) { resolver in
 //            let reactor = SplashViewReactor()
 //            let controller = SplashViewController(reactor: reactor)
-//            
+//
 //            return controller
 //        }
         
