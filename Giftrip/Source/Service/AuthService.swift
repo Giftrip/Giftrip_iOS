@@ -92,6 +92,7 @@ final class AuthService: AuthServiceType {
     }
     
     fileprivate func deleteToken() {
-        
+        try? self.keychain.remove("access_token")
+        try? self.keychain.remove("refresh_token")
     }
 }
