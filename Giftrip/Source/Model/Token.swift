@@ -11,7 +11,7 @@ struct Token: ModelType {
     enum Event {}
     
     var accessToken: AccessToken
-    var refreshToken: RefreshToken
+    var refreshToken: RefreshToken?
 
     private enum CodingKeys: String, CodingKey {
         case accessToken

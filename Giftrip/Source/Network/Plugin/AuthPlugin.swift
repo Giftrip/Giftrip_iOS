@@ -7,6 +7,36 @@
 
 import Moya
 
-final class AuthPlugin: PluginType {
+protocol AuthorizedTargetType: TargetType {
+    var needsAuth: Bool { get }
+}
+
+struct AuthPlugin: PluginType {
+    fileprivate let authService: AuthService
     
+    init(authService: AuthService) {
+        self.authService = authService
+    }
+    
+    func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
+        guard
+            var token = authService.currentToken,
+            let target = target as? AuthorizedTargetType,
+            target.needsAuth
+        else {
+            return request
+        }
+        
+        if token.refreshToken!.expiredAt > Date() {
+            authService.logout()
+            return request // logout후 request 요청을 중단(취소)할 방법을 찾아야함
+        } else if token.accessToken.expiredAt > Date() {
+            authService.renewalToken()
+            token = authService.currentToken!
+        }
+        
+        var request = request
+        request.addValue("Bearer \(token.accessToken.token)", forHTTPHeaderField: "Authorization")
+        return request
+    }
 }

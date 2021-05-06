@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		7777A14F58B87A751E5A4957 /* Pods_Giftrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9536DFD7786B9EF7F5123A93 /* Pods_Giftrip.framework */; };
 		B19554A3EE5BC3C5484F3624 /* Pods_Giftrip_GiftripTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30DDB4014B2BC55BE9072224 /* Pods_Giftrip_GiftripTests.framework */; };
+		F22ACDA6262FE47E0070781D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22ACDA5262FE47D0070781D /* AuthService.swift */; };
+		F22ACDB3262FF4B70070781D /* GiftripAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22ACDB2262FF4B70070781D /* GiftripAPI.swift */; };
+		F22ACDB8263022180070781D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22ACDB7263022180070781D /* User.swift */; };
+		F22ACDE026314D940070781D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22ACDDF26314D940070781D /* UserService.swift */; };
+		F2350A7426340B9E000C523B /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2350A7326340B9E000C523B /* AuthAPI.swift */; };
 		F2429BC0262D5D3B009FD306 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F2429BBF262D5D3B009FD306 /* .swiftlint.yml */; };
 		F2429BC8262D5DB8009FD306 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2429BC7262D5DB8009FD306 /* R.generated.swift */; };
 		F2429BF1262D60A1009FD306 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2429BF0262D60A1009FD306 /* Preview.swift */; };
@@ -17,6 +22,7 @@
 		F2618520262D4C5100EA707C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F261851E262D4C5100EA707C /* LaunchScreen.storyboard */; };
 		F261852B262D4C5100EA707C /* GiftripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261852A262D4C5100EA707C /* GiftripTests.swift */; };
 		F2618536262D4C5100EA707C /* GiftripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2618535262D4C5100EA707C /* GiftripUITests.swift */; };
+		F279C6192643C2BF008EA8C4 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F279C6182643C2BF008EA8C4 /* Color.xcassets */; };
 		F2A46432262D753F00D4238E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46431262D753F00D4238E /* BaseViewController.swift */; };
 		F2A4647E262D791E00D4238E /* GiftripStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4647D262D791E00D4238E /* GiftripStep.swift */; };
 		F2A46499262DA07200D4238E /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46498262DA07200D4238E /* BaseAPI.swift */; };
@@ -25,7 +31,7 @@
 		F2A464B5262DA6F600D4238E /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464B4262DA6F600D4238E /* AuthPlugin.swift */; };
 		F2A464BB262E65F300D4238E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464BA262E65F300D4238E /* Token.swift */; };
 		F2A464C0262E682300D4238E /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464BF262E682300D4238E /* ModelType.swift */; };
-		F2A464C8262E6A2800D4238E /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464C7262E6A2800D4238E /* BaseModel.swift */; };
+		F2A464C8262E6A2800D4238E /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464C7262E6A2800D4238E /* ResponseModel.swift */; };
 		F2A464D0262E76D600D4238E /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464CF262E76D600D4238E /* DIContainer.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +59,11 @@
 		DD9FA1D50A63A2057F853D66 /* Pods-Giftrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giftrip.release.xcconfig"; path = "Target Support Files/Pods-Giftrip/Pods-Giftrip.release.xcconfig"; sourceTree = "<group>"; };
 		DE0E70E245A6EB2B17207E15 /* Pods-Giftrip-GiftripTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giftrip-GiftripTests.debug.xcconfig"; path = "Target Support Files/Pods-Giftrip-GiftripTests/Pods-Giftrip-GiftripTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F1F3FE96D5D2CC71ED6DC7AB /* Pods-Giftrip-GiftripTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giftrip-GiftripTests.release.xcconfig"; path = "Target Support Files/Pods-Giftrip-GiftripTests/Pods-Giftrip-GiftripTests.release.xcconfig"; sourceTree = "<group>"; };
+		F22ACDA5262FE47D0070781D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		F22ACDB2262FF4B70070781D /* GiftripAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftripAPI.swift; sourceTree = "<group>"; };
+		F22ACDB7263022180070781D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F22ACDDF26314D940070781D /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		F2350A7326340B9E000C523B /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		F2429BBF262D5D3B009FD306 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		F2429BC7262D5DB8009FD306 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		F2429BF0262D60A1009FD306 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
@@ -67,6 +78,7 @@
 		F2618531262D4C5100EA707C /* GiftripUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiftripUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2618535262D4C5100EA707C /* GiftripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftripUITests.swift; sourceTree = "<group>"; };
 		F2618537262D4C5100EA707C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F279C6182643C2BF008EA8C4 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		F2A46431262D753F00D4238E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F2A4647D262D791E00D4238E /* GiftripStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftripStep.swift; sourceTree = "<group>"; };
 		F2A46498262DA07200D4238E /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
@@ -75,7 +87,7 @@
 		F2A464B4262DA6F600D4238E /* AuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
 		F2A464BA262E65F300D4238E /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		F2A464BF262E682300D4238E /* ModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
-		F2A464C7262E6A2800D4238E /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		F2A464C7262E6A2800D4238E /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		F2A464CF262E76D600D4238E /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +136,14 @@
 				30DDB4014B2BC55BE9072224 /* Pods_Giftrip_GiftripTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F22ACDBC263024DF0070781D /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				F2A464C7262E6A2800D4238E /* ResponseModel.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		F2618507262D4C4F00EA707C = {
@@ -197,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				F261851C262D4C5100EA707C /* Assets.xcassets */,
+				F279C6182643C2BF008EA8C4 /* Color.xcassets */,
 				F261851E262D4C5100EA707C /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
@@ -230,6 +251,8 @@
 		F2618572262D54CB00EA707C /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				F22ACDA5262FE47D0070781D /* AuthService.swift */,
+				F22ACDDF26314D940070781D /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -254,9 +277,10 @@
 		F2618575262D54E400EA707C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F22ACDBC263024DF0070781D /* Response */,
 				F2A464BF262E682300D4238E /* ModelType.swift */,
-				F2A464C7262E6A2800D4238E /* BaseModel.swift */,
 				F2A464BA262E65F300D4238E /* Token.swift */,
+				F22ACDB7263022180070781D /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -273,6 +297,8 @@
 			isa = PBXGroup;
 			children = (
 				F2A46498262DA07200D4238E /* BaseAPI.swift */,
+				F2350A7326340B9E000C523B /* AuthAPI.swift */,
+				F22ACDB2262FF4B70070781D /* GiftripAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -396,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2429BC0262D5D3B009FD306 /* .swiftlint.yml in Resources */,
+				F279C6192643C2BF008EA8C4 /* Color.xcassets in Resources */,
 				F2618520262D4C5100EA707C /* LaunchScreen.storyboard in Resources */,
 				F261851D262D4C5100EA707C /* Assets.xcassets in Resources */,
 			);
@@ -542,18 +569,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2A464D0262E76D600D4238E /* DIContainer.swift in Sources */,
-				F2A464C8262E6A2800D4238E /* BaseModel.swift in Sources */,
+				F2A464C8262E6A2800D4238E /* ResponseModel.swift in Sources */,
+				F22ACDE026314D940070781D /* UserService.swift in Sources */,
 				F2618514262D4C4F00EA707C /* AppDelegate.swift in Sources */,
 				F2A46432262D753F00D4238E /* BaseViewController.swift in Sources */,
+				F22ACDB8263022180070781D /* User.swift in Sources */,
 				F2A464C0262E682300D4238E /* ModelType.swift in Sources */,
 				F2429BF1262D60A1009FD306 /* Preview.swift in Sources */,
 				F2429BC8262D5DB8009FD306 /* R.generated.swift in Sources */,
 				F2A4647E262D791E00D4238E /* GiftripStep.swift in Sources */,
+				F22ACDB3262FF4B70070781D /* GiftripAPI.swift in Sources */,
 				F2A464B5262DA6F600D4238E /* AuthPlugin.swift in Sources */,
 				F2A464BB262E65F300D4238E /* Token.swift in Sources */,
 				F2A464A1262DA07900D4238E /* Network.swift in Sources */,
+				F2350A7426340B9E000C523B /* AuthAPI.swift in Sources */,
 				F2A46499262DA07200D4238E /* BaseAPI.swift in Sources */,
 				F2A464A7262DA1A200D4238E /* RequestLoggingPlugin.swift in Sources */,
+				F22ACDA6262FE47E0070781D /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
