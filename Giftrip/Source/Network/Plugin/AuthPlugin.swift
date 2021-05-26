@@ -12,9 +12,9 @@ protocol AuthorizedTargetType: TargetType {
 }
 
 struct AuthPlugin: PluginType {
-    fileprivate let authService: AuthService
+    fileprivate let authService: AuthServiceType
     
-    init(authService: AuthService) {
+    init(authService: AuthServiceType) {
         self.authService = authService
     }
     

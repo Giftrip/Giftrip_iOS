@@ -21,7 +21,7 @@ final class UserService: UserServiceType {
     }
     
     fileprivate let userSubject = ReplaySubject<User?>.create(bufferSize: 1)
-    lazy var currentUser: Observable<User?> = self.userSubject.asObserver()
+    lazy var currentUser: Observable<User?> = self.userSubject.asObservable()
         .startWith(nil)
         .share(replay: 1, scope: .forever) // subscribe가 끊어져도 scope를 지속시킴
     

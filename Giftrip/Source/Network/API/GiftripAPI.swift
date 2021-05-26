@@ -11,9 +11,10 @@ import Moya
 enum GiftripAPI {
     
     // MARK: - userController
+    
     case changePw(_ password: String)
+    case editMyInfo(_ name: String) // 프로필 이미지로 인해 멀티파트 업로드 해야함
     case getMyInfo
-    case editMyInfo(_ name: String)
     
 }
 

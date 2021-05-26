@@ -23,6 +23,35 @@
 		F261852B262D4C5100EA707C /* GiftripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F261852A262D4C5100EA707C /* GiftripTests.swift */; };
 		F2618536262D4C5100EA707C /* GiftripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2618535262D4C5100EA707C /* GiftripUITests.swift */; };
 		F279C6192643C2BF008EA8C4 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F279C6182643C2BF008EA8C4 /* Color.xcassets */; };
+		F279C61D2643CF19008EA8C4 /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C61C2643CF19008EA8C4 /* AppFlow.swift */; };
+		F279C61F2643CF2C008EA8C4 /* IntroFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C61E2643CF2C008EA8C4 /* IntroFlow.swift */; };
+		F279C6212643CF3F008EA8C4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C6202643CF3F008EA8C4 /* TabBarViewController.swift */; };
+		F279C6232643CF51008EA8C4 /* TabBarFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C6222643CF51008EA8C4 /* TabBarFlow.swift */; };
+		F279C6252643CF5D008EA8C4 /* HomeFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C6242643CF5D008EA8C4 /* HomeFlow.swift */; };
+		F279C6272643CF6E008EA8C4 /* RankFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C6262643CF6E008EA8C4 /* RankFlow.swift */; };
+		F279C6292643CFB1008EA8C4 /* SettingsFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C6282643CFB1008EA8C4 /* SettingsFlow.swift */; };
+		F279C62B2643CFCB008EA8C4 /* NotificationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C62A2643CFCB008EA8C4 /* NotificationFlow.swift */; };
+		F279C62D2643DE34008EA8C4 /* GiftFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C62C2643DE34008EA8C4 /* GiftFlow.swift */; };
+		F279C6342643ED9F008EA8C4 /* SplashViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C6322643ED9F008EA8C4 /* SplashViewReactor.swift */; };
+		F279C6352643ED9F008EA8C4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C6332643ED9F008EA8C4 /* SplashViewController.swift */; };
+		F279C6382643EDBC008EA8C4 /* IntroViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C6362643EDBC008EA8C4 /* IntroViewReactor.swift */; };
+		F279C6392643EDBC008EA8C4 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C6372643EDBC008EA8C4 /* IntroViewController.swift */; };
+		F279C63C2643EDC5008EA8C4 /* LoginViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C63A2643EDC5008EA8C4 /* LoginViewReactor.swift */; };
+		F279C63D2643EDC5008EA8C4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C63B2643EDC5008EA8C4 /* LoginViewController.swift */; };
+		F279C6442643EE0C008EA8C4 /* RegisterPhoneViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C6422643EE0C008EA8C4 /* RegisterPhoneViewReactor.swift */; };
+		F279C6452643EE0C008EA8C4 /* RegisterPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C6432643EE0C008EA8C4 /* RegisterPhoneViewController.swift */; };
+		F279C6482643EE17008EA8C4 /* RegisterInfoViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C6462643EE17008EA8C4 /* RegisterInfoViewReactor.swift */; };
+		F279C6492643EE17008EA8C4 /* RegisterInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C6472643EE17008EA8C4 /* RegisterInfoViewController.swift */; };
+		F279C64B2643FBE2008EA8C4 /* CGFloatLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C64A2643FBE2008EA8C4 /* CGFloatLiteral.swift */; };
+		F279C64D2643FBFF008EA8C4 /* UIViewControllerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C64C2643FBFF008EA8C4 /* UIViewControllerPreview.swift */; };
+		F279C64F2643FC17008EA8C4 /* UIViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C64E2643FC17008EA8C4 /* UIViewPreview.swift */; };
+		F279C6512643FC34008EA8C4 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C6502643FC34008EA8C4 /* HapticFeedback.swift */; };
+		F279C6532643FC48008EA8C4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C6522643FC48008EA8C4 /* Message.swift */; };
+		F279C6552643FC5D008EA8C4 /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C6542643FC5D008EA8C4 /* ValidationResult.swift */; };
+		F279C6572644066B008EA8C4 /* GiftripPlainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C6562644066B008EA8C4 /* GiftripPlainButton.swift */; };
+		F279C65B26440A65008EA8C4 /* PrivacyPolicyViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C65926440A65008EA8C4 /* PrivacyPolicyViewReactor.swift */; };
+		F279C65C26440A65008EA8C4 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C65A26440A65008EA8C4 /* PrivacyPolicyViewController.swift */; };
+		F279C65E26440CF2008EA8C4 /* GiftripTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279C65D26440CF2008EA8C4 /* GiftripTextField.swift */; };
 		F2A46432262D753F00D4238E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46431262D753F00D4238E /* BaseViewController.swift */; };
 		F2A4647E262D791E00D4238E /* GiftripStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A4647D262D791E00D4238E /* GiftripStep.swift */; };
 		F2A46499262DA07200D4238E /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A46498262DA07200D4238E /* BaseAPI.swift */; };
@@ -31,8 +60,12 @@
 		F2A464B5262DA6F600D4238E /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464B4262DA6F600D4238E /* AuthPlugin.swift */; };
 		F2A464BB262E65F300D4238E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464BA262E65F300D4238E /* Token.swift */; };
 		F2A464C0262E682300D4238E /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464BF262E682300D4238E /* ModelType.swift */; };
-		F2A464C8262E6A2800D4238E /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464C7262E6A2800D4238E /* ResponseModel.swift */; };
-		F2A464D0262E76D600D4238E /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464CF262E76D600D4238E /* DIContainer.swift */; };
+		F2A464D0262E76D600D4238E /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464CF262E76D600D4238E /* AppServices.swift */; };
+		F2D2FBB7265DED200010731F /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBB6265DED200010731F /* UIImageView+Kingfisher.swift */; };
+		F2D2FBBD265E0E5F0010731F /* KeyboardTopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBBC265E0E5F0010731F /* KeyboardTopButton.swift */; };
+		F2D2FBC0265E18450010731F /* AuthCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBBF265E18450010731F /* AuthCodeResponse.swift */; };
+		F2D2FBC3265E2F3A0010731F /* HandleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBC2265E2F3A0010731F /* HandleResponse.swift */; };
+		F2D2FBC5265E2FB50010731F /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBC4265E2FB50010731F /* ErrorResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +112,35 @@
 		F2618535262D4C5100EA707C /* GiftripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftripUITests.swift; sourceTree = "<group>"; };
 		F2618537262D4C5100EA707C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F279C6182643C2BF008EA8C4 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		F279C61C2643CF19008EA8C4 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
+		F279C61E2643CF2C008EA8C4 /* IntroFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroFlow.swift; sourceTree = "<group>"; };
+		F279C6202643CF3F008EA8C4 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		F279C6222643CF51008EA8C4 /* TabBarFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFlow.swift; sourceTree = "<group>"; };
+		F279C6242643CF5D008EA8C4 /* HomeFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlow.swift; sourceTree = "<group>"; };
+		F279C6262643CF6E008EA8C4 /* RankFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankFlow.swift; sourceTree = "<group>"; };
+		F279C6282643CFB1008EA8C4 /* SettingsFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFlow.swift; sourceTree = "<group>"; };
+		F279C62A2643CFCB008EA8C4 /* NotificationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFlow.swift; sourceTree = "<group>"; };
+		F279C62C2643DE34008EA8C4 /* GiftFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftFlow.swift; sourceTree = "<group>"; };
+		F279C6322643ED9F008EA8C4 /* SplashViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewReactor.swift; sourceTree = "<group>"; };
+		F279C6332643ED9F008EA8C4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		F279C6362643EDBC008EA8C4 /* IntroViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewReactor.swift; sourceTree = "<group>"; };
+		F279C6372643EDBC008EA8C4 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		F279C63A2643EDC5008EA8C4 /* LoginViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewReactor.swift; sourceTree = "<group>"; };
+		F279C63B2643EDC5008EA8C4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F279C6422643EE0C008EA8C4 /* RegisterPhoneViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPhoneViewReactor.swift; sourceTree = "<group>"; };
+		F279C6432643EE0C008EA8C4 /* RegisterPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPhoneViewController.swift; sourceTree = "<group>"; };
+		F279C6462643EE17008EA8C4 /* RegisterInfoViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInfoViewReactor.swift; sourceTree = "<group>"; };
+		F279C6472643EE17008EA8C4 /* RegisterInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInfoViewController.swift; sourceTree = "<group>"; };
+		F279C64A2643FBE2008EA8C4 /* CGFloatLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatLiteral.swift; sourceTree = "<group>"; };
+		F279C64C2643FBFF008EA8C4 /* UIViewControllerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerPreview.swift; sourceTree = "<group>"; };
+		F279C64E2643FC17008EA8C4 /* UIViewPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewPreview.swift; sourceTree = "<group>"; };
+		F279C6502643FC34008EA8C4 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
+		F279C6522643FC48008EA8C4 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		F279C6542643FC5D008EA8C4 /* ValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
+		F279C6562644066B008EA8C4 /* GiftripPlainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftripPlainButton.swift; sourceTree = "<group>"; };
+		F279C65926440A65008EA8C4 /* PrivacyPolicyViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewReactor.swift; sourceTree = "<group>"; };
+		F279C65A26440A65008EA8C4 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		F279C65D26440CF2008EA8C4 /* GiftripTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftripTextField.swift; sourceTree = "<group>"; };
 		F2A46431262D753F00D4238E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F2A4647D262D791E00D4238E /* GiftripStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftripStep.swift; sourceTree = "<group>"; };
 		F2A46498262DA07200D4238E /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
@@ -87,8 +149,12 @@
 		F2A464B4262DA6F600D4238E /* AuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
 		F2A464BA262E65F300D4238E /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		F2A464BF262E682300D4238E /* ModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
-		F2A464C7262E6A2800D4238E /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
-		F2A464CF262E76D600D4238E /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		F2A464CF262E76D600D4238E /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
+		F2D2FBB6265DED200010731F /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		F2D2FBBC265E0E5F0010731F /* KeyboardTopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardTopButton.swift; sourceTree = "<group>"; };
+		F2D2FBBF265E18450010731F /* AuthCodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeResponse.swift; sourceTree = "<group>"; };
+		F2D2FBC2265E2F3A0010731F /* HandleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleResponse.swift; sourceTree = "<group>"; };
+		F2D2FBC4265E2FB50010731F /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,14 +202,6 @@
 				30DDB4014B2BC55BE9072224 /* Pods_Giftrip_GiftripTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F22ACDBC263024DF0070781D /* Response */ = {
-			isa = PBXGroup;
-			children = (
-				F2A464C7262E6A2800D4238E /* ResponseModel.swift */,
-			);
-			path = Response;
 			sourceTree = "<group>";
 		};
 		F2618507262D4C4F00EA707C = {
@@ -201,13 +259,14 @@
 			isa = PBXGroup;
 			children = (
 				F2618513262D4C4F00EA707C /* AppDelegate.swift */,
-				F2A464CF262E76D600D4238E /* DIContainer.swift */,
+				F2A464CF262E76D600D4238E /* AppServices.swift */,
 				F2A4642C262D73DC00D4238E /* Flow */,
-				F2618570262D54C200EA707C /* View */,
 				F2618571262D54C700EA707C /* ViewController */,
+				F2618570262D54C200EA707C /* View */,
 				F2618575262D54E400EA707C /* Model */,
 				F2618572262D54CB00EA707C /* Service */,
 				F2618573262D54D300EA707C /* Network */,
+				F2D2FBB8265E0C230010731F /* Extension */,
 				F2618574262D54DD00EA707C /* Util */,
 			);
 			path = Source;
@@ -236,6 +295,7 @@
 		F2618570262D54C200EA707C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F2D2FBBB265E0E480010731F /* Base */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -244,6 +304,11 @@
 			isa = PBXGroup;
 			children = (
 				F2A46431262D753F00D4238E /* BaseViewController.swift */,
+				F279C6312643EB5D008EA8C4 /* Splash */,
+				F279C6302643EB52008EA8C4 /* Intro */,
+				F279C65826440A31008EA8C4 /* PrivacyPolicy */,
+				F279C62E2643EB48008EA8C4 /* Login */,
+				F279C62F2643EB4E008EA8C4 /* Register */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -260,6 +325,7 @@
 		F2618573262D54D300EA707C /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F2D2FBC2265E2F3A0010731F /* HandleResponse.swift */,
 				F2A464A0262DA07900D4238E /* Network.swift */,
 				F2A46493262D96D600D4238E /* API */,
 				F2A464A5262DA18A00D4238E /* Plugin */,
@@ -270,6 +336,13 @@
 		F2618574262D54DD00EA707C /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				F279C64A2643FBE2008EA8C4 /* CGFloatLiteral.swift */,
+				F279C64C2643FBFF008EA8C4 /* UIViewControllerPreview.swift */,
+				F279C64E2643FC17008EA8C4 /* UIViewPreview.swift */,
+				F279C6502643FC34008EA8C4 /* HapticFeedback.swift */,
+				F279C6522643FC48008EA8C4 /* Message.swift */,
+				F279C6542643FC5D008EA8C4 /* ValidationResult.swift */,
+				F2D2FBB6265DED200010731F /* UIImageView+Kingfisher.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -277,7 +350,7 @@
 		F2618575262D54E400EA707C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F22ACDBC263024DF0070781D /* Response */,
+				F2D2FBC1265E184B0010731F /* Response */,
 				F2A464BF262E682300D4238E /* ModelType.swift */,
 				F2A464BA262E65F300D4238E /* Token.swift */,
 				F22ACDB7263022180070781D /* User.swift */,
@@ -285,10 +358,82 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F279C61A2643CEF7008EA8C4 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				F279C6202643CF3F008EA8C4 /* TabBarViewController.swift */,
+				F279C6222643CF51008EA8C4 /* TabBarFlow.swift */,
+				F279C61B2643CF03008EA8C4 /* Tabs */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		F279C61B2643CF03008EA8C4 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				F279C6242643CF5D008EA8C4 /* HomeFlow.swift */,
+				F279C6262643CF6E008EA8C4 /* RankFlow.swift */,
+				F279C62C2643DE34008EA8C4 /* GiftFlow.swift */,
+				F279C62A2643CFCB008EA8C4 /* NotificationFlow.swift */,
+				F279C6282643CFB1008EA8C4 /* SettingsFlow.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		F279C62E2643EB48008EA8C4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F279C63A2643EDC5008EA8C4 /* LoginViewReactor.swift */,
+				F279C63B2643EDC5008EA8C4 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F279C62F2643EB4E008EA8C4 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				F279C6422643EE0C008EA8C4 /* RegisterPhoneViewReactor.swift */,
+				F279C6432643EE0C008EA8C4 /* RegisterPhoneViewController.swift */,
+				F279C6462643EE17008EA8C4 /* RegisterInfoViewReactor.swift */,
+				F279C6472643EE17008EA8C4 /* RegisterInfoViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		F279C6302643EB52008EA8C4 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				F279C6362643EDBC008EA8C4 /* IntroViewReactor.swift */,
+				F279C6372643EDBC008EA8C4 /* IntroViewController.swift */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		F279C6312643EB5D008EA8C4 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				F279C6322643ED9F008EA8C4 /* SplashViewReactor.swift */,
+				F279C6332643ED9F008EA8C4 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		F279C65826440A31008EA8C4 /* PrivacyPolicy */ = {
+			isa = PBXGroup;
+			children = (
+				F279C65926440A65008EA8C4 /* PrivacyPolicyViewReactor.swift */,
+				F279C65A26440A65008EA8C4 /* PrivacyPolicyViewController.swift */,
+			);
+			path = PrivacyPolicy;
+			sourceTree = "<group>";
+		};
 		F2A4642C262D73DC00D4238E /* Flow */ = {
 			isa = PBXGroup;
 			children = (
 				F2A4647D262D791E00D4238E /* GiftripStep.swift */,
+				F279C61C2643CF19008EA8C4 /* AppFlow.swift */,
+				F279C61E2643CF2C008EA8C4 /* IntroFlow.swift */,
+				F279C61A2643CEF7008EA8C4 /* TabBar */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -310,6 +455,32 @@
 				F2A464B4262DA6F600D4238E /* AuthPlugin.swift */,
 			);
 			path = Plugin;
+			sourceTree = "<group>";
+		};
+		F2D2FBB8265E0C230010731F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F2D2FBBB265E0E480010731F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F279C6562644066B008EA8C4 /* GiftripPlainButton.swift */,
+				F279C65D26440CF2008EA8C4 /* GiftripTextField.swift */,
+				F2D2FBBC265E0E5F0010731F /* KeyboardTopButton.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F2D2FBC1265E184B0010731F /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				F2D2FBC4265E2FB50010731F /* ErrorResponse.swift */,
+				F2D2FBBF265E18450010731F /* AuthCodeResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -568,23 +739,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2A464D0262E76D600D4238E /* DIContainer.swift in Sources */,
-				F2A464C8262E6A2800D4238E /* ResponseModel.swift in Sources */,
+				F2D2FBC3265E2F3A0010731F /* HandleResponse.swift in Sources */,
+				F279C6252643CF5D008EA8C4 /* HomeFlow.swift in Sources */,
+				F2D2FBB7265DED200010731F /* UIImageView+Kingfisher.swift in Sources */,
+				F2A464D0262E76D600D4238E /* AppServices.swift in Sources */,
+				F279C6492643EE17008EA8C4 /* RegisterInfoViewController.swift in Sources */,
 				F22ACDE026314D940070781D /* UserService.swift in Sources */,
+				F279C6572644066B008EA8C4 /* GiftripPlainButton.swift in Sources */,
+				F279C63C2643EDC5008EA8C4 /* LoginViewReactor.swift in Sources */,
+				F279C6452643EE0C008EA8C4 /* RegisterPhoneViewController.swift in Sources */,
 				F2618514262D4C4F00EA707C /* AppDelegate.swift in Sources */,
+				F279C6292643CFB1008EA8C4 /* SettingsFlow.swift in Sources */,
+				F279C64F2643FC17008EA8C4 /* UIViewPreview.swift in Sources */,
+				F279C6272643CF6E008EA8C4 /* RankFlow.swift in Sources */,
+				F279C64B2643FBE2008EA8C4 /* CGFloatLiteral.swift in Sources */,
+				F279C6552643FC5D008EA8C4 /* ValidationResult.swift in Sources */,
+				F279C6212643CF3F008EA8C4 /* TabBarViewController.swift in Sources */,
+				F279C65B26440A65008EA8C4 /* PrivacyPolicyViewReactor.swift in Sources */,
+				F279C64D2643FBFF008EA8C4 /* UIViewControllerPreview.swift in Sources */,
+				F279C6342643ED9F008EA8C4 /* SplashViewReactor.swift in Sources */,
+				F279C6442643EE0C008EA8C4 /* RegisterPhoneViewReactor.swift in Sources */,
+				F279C6482643EE17008EA8C4 /* RegisterInfoViewReactor.swift in Sources */,
 				F2A46432262D753F00D4238E /* BaseViewController.swift in Sources */,
 				F22ACDB8263022180070781D /* User.swift in Sources */,
 				F2A464C0262E682300D4238E /* ModelType.swift in Sources */,
+				F2D2FBC5265E2FB50010731F /* ErrorResponse.swift in Sources */,
+				F279C6532643FC48008EA8C4 /* Message.swift in Sources */,
+				F279C65E26440CF2008EA8C4 /* GiftripTextField.swift in Sources */,
+				F279C63D2643EDC5008EA8C4 /* LoginViewController.swift in Sources */,
 				F2429BF1262D60A1009FD306 /* Preview.swift in Sources */,
 				F2429BC8262D5DB8009FD306 /* R.generated.swift in Sources */,
 				F2A4647E262D791E00D4238E /* GiftripStep.swift in Sources */,
+				F279C6382643EDBC008EA8C4 /* IntroViewReactor.swift in Sources */,
+				F279C6392643EDBC008EA8C4 /* IntroViewController.swift in Sources */,
 				F22ACDB3262FF4B70070781D /* GiftripAPI.swift in Sources */,
 				F2A464B5262DA6F600D4238E /* AuthPlugin.swift in Sources */,
+				F279C62D2643DE34008EA8C4 /* GiftFlow.swift in Sources */,
+				F2D2FBBD265E0E5F0010731F /* KeyboardTopButton.swift in Sources */,
 				F2A464BB262E65F300D4238E /* Token.swift in Sources */,
 				F2A464A1262DA07900D4238E /* Network.swift in Sources */,
+				F279C6352643ED9F008EA8C4 /* SplashViewController.swift in Sources */,
 				F2350A7426340B9E000C523B /* AuthAPI.swift in Sources */,
+				F2D2FBC0265E18450010731F /* AuthCodeResponse.swift in Sources */,
 				F2A46499262DA07200D4238E /* BaseAPI.swift in Sources */,
+				F279C6232643CF51008EA8C4 /* TabBarFlow.swift in Sources */,
 				F2A464A7262DA1A200D4238E /* RequestLoggingPlugin.swift in Sources */,
+				F279C61D2643CF19008EA8C4 /* AppFlow.swift in Sources */,
+				F279C61F2643CF2C008EA8C4 /* IntroFlow.swift in Sources */,
+				F279C6512643FC34008EA8C4 /* HapticFeedback.swift in Sources */,
+				F279C65C26440A65008EA8C4 /* PrivacyPolicyViewController.swift in Sources */,
+				F279C62B2643CFCB008EA8C4 /* NotificationFlow.swift in Sources */,
 				F22ACDA6262FE47E0070781D /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
