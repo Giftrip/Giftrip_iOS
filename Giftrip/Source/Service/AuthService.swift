@@ -7,6 +7,7 @@
 
 import RxSwift
 import KeychainAccess
+import CryptoSwift
 
 protocol AuthServiceType {
     var currentToken: Token? { get }
@@ -23,7 +24,7 @@ final class AuthService: AuthServiceType {
     
     fileprivate let network: Network<AuthAPI>
     
-    fileprivate let keychain = Keychain(service: "com.flash21.Giftrip")
+    fileprivate let keychain = Keychain(service: Bundle.main.bundleIdentifier ?? "com.flash21.Giftrip")
     private(set) var currentToken: Token?
     
     let disposeBag = DisposeBag()
@@ -34,7 +35,7 @@ final class AuthService: AuthServiceType {
     }
     
     func login(_ phoneNumber: String, _ password: String) -> Observable<Void> {
-        return network.requestObject(.login(phoneNumber, password), type: Token.self)
+        return network.requestObject(.login(phoneNumber, password.sha512()), type: Token.self)
             .asObservable()
             .do(onNext: { [weak self] response in
                 try self?.saveToken(response)
@@ -44,7 +45,11 @@ final class AuthService: AuthServiceType {
     }
     
     func register(_ phoneNumber: String, _ code: String, _ password: String, _ name: String, _ birth: Date) -> Observable<Void> {
-        return network.requestObject(.register(phoneNumber, code, password, name, birth), type: Token.self)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+        let date = dateFormatter.string(from: birth)
+        
+        return network.requestObject(.register(phoneNumber, code, password.sha512(), name, date), type: Token.self)
             .asObservable()
             .do(onNext: { [weak self] response in
                 try self?.saveToken(response)

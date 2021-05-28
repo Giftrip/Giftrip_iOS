@@ -33,7 +33,7 @@ final class IntroViewReactor: Reactor, Stepper {
             return .empty()
             
         case .register:
-            self.steps.accept(GiftripStep.registerPhoneIsRequired)
+            self.steps.accept(GiftripStep.registerInfoIsRequired)
             return .empty()
             
         case .privacyPolicy:

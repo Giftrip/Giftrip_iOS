@@ -1,18 +1,17 @@
 //
-//  RegisterPhoneViewController.swift
+//  RegisterAuthCodeViewController.swift
 //  Giftrip
 //
-//  Created by 강민석 on 2021/05/06.
+//  Created by 강민석 on 2021/05/27.
 //
 
 import UIKit
 
 import ReactorKit
-import SwiftMessages
 
-final class RegisterPhoneViewController: BaseViewController, View {
+final class RegisterAuthCodeViewController: BaseViewController, View {
     
-    typealias Reactor = RegisterPhoneViewReactor
+    typealias Reactor = RegisterAuthCodeViewReactor
     
     struct Metric {
         static let titleLabelLeftRight = 20.f
@@ -30,30 +29,25 @@ final class RegisterPhoneViewController: BaseViewController, View {
     struct Font {
         static let titleLabel = UIFont.systemFont(ofSize: 23, weight: .semibold)
     }
-    
+
     // MARK: - Properties
-    
+
     // MARK: - UI
     fileprivate let titleLabel = UILabel().then {
-        $0.text = "전화번호와\n비밀번호를 입력해주세요"
+        $0.text = "인증번호가 일치하면\n회원가입이 완료됩니다"
         $0.font = Font.titleLabel
         $0.numberOfLines = 0
     }
     
-    fileprivate let phoneNumberTextField = GiftripTextField().then {
-        $0.textField.placeholder = "전화번호"
-        $0.textField.keyboardType = .phonePad
+    fileprivate let authCodeTextField = GiftripTextField().then {
+        $0.textField.placeholder = "인증번호"
+        $0.icon.image = UIImage()
     }
     
-    fileprivate let passwordTextField = GiftripTextField().then {
-        $0.textField.placeholder = "비밀번호"
-        $0.textField.isSecureTextEntry = true
+    fileprivate let registerButton = GiftripPlainButton().then {
+        $0.setTitle("회원가입", for: .normal)
     }
-    
-    fileprivate let nextButton = GiftripPlainButton().then {
-        $0.setTitle("다음", for: .normal)
-    }
-    
+
     // MARK: - Initializing
     init(
         reactor: Reactor
@@ -61,22 +55,23 @@ final class RegisterPhoneViewController: BaseViewController, View {
         defer { self.reactor = reactor }
         super.init()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.addSubview(self.titleLabel)
-        self.view.addSubview(self.phoneNumberTextField)
-        self.view.addSubview(self.passwordTextField)
-        self.view.addSubview(self.nextButton)
+        self.view.addSubview(self.authCodeTextField)
+        self.view.addSubview(self.registerButton)
         
     }
     override func setupConstraints() {
+        super.setupConstraints()
+        
         self.titleLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(self.view.safeAreaLayoutGuide).offset(Metric.titleLabelTop)
@@ -84,7 +79,7 @@ final class RegisterPhoneViewController: BaseViewController, View {
             make.right.equalToSuperview().offset(-Metric.titleLabelLeftRight)
         }
         
-        self.phoneNumberTextField.snp.makeConstraints { make in
+        self.authCodeTextField.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(self.titleLabel.snp.bottom).offset(Metric.textFieldTop)
             make.left.equalToSuperview().offset(Metric.textFieldLeftRight)
@@ -92,15 +87,7 @@ final class RegisterPhoneViewController: BaseViewController, View {
             make.height.equalTo(Metric.textFieldHeight)
         }
         
-        self.passwordTextField.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(self.phoneNumberTextField.snp.bottom).offset(Metric.textFieldTop)
-            make.left.equalToSuperview().offset(Metric.textFieldLeftRight)
-            make.right.equalToSuperview().offset(-Metric.textFieldLeftRight)
-            make.height.equalTo(Metric.textFieldHeight)
-        }
-        
-        self.nextButton.snp.makeConstraints { make in
+        self.registerButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.left.equalToSuperview().offset(Metric.buttonLeftRight)
             make.right.equalToSuperview().offset(-Metric.buttonLeftRight)
@@ -108,62 +95,42 @@ final class RegisterPhoneViewController: BaseViewController, View {
             make.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-Metric.buttonBottom)
         }
     }
-    
+
     // MARK: - Configuring
     func bind(reactor: Reactor) {
         // MARK: - input
-        self.phoneNumberTextField.textField.rx.text.orEmpty
-            .map(Reactor.Action.setPhoneNumber)
+        self.authCodeTextField.textField.rx.text.orEmpty
+            .map(Reactor.Action.setAuthCode)
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
-        self.passwordTextField.textField.rx.text.orEmpty
-            .map(Reactor.Action.setPassword)
-            .bind(to: reactor.action)
-            .disposed(by: disposeBag)
-        
-        self.nextButton.rx.tap
-            .map { Reactor.Action.next }
+        self.registerButton.rx.tap
+            .map { Reactor.Action.register }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
         // MARK: - output
-        let phoneValidation = reactor.state
-            .map { $0.phoneNumberValidation }
-            .distinctUntilChanged()
-        
-        let passwordValidation = reactor.state
-            .map { $0.passwordValidation }
-            .distinctUntilChanged()
-        
-        phoneValidation
-            .bind(to: self.phoneNumberTextField.rx.error)
+        reactor.state.map { $0.authCodeValidation }
+            .bind(to: self.registerButton.rx.isEnabled)
             .disposed(by: disposeBag)
         
-        passwordValidation
-            .bind(to: self.passwordTextField.rx.error)
+        reactor.state.map { $0.isLoading }
+            .bind(to: self.activityIndicatorView.rx.isAnimating)
             .disposed(by: disposeBag)
         
-        Observable.combineLatest(
-            phoneValidation,
-            passwordValidation
-        ).map { $0 && $1 }
-        .bind(to: self.nextButton.rx.isEnabled )
-        .disposed(by: disposeBag)
-        
-        reactor.state.map { $0.authCodeResponse }
+        reactor.state.map { $0.successMessage }
             .filterNil()
             .distinctUntilChanged()
-            .subscribe(onNext: { response in
-                SwiftMessages.show(config: Message.timerConfig, view: Message.timerView(response.expireAt))
+            .subscribe(onNext: { [weak self] message in
+                self?.messageManager.show(config: Message.bottomConfig, view: Message.successView(message))
             })
             .disposed(by: disposeBag)
         
         reactor.state.map { $0.error }
             .filterNil()
             .distinctUntilChanged()
-            .subscribe(onNext: { error in
-                SwiftMessages.show(config: Message.bottomConfig, view: Message.faildView(error.message))
+            .subscribe(onNext: { [weak self] error in
+                self?.messageManager.show(config: Message.bottomConfig, view: Message.faildView(error.message))
             })
             .disposed(by: disposeBag)
     }

@@ -27,10 +27,10 @@ struct AuthPlugin: PluginType {
             return request
         }
         
-        if token.refreshToken!.expiredAt > Date() {
+        if token.refreshToken!.expiredAt < Date() {
             authService.logout()
             return request // logout후 request 요청을 중단(취소)할 방법을 찾아야함
-        } else if token.accessToken.expiredAt > Date() {
+        } else if token.accessToken.expiredAt < Date() {
             authService.renewalToken()
             token = authService.currentToken!
         }

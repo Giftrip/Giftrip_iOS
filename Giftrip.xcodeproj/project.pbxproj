@@ -66,6 +66,9 @@
 		F2D2FBC0265E18450010731F /* AuthCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBBF265E18450010731F /* AuthCodeResponse.swift */; };
 		F2D2FBC3265E2F3A0010731F /* HandleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBC2265E2F3A0010731F /* HandleResponse.swift */; };
 		F2D2FBC5265E2FB50010731F /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBC4265E2FB50010731F /* ErrorResponse.swift */; };
+		F2D2FBC7265F1DCF0010731F /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBC6265F1DCF0010731F /* DateFormatter.swift */; };
+		F2D2FBCA265F35800010731F /* RegisterAuthCodeViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBC8265F35800010731F /* RegisterAuthCodeViewReactor.swift */; };
+		F2D2FBCB265F35800010731F /* RegisterAuthCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBC9265F35800010731F /* RegisterAuthCodeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +158,9 @@
 		F2D2FBBF265E18450010731F /* AuthCodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeResponse.swift; sourceTree = "<group>"; };
 		F2D2FBC2265E2F3A0010731F /* HandleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleResponse.swift; sourceTree = "<group>"; };
 		F2D2FBC4265E2FB50010731F /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		F2D2FBC6265F1DCF0010731F /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		F2D2FBC8265F35800010731F /* RegisterAuthCodeViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAuthCodeViewReactor.swift; sourceTree = "<group>"; };
+		F2D2FBC9265F35800010731F /* RegisterAuthCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAuthCodeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,10 +398,12 @@
 		F279C62F2643EB4E008EA8C4 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				F279C6422643EE0C008EA8C4 /* RegisterPhoneViewReactor.swift */,
-				F279C6432643EE0C008EA8C4 /* RegisterPhoneViewController.swift */,
 				F279C6462643EE17008EA8C4 /* RegisterInfoViewReactor.swift */,
 				F279C6472643EE17008EA8C4 /* RegisterInfoViewController.swift */,
+				F279C6422643EE0C008EA8C4 /* RegisterPhoneViewReactor.swift */,
+				F279C6432643EE0C008EA8C4 /* RegisterPhoneViewController.swift */,
+				F2D2FBC8265F35800010731F /* RegisterAuthCodeViewReactor.swift */,
+				F2D2FBC9265F35800010731F /* RegisterAuthCodeViewController.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -460,6 +468,7 @@
 		F2D2FBB8265E0C230010731F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				F2D2FBC6265F1DCF0010731F /* DateFormatter.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -740,9 +749,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2D2FBC3265E2F3A0010731F /* HandleResponse.swift in Sources */,
+				F2D2FBCA265F35800010731F /* RegisterAuthCodeViewReactor.swift in Sources */,
 				F279C6252643CF5D008EA8C4 /* HomeFlow.swift in Sources */,
 				F2D2FBB7265DED200010731F /* UIImageView+Kingfisher.swift in Sources */,
 				F2A464D0262E76D600D4238E /* AppServices.swift in Sources */,
+				F2D2FBC7265F1DCF0010731F /* DateFormatter.swift in Sources */,
 				F279C6492643EE17008EA8C4 /* RegisterInfoViewController.swift in Sources */,
 				F22ACDE026314D940070781D /* UserService.swift in Sources */,
 				F279C6572644066B008EA8C4 /* GiftripPlainButton.swift in Sources */,
@@ -763,6 +774,7 @@
 				F2A46432262D753F00D4238E /* BaseViewController.swift in Sources */,
 				F22ACDB8263022180070781D /* User.swift in Sources */,
 				F2A464C0262E682300D4238E /* ModelType.swift in Sources */,
+				F2D2FBCB265F35800010731F /* RegisterAuthCodeViewController.swift in Sources */,
 				F2D2FBC5265E2FB50010731F /* ErrorResponse.swift in Sources */,
 				F279C6532643FC48008EA8C4 /* Message.swift in Sources */,
 				F279C65E26440CF2008EA8C4 /* GiftripTextField.swift in Sources */,

@@ -32,14 +32,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         coordinator.rx.willNavigate.subscribe(onNext: { (flow, step) in
             print("❇️ will navigate to flow=\(flow) and step=\(step)")
         }).disposed(by: self.disposeBag)
-
+        
         coordinator.rx.didNavigate.subscribe(onNext: { (flow, step) in
             print("✅ did navigate to flow=\(flow) and step=\(step)")
         }).disposed(by: self.disposeBag)
         
         let appFlow = AppFlow(window: window, services: appServices)
         
-        self.coordinator.coordinate(flow: appFlow, with: AppStepper(appServices.userService))
+        let nextStepper = OneStepper(withSingleStep: GiftripStep.splashIsRequired)
+        self.coordinator.coordinate(flow: appFlow, with: nextStepper)
         
         return true
     }

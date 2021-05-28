@@ -8,11 +8,13 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SwiftMessages
 
 class BaseViewController: UIViewController {
     
     // MARK: - Properties
     let activityIndicatorView = UIActivityIndicatorView(style: .large)
+    let messageManager = SwiftMessages()
     
     // MARK: - Initializing
     init() {
@@ -60,7 +62,7 @@ class BaseViewController: UIViewController {
     }
 
     func setupStyle() {
-        self.activityIndicatorView.color = .systemBackground
+        self.activityIndicatorView.color = .black
         let backItem = UIBarButtonItem()
         backItem.title = ""
         backItem.tintColor = .systemGray

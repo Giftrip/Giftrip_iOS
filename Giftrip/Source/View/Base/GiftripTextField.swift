@@ -18,7 +18,7 @@ class GiftripTextField: UIView {
         static let textFieldTop = 10.f
         static let textFieldLeftRight = 15.f
         static let iconRight = 12.f
-        static let iconTopBottom = 15.f
+        static let iconSize = 20.f
     }
     
     fileprivate struct Font {
@@ -60,8 +60,7 @@ class GiftripTextField: UIView {
         self.icon.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.right.equalToSuperview().offset(-Metric.iconRight)
-            make.top.equalToSuperview().offset(Metric.iconTopBottom)
-            make.bottom.equalToSuperview().offset(-Metric.iconTopBottom)
+            make.width.height.equalTo(Metric.iconSize)
         }
         
         self.textField.snp.makeConstraints { make in

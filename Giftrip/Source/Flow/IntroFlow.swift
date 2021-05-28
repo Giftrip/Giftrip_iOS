@@ -16,6 +16,9 @@ final class IntroFlow: Flow {
         return self.rootViewController
     }
     
+    var name: String = ""
+    var birth: Date = Date()
+    
     private lazy var rootViewController = UINavigationController().then {
         $0.navigationBar.setBackgroundImage(UIImage(), for: .default)
         $0.navigationBar.shadowImage = UIImage()
@@ -40,20 +43,27 @@ final class IntroFlow: Flow {
         case .introIsRequired:
             return navigateToIntro()
             
+        // 개인정보처리방침 화면
         case .privacyPolicyIsRequired:
             return navigateToPrivacyPolicy()
             
         // 로그인
         case .loginIsRequired:
             return navigateToLogin()
-            
-        // 회원가입 - 전화번호
-        case .registerPhoneIsRequired:
-            return navigateToRegisterPhone()
-            
-        // 회원가입 - 정보
+        
+        // 회원가입 - 간단 정보
         case .registerInfoIsRequired:
             return navigateToRegisterInfo()
+            
+        // 회원가입 - 전화번호, 비밀번호
+        case let .registerPhoneIsRequired(name, birth):
+            self.name = name
+            self.birth = birth
+            return navigateToRegisterPhone()
+            
+        // 회원가입 - 인증번호
+        case let .registerAuthCodeIsRequired(phone, password):
+            return navigateToRegisterAuthCode(phone, password)
             
         // 메인화면
         case .mainTabBarIsRequired:
@@ -96,6 +106,14 @@ extension IntroFlow {
         return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: reactor))
     }
     
+    private func navigateToRegisterInfo() -> FlowContributors {
+        let reactor = RegisterInfoViewReactor()
+        let viewController = RegisterInfoViewController(reactor: reactor)
+        
+        self.rootViewController.pushViewController(viewController, animated: true)
+        return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: reactor))
+    }
+    
     private func navigateToRegisterPhone() -> FlowContributors {
         let reactor = RegisterPhoneViewReactor(authService: self.services.authService)
         let viewController = RegisterPhoneViewController(reactor: reactor)
@@ -104,10 +122,16 @@ extension IntroFlow {
         return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: reactor))
     }
     
-    private func navigateToRegisterInfo() -> FlowContributors {
-        let reactor = RegisterInfoViewReactor()
-//        let reactor = RegisterInfoViewReactor(authService: self.authService, userService: self.userService)
-        let viewController = RegisterInfoViewController(reactor: reactor)
+    private func navigateToRegisterAuthCode(_ phone: String, _ password: String) -> FlowContributors {
+        let reactor = RegisterAuthCodeViewReactor(
+            authService: self.services.authService,
+            userService: self.services.userService,
+            name: self.name,
+            birth: self.birth,
+            phone: phone,
+            password: password
+        )
+        let viewController = RegisterAuthCodeViewController(reactor: reactor)
         
         self.rootViewController.pushViewController(viewController, animated: true)
         return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: reactor))

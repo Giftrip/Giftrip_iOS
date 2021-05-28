@@ -49,7 +49,8 @@ final class AppFlow: Flow {
 
 extension AppFlow {
     private func navigateToSplash() -> FlowContributors {
-        let viewController = SplashViewController(reactor: SplashViewReactor())
+        let reactor = SplashViewReactor(authService: self.services.authService, userService: self.services.userService)
+        let viewController = SplashViewController(reactor: reactor)
         
         self.window.rootViewController = viewController
         
@@ -58,7 +59,7 @@ extension AppFlow {
                           options: [.transitionCrossDissolve],
                           animations: nil,
                           completion: nil)
-        return .none
+        return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: reactor))
     }
     
     private func navigateToIntro() -> FlowContributors {
@@ -93,34 +94,5 @@ extension AppFlow {
         
         let nextStep = OneStepper(withSingleStep: GiftripStep.mainTabBarIsRequired)
         return .one(flowContributor: .contribute(withNextPresentable: tabBarFlow, withNextStepper: nextStep))
-    }
-}
-
-/// User 정보 확인후 화면 결정
-class AppStepper: Stepper {
-
-    let userService: UserServiceType
-    
-    let disposeBag = DisposeBag()
-    let steps = PublishRelay<Step>()
-
-    var initialStep: Step {
-        return GiftripStep.splashIsRequired
-    }
-    
-    init(_ userService: UserServiceType) {
-        self.userService = userService
-    }
-
-    // 사용자 정보 받아오기 성공시 실행되는 콜백 메서드
-    func readyToEmitSteps() {
-        self.userService.fetchUser()
-            .asObservable()
-            .map { true }
-            .catchErrorJustReturn(false)
-            .map { $0 ? GiftripStep.mainTabBarIsRequired : GiftripStep.introIsRequired }
-//            .map { $0 ? GiftripStep.introIsRequired : GiftripStep.mainTabBarIsRequired } // 메인 테스트용
-            .bind(to: self.steps)
-            .disposed(by: disposeBag)
     }
 }

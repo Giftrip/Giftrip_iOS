@@ -28,7 +28,7 @@ enum AuthAPI {
     case refresh(_ refreshToken: String)
     
     /// 회원가입
-    case register(_ phoneNumber: String, _ code: String, _ password: String, _ name: String, _ birth: Date)
+    case register(_ phoneNumber: String, _ code: String, _ password: String, _ name: String, _ birth: String)
 }
 
 extension AuthAPI: BaseAPI {
@@ -68,41 +68,56 @@ extension AuthAPI: BaseAPI {
     }
     
     var headers: [String: String]? {
-        return ["Accept": "application/json"]
+        return ["Content-Type": "application/json"]
     }
     
     var parameters: [String: Any]? {
-        var params: [String: Any] = [:]
         switch self {
         case let .changePwByCode(phoneNumber, code, password):
-            params["phoneNumber"] = phoneNumber
-            params["code"] = code
-            params["pw"] = password
+            return [
+                "phoneNumber": phoneNumber,
+                "code": code,
+                "pw": password
+            ]
             
         case let .createAuthCode(phoneNumber):
-            params["phoneNumber"] = phoneNumber
+            return [
+                "phoneNumber": phoneNumber
+            ]
             
         case let .login(phoneNumber, password):
-            params["phoneNumber"] = phoneNumber
-            params["pw"] = password
+            return [
+                "phoneNumber": phoneNumber,
+                "pw": password
+            ]
             
         case let .refresh(refreshToken):
-            params["refreshToken"] = refreshToken
+            return [
+                "refreshToken": refreshToken
+            ]
             
         case let .register(phoneNumber, code, password, name, birth):
-            params["phoneNumber"] = phoneNumber
-            params["code"] = code
-            params["pw"] = password
-            params["name"] = name
-            params["birth"] = birth
+            return [
+                "phoneNumber": phoneNumber,
+                "code": code,
+                "pw": password,
+                "name": name,
+                "birth": birth
+            ]
             
-        default: break
+        default:
+            return nil
         }
-        return params
     }
     
     public var parameterEncoding: ParameterEncoding {
-        return URLEncoding.default
+        switch self {
+        case .createAuthCode:
+            return URLEncoding.queryString
+            
+        default:
+            return JSONEncoding.default
+        }
     }
     
     var task: Task {

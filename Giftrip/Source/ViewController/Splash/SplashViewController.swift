@@ -82,8 +82,18 @@ final class SplashViewController: BaseViewController, View {
     // MARK: - Configuring
     func bind(reactor: Reactor) {
         // MARK: - input
+        Observable.just(Reactor.Action.branchView)
+            .delay(.seconds(1), scheduler: MainScheduler.instance)
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
         
         // MARK: - output
-        
+        reactor.state.map { $0.error }
+            .distinctUntilChanged()
+            .filterNil()
+            .subscribe(onNext: { [weak self] error in
+                self?.messageManager.show(view: Message.faildView(error.message))
+            })
+            .disposed(by: disposeBag)
     }
 }

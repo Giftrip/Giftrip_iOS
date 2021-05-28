@@ -7,8 +7,6 @@
 
 import RxFlow
 
-import RxFlow
-
 enum GiftripStep: Step {
     
     case popViewController
@@ -22,8 +20,9 @@ enum GiftripStep: Step {
     case introIsRequired
     case privacyPolicyIsRequired
     case loginIsRequired
-    case registerPhoneIsRequired
     case registerInfoIsRequired
+    case registerPhoneIsRequired(name: String, birth: Date)
+    case registerAuthCodeIsRequired(phone: String, password: String)
     
     // MARK: - Home
     case homeIsRequired

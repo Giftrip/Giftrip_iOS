@@ -18,8 +18,9 @@ final class RegisterInfoViewController: BaseViewController, View {
         static let titleLabelLeftRight = 20.f
         static let titleLabelTop = 130.f
         
-        static let stackViewLeftRight = 20.f
-        static let stackViewTop = 20.f
+        static let textFieldLeftRight = 20.f
+        static let textFieldTop = 30.f
+        static let textFieldHeight = 50.f
         
         static let buttonLeftRight = 20.f
         static let buttonHeight = 50.f
@@ -33,14 +34,6 @@ final class RegisterInfoViewController: BaseViewController, View {
     // MARK: - Properties
 
     // MARK: - UI
-    let stackView = UIStackView().then {
-        $0.axis = .vertical
-        $0.spacing = 30
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.alignment = .fill
-        $0.distribution = .fillEqually
-    }
-    
     let titleLabel = UILabel().then {
         $0.text = "회원가입을 위해\n간단한 정보를 입력해주세요"
         $0.font = Font.titleLabel
@@ -51,20 +44,25 @@ final class RegisterInfoViewController: BaseViewController, View {
         $0.textField.placeholder = "이름"
     }
     
-    let birthTextField = GiftripTextField().then {
+    let doneButton = KeyboardTopButton()
+    let datePicker = UIDatePicker(
+        frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 216)
+    ).then {
+        $0.datePickerMode = .date
+    }
+    lazy var birthTextField = GiftripTextField().then {
         $0.textField.placeholder = "생년월일"
-    }
-    
-    let passwordTextField = GiftripTextField().then {
-        $0.textField.placeholder = "비밀번호"
-    }
-    
-    let authCodeTextField = GiftripTextField().then {
-        $0.textField.placeholder = "인증번호"
+        
+        if #available(iOS 14, *) {
+            datePicker.preferredDatePickerStyle = .wheels
+            datePicker.sizeToFit()
+        }
+        $0.textField.inputView = datePicker
+        $0.textField.inputAccessoryView = doneButton
     }
     
     let nextButton = GiftripPlainButton().then {
-        $0.setTitle("회원가입", for: .normal)
+        $0.setTitle("다음", for: .normal)
     }
 
     // MARK: - Initializing
@@ -84,13 +82,11 @@ final class RegisterInfoViewController: BaseViewController, View {
         super.viewDidLoad()
         
         self.view.addSubview(self.titleLabel)
-        self.view.addSubview(self.stackView)
-        self.stackView.addArrangedSubview(self.nameTextField)
-        self.stackView.addArrangedSubview(self.birthTextField)
-        self.stackView.addArrangedSubview(self.passwordTextField)
-        self.stackView.addArrangedSubview(self.authCodeTextField)
+        self.view.addSubview(self.nameTextField)
+        self.view.addSubview(self.birthTextField)
         self.view.addSubview(self.nextButton)
     }
+    
     override func setupConstraints() {
         self.titleLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -99,11 +95,20 @@ final class RegisterInfoViewController: BaseViewController, View {
             make.right.equalToSuperview().offset(-Metric.titleLabelLeftRight)
         }
         
-        self.stackView.snp.makeConstraints { make in
-            make.top.equalTo(self.titleLabel.snp.bottom).offset(Metric.stackViewTop)
-            make.left.equalToSuperview().offset(Metric.stackViewLeftRight)
-            make.right.equalToSuperview().offset(-Metric.stackViewLeftRight)
-            make.height.equalTo(300)
+        self.nameTextField.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(self.titleLabel.snp.bottom).offset(Metric.textFieldTop)
+            make.left.equalToSuperview().offset(Metric.textFieldLeftRight)
+            make.right.equalToSuperview().offset(-Metric.textFieldLeftRight)
+            make.height.equalTo(Metric.textFieldHeight)
+        }
+        
+        self.birthTextField.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(self.nameTextField.snp.bottom).offset(Metric.textFieldTop)
+            make.left.equalToSuperview().offset(Metric.textFieldLeftRight)
+            make.right.equalToSuperview().offset(-Metric.textFieldLeftRight)
+            make.height.equalTo(Metric.textFieldHeight)
         }
         
         self.nextButton.snp.makeConstraints { make in
@@ -118,8 +123,37 @@ final class RegisterInfoViewController: BaseViewController, View {
     // MARK: - Configuring
     func bind(reactor: Reactor) {
         // MARK: - input
+        self.nameTextField.textField.rx.text.orEmpty
+            .map(Reactor.Action.setName)
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        self.doneButton.rx.tap
+            .map {
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateStyle = .medium
+                let date = self.datePicker.date
+                self.birthTextField.textField.text = dateFormatter.string(from: date)
+                self.view.endEditing(true)
+                return Reactor.Action.setBirthDate(date)
+            }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        self.nextButton.rx.tap
+            .map { Reactor.Action.next }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
         
         // MARK: - output
+        reactor.state.map { $0.nameValidation }
+            .distinctUntilChanged()
+            .bind(to: self.nameTextField.rx.error)
+            .disposed(by: disposeBag)
         
+        reactor.state.map { $0.birthDateValidation }
+            .distinctUntilChanged()
+            .bind(to: self.birthTextField.rx.error)
+            .disposed(by: disposeBag)
     }
 }
