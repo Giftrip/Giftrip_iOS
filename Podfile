@@ -35,6 +35,7 @@ target 'Giftrip' do
   
   # Security
   pod 'KeychainAccess'
+  pod 'CryptoSwift'
 
   target 'GiftripTests' do
     inherit! :complete
