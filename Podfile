@@ -18,6 +18,7 @@ target 'Giftrip' do
   pod 'RxDataSources'
   pod 'RxViewController'
   pod 'RxOptional'
+  pod 'RxGesture'
   
   # DB
   pod 'RealmSwift'
