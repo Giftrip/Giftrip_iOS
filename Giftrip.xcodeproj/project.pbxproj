@@ -272,7 +272,6 @@
 				F2618575262D54E400EA707C /* Model */,
 				F2618572262D54CB00EA707C /* Service */,
 				F2618573262D54D300EA707C /* Network */,
-				F2D2FBB8265E0C230010731F /* Extension */,
 				F2618574262D54DD00EA707C /* Util */,
 			);
 			path = Source;
@@ -342,6 +341,7 @@
 		F2618574262D54DD00EA707C /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				F2D2FBC6265F1DCF0010731F /* DateFormatter.swift */,
 				F279C64A2643FBE2008EA8C4 /* CGFloatLiteral.swift */,
 				F279C64C2643FBFF008EA8C4 /* UIViewControllerPreview.swift */,
 				F279C64E2643FC17008EA8C4 /* UIViewPreview.swift */,
@@ -463,14 +463,6 @@
 				F2A464B4262DA6F600D4238E /* AuthPlugin.swift */,
 			);
 			path = Plugin;
-			sourceTree = "<group>";
-		};
-		F2D2FBB8265E0C230010731F /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				F2D2FBC6265F1DCF0010731F /* DateFormatter.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		F2D2FBBB265E0E480010731F /* Base */ = {
