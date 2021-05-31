@@ -64,6 +64,7 @@ class Message {
             view.configureContent(title: "인증번호 만료까지 \(timeInterval)초 ", body: "")
             if timeInterval <= 0 {
                 timer.invalidate()
+                SwiftMessages.hideAll()
             }
         }
         

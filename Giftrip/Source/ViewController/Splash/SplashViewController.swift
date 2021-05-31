@@ -88,11 +88,9 @@ final class SplashViewController: BaseViewController, View {
             .disposed(by: disposeBag)
         
         // MARK: - output
-        reactor.state.map { $0.error }
-            .distinctUntilChanged()
-            .filterNil()
+        reactor.errorRelay
             .subscribe(onNext: { [weak self] error in
-                self?.messageManager.show(view: Message.faildView(error.message))
+                self?.messageManager.show(config: Message.bottomConfig, view: Message.faildView(error.localizedDescription))
             })
             .disposed(by: disposeBag)
     }

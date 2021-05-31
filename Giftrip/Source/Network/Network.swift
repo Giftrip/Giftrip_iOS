@@ -9,11 +9,18 @@ import RxSwift
 import Moya
 
 class Network<API: TargetType>: MoyaProvider<API> {
-    init(plugins: [PluginType] = []) {
+    init(
+        isHandleToken: Bool = false,
+        plugins: [PluginType] = []
+    ) {
         let session = MoyaProvider<API>.defaultAlamofireSession()
         session.sessionConfiguration.timeoutIntervalForRequest = 10
         
-        super.init(session: session, plugins: plugins)
+        if isHandleToken {
+            super.init(requestClosure: Self.endpointResolver(), session: session, plugins: plugins)
+        } else {
+            super.init(session: session, plugins: plugins)
+        }
     }
     
     func request(_ api: API) -> Single<Response> {

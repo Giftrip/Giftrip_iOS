@@ -14,8 +14,9 @@ protocol AuthServiceType {
     
     func login(_ phoneNumber: String, _ password: String) -> Observable<Void>
     func register(_ phoneNumber: String, _ code: String, _ password: String, _ name: String, _ birth: Date) -> Observable<Void>
-    func renewalToken()
     func logout()
+    
+    func saveToken(_ token: Token) throws
     
     func createAuthCode(_ phoneNumber: String) -> Single<AuthCodeResponse>
 }
@@ -27,8 +28,6 @@ final class AuthService: AuthServiceType {
     fileprivate let keychain = Keychain(service: Bundle.main.bundleIdentifier ?? "com.flash21.Giftrip")
     private(set) var currentToken: Token?
     
-    let disposeBag = DisposeBag()
-    
     init() {
         self.network = Network<AuthAPI>(plugins: [RequestLoggingPlugin()])
         self.currentToken = self.loadToken()
@@ -39,7 +38,6 @@ final class AuthService: AuthServiceType {
             .asObservable()
             .do(onNext: { [weak self] response in
                 try self?.saveToken(response)
-                self?.currentToken = response
             })
             .map { _ in }
     }
@@ -53,18 +51,8 @@ final class AuthService: AuthServiceType {
             .asObservable()
             .do(onNext: { [weak self] response in
                 try self?.saveToken(response)
-                self?.currentToken = response
             })
             .map { _ in }
-    }
-    
-    func renewalToken() {
-        let refreshToken = self.loadToken()?.refreshToken?.token
-        return network.requestObject(.refresh(refreshToken ?? ""), type: Token.self)
-            .subscribe(onSuccess: { [weak self] token in
-                try? self?.saveToken(token)
-                self?.currentToken = token
-            }).disposed(by: disposeBag)
     }
     
     func logout() {
@@ -76,7 +64,9 @@ final class AuthService: AuthServiceType {
         return network.requestObject(.createAuthCode(phoneNumber), type: AuthCodeResponse.self)
     }
     
-    fileprivate func saveToken(_ token: Token) throws {
+    func saveToken(_ token: Token) throws {
+        self.currentToken = token
+        
         let jsonEncoder: JSONEncoder = JSONEncoder()
         
         let accessTokenData = try jsonEncoder.encode(token.accessToken)

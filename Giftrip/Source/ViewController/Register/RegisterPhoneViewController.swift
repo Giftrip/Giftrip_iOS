@@ -77,6 +77,8 @@ final class RegisterPhoneViewController: BaseViewController, View {
         
     }
     override func setupConstraints() {
+        super.setupConstraints()
+        
         self.titleLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(self.view.safeAreaLayoutGuide).offset(Metric.titleLabelTop)
@@ -154,17 +156,22 @@ final class RegisterPhoneViewController: BaseViewController, View {
         reactor.state.map { $0.authCodeResponse }
             .filterNil()
             .distinctUntilChanged()
-            .subscribe(onNext: { response in
-                SwiftMessages.show(config: Message.timerConfig, view: Message.timerView(response.expireAt))
+            .subscribe(onNext: { [weak self] response in
+                self?.messageManager.show(config: Message.timerConfig, view: Message.timerView(response.expireAt))
             })
             .disposed(by: disposeBag)
         
         reactor.state.map { $0.error }
             .filterNil()
             .distinctUntilChanged()
-            .subscribe(onNext: { error in
-                SwiftMessages.show(config: Message.bottomConfig, view: Message.faildView(error.message))
+            .subscribe(onNext: { [weak self] error in
+                self?.messageManager.show(config: Message.bottomConfig, view: Message.faildView(error.message))
             })
+            .disposed(by: disposeBag)
+        
+        reactor.state.map { $0.isLoading }
+            .distinctUntilChanged()
+            .bind(to: self.activityIndicatorView.rx.isAnimating)
             .disposed(by: disposeBag)
     }
 }

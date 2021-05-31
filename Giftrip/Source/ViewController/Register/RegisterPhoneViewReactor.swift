@@ -26,6 +26,7 @@ final class RegisterPhoneViewReactor: Reactor, Stepper {
         case validPassword(String)
         case setAuthCodeResponse(AuthCodeResponse)
         case setError(Error)
+        case setLoading(Bool)
     }
     
     struct State {
@@ -37,6 +38,8 @@ final class RegisterPhoneViewReactor: Reactor, Stepper {
         
         var authCodeResponse: AuthCodeResponse?
         var error: ErrorResponse?
+        
+        var isLoading: Bool = false
     }
     
     let initialState: State = State()
@@ -56,7 +59,10 @@ final class RegisterPhoneViewReactor: Reactor, Stepper {
             return Observable.just(Mutation.validPassword(password))
             
         case .next:
-            return self.authService.createAuthCode(self.currentState.phoneNumber)
+            return Observable.concat([
+                Observable.just(Mutation.setLoading(true)),
+                
+                self.authService.createAuthCode(self.currentState.phoneNumber)
                 .asObservable()
                 .map { response in
                     self.steps.accept(GiftripStep.registerAuthCodeIsRequired(phone: self.currentState.phoneNumber, password: self.currentState.password))
@@ -64,7 +70,10 @@ final class RegisterPhoneViewReactor: Reactor, Stepper {
                 }
                 .catchError { error in
                     return .just(Mutation.setError(error))
-                }
+                },
+                
+                Observable.just(Mutation.setLoading(false))
+            ])
         }
     }
     
@@ -87,6 +96,9 @@ final class RegisterPhoneViewReactor: Reactor, Stepper {
             if let error = error as? ErrorResponse {
                 state.error = error
             }
+            
+        case let .setLoading(isLoading):
+            state.isLoading = isLoading
         }
         
         return state

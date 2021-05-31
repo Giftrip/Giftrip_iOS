@@ -19,16 +19,18 @@ final class SplashViewReactor: Reactor, Stepper {
     }
 
     enum Mutation {
-        case setError(Error)
+        
     }
 
     struct State {
-        var error: ErrorResponse?
+        
     }
 
     let initialState: State = State()
     fileprivate let authService: AuthServiceType
     fileprivate let userService: UserServiceType
+    
+    let errorRelay = PublishRelay<Error>()
 
     init(
         authService: AuthServiceType,
@@ -48,28 +50,12 @@ final class SplashViewReactor: Reactor, Stepper {
             
             return self.userService.fetchUser()
                 .asObservable()
-                .map { true }
-                .catchErrorJustReturn(false)
-                .do { isLoggedIn in
-                    if isLoggedIn {
-                        self.steps.accept(GiftripStep.mainTabBarIsRequired)
-                    } else {
-                        self.steps.accept(GiftripStep.introIsRequired)
-                    }
-                }.flatMap { _ in Observable.empty() }
+                .do(onNext: {
+                    self.steps.accept(GiftripStep.mainTabBarIsRequired)
+                }, onError: { error in
+                    self.steps.accept(GiftripStep.introIsRequired)
+                    self.errorRelay.accept(error)
+                }).flatMap { _ in Observable.empty() }
         }
-    }
-
-    func reduce(state: State, mutation: Mutation) -> State {
-        var state = state
-
-        switch mutation {
-        case let .setError(error):
-            if let error = error as? ErrorResponse {
-                state.error = error
-            }
-        }
-
-        return state
     }
 }

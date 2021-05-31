@@ -15,9 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let disposeBag = DisposeBag()
     var window: UIWindow?
     var coordinator = FlowCoordinator()
-    lazy var appServices = {
-        return AppServices()
-    }()
+    let appServices = AppServices.shared
     
     func application(
         _ application: UIApplication,
