@@ -69,6 +69,8 @@
 		F2D2FBC7265F1DCF0010731F /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBC6265F1DCF0010731F /* DateFormatter.swift */; };
 		F2D2FBCA265F35800010731F /* RegisterAuthCodeViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBC8265F35800010731F /* RegisterAuthCodeViewReactor.swift */; };
 		F2D2FBCB265F35800010731F /* RegisterAuthCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBC9265F35800010731F /* RegisterAuthCodeViewController.swift */; };
+		F2D2FBD52664CECB0010731F /* HomeViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBD32664CECB0010731F /* HomeViewReactor.swift */; };
+		F2D2FBD62664CECB0010731F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBD42664CECB0010731F /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +163,8 @@
 		F2D2FBC6265F1DCF0010731F /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		F2D2FBC8265F35800010731F /* RegisterAuthCodeViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAuthCodeViewReactor.swift; sourceTree = "<group>"; };
 		F2D2FBC9265F35800010731F /* RegisterAuthCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAuthCodeViewController.swift; sourceTree = "<group>"; };
+		F2D2FBD32664CECB0010731F /* HomeViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewReactor.swift; sourceTree = "<group>"; };
+		F2D2FBD42664CECB0010731F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +318,7 @@
 				F279C65826440A31008EA8C4 /* PrivacyPolicy */,
 				F279C62E2643EB48008EA8C4 /* Login */,
 				F279C62F2643EB4E008EA8C4 /* Register */,
+				F2D2FBD22664CE4C0010731F /* Home */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -482,6 +487,15 @@
 				F2D2FBBF265E18450010731F /* AuthCodeResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		F2D2FBD22664CE4C0010731F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F2D2FBD32664CECB0010731F /* HomeViewReactor.swift */,
+				F2D2FBD42664CECB0010731F /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -759,8 +773,10 @@
 				F279C6552643FC5D008EA8C4 /* ValidationResult.swift in Sources */,
 				F279C6212643CF3F008EA8C4 /* TabBarViewController.swift in Sources */,
 				F279C65B26440A65008EA8C4 /* PrivacyPolicyViewReactor.swift in Sources */,
+				F2D2FBD62664CECB0010731F /* HomeViewController.swift in Sources */,
 				F279C64D2643FBFF008EA8C4 /* UIViewControllerPreview.swift in Sources */,
 				F279C6342643ED9F008EA8C4 /* SplashViewReactor.swift in Sources */,
+				F2D2FBD52664CECB0010731F /* HomeViewReactor.swift in Sources */,
 				F279C6442643EE0C008EA8C4 /* RegisterPhoneViewReactor.swift in Sources */,
 				F279C6482643EE17008EA8C4 /* RegisterInfoViewReactor.swift in Sources */,
 				F2A46432262D753F00D4238E /* BaseViewController.swift in Sources */,

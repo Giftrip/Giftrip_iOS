@@ -11,6 +11,7 @@ target 'Giftrip' do
   pod 'SnapKit'
   pod 'RxFlow'
   pod 'SwiftMessages'
+  pod 'NMapsMap'
   
   # Rx
   pod 'RxSwift', '5.1.1'

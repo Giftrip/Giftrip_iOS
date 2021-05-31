@@ -11,12 +11,21 @@ import RxSwift
 class TabBarViewController: UITabBarController {
     
     let disposeBag = DisposeBag()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.bind()
-//        self.tabBarCustom()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        self.tabBar.barTintColor = .white
+        self.tabBar.tintColor = .black
+        
+//        self.tabBar.frame.size.height = 95
+//        self.tabBar.frame.origin.y = self.view.frame.height - 95
     }
     
     func bind() {
@@ -43,15 +52,8 @@ class TabBarViewController: UITabBarController {
             }
             return
         }
-        guard let scrollView = viewController.view.subviews.first as? UIScrollView else { return }
-        scrollView.setContentOffset(.zero, animated: true)
-    }
-    
-    func tabBarCustom() {
-        self.tabBar.layer.masksToBounds = true
-        self.tabBar.isTranslucent = true
-        self.tabBar.barStyle = .default
-        self.tabBar.layer.cornerRadius = 20
-        self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        guard let scrollView = viewController.view.subviews[1] as? UIScrollView else { return }
+        
+        scrollView.scrollRectToVisible(CGRect(x: 0, y: 0, width: 1, height: 1), animated: true)
     }
 }
