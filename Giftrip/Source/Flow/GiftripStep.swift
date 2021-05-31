@@ -9,12 +9,33 @@ import RxFlow
 
 enum GiftripStep: Step {
     
-    case splashViewIsRequired
+    case popViewController
+    case dismiss
     
-    case introViewIsRequired
-    case loginViewIsRequired
-    case signupViewIsRequired
+    // MARK: - Splash
+    case splashIsRequired
+    case mainTabBarIsRequired
     
-    case mainViewIsRequired
+    // MARK: - Intro
+    case introIsRequired
+    case privacyPolicyIsRequired
+    case loginIsRequired
+    case registerInfoIsRequired
+    case registerPhoneIsRequired(name: String, birth: Date)
+    case registerAuthCodeIsRequired(phone: String, password: String)
     
+    // MARK: - Home
+    case homeIsRequired
+    
+    // MARK: - Rank
+    case rankIsRequired
+    
+    // MARK: - Gift
+    case giftIsRequired
+    
+    // MARK: - Notification
+    case notificationIsRequired
+    
+    // MARK: - Settings
+    case settingsIsRequired
 }

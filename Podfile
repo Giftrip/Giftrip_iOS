@@ -10,6 +10,7 @@ target 'Giftrip' do
   # UI
   pod 'SnapKit'
   pod 'RxFlow'
+  pod 'SwiftMessages'
   
   # Rx
   pod 'RxSwift', '5.1.1'
@@ -17,6 +18,7 @@ target 'Giftrip' do
   pod 'RxDataSources'
   pod 'RxViewController'
   pod 'RxOptional'
+  pod 'RxGesture'
   
   # DB
   pod 'RealmSwift'
@@ -33,6 +35,7 @@ target 'Giftrip' do
   
   # Security
   pod 'KeychainAccess'
+  pod 'CryptoSwift'
 
   target 'GiftripTests' do
     inherit! :complete
@@ -49,4 +52,3 @@ post_install do |installer|
   end
  end
 end
-

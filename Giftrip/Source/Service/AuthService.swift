@@ -7,20 +7,25 @@
 
 import RxSwift
 import KeychainAccess
+import CryptoSwift
 
 protocol AuthServiceType {
     var currentToken: Token? { get }
     
-    func login(phoneNumber: String, password: String) -> Observable<Void>
-    func register(phoneNumber: String, code: String, password: String, name: String, birth: Date) -> Observable<Void>
+    func login(_ phoneNumber: String, _ password: String) -> Observable<Void>
+    func register(_ phoneNumber: String, _ code: String, _ password: String, _ name: String, _ birth: Date) -> Observable<Void>
     func logout()
+    
+    func saveToken(_ token: Token) throws
+    
+    func createAuthCode(_ phoneNumber: String) -> Single<AuthCodeResponse>
 }
 
 final class AuthService: AuthServiceType {
     
-    fileprivate let network: Network<AuthAPI> // 테스트 후 Alamofire로 대체할지 결정할 예정
+    fileprivate let network: Network<AuthAPI>
     
-    fileprivate let keychain = Keychain(service: "com.flash21.Giftrip")
+    fileprivate let keychain = Keychain(service: Bundle.main.bundleIdentifier ?? "com.flash21.Giftrip")
     private(set) var currentToken: Token?
     
     init() {
@@ -28,34 +33,24 @@ final class AuthService: AuthServiceType {
         self.currentToken = self.loadToken()
     }
     
-    func login(phoneNumber: String, password: String) -> Observable<Void> {
-        return network.requestObject(.login(phoneNumber, password), type: ResponseModel<Token>.self)
+    func login(_ phoneNumber: String, _ password: String) -> Observable<Void> {
+        return network.requestObject(.login(phoneNumber, password.sha512()), type: Token.self)
             .asObservable()
             .do(onNext: { [weak self] response in
-                try self?.saveToken(response.data!)
-                self?.currentToken = response.data
+                try self?.saveToken(response)
             })
             .map { _ in }
     }
     
-    func register(phoneNumber: String, code: String, password: String, name: String, birth: Date) -> Observable<Void> {
-        return network.requestObject(.register(phoneNumber, code, password, name, birth), type: ResponseModel<Token>.self)
+    func register(_ phoneNumber: String, _ code: String, _ password: String, _ name: String, _ birth: Date) -> Observable<Void> {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+        let date = dateFormatter.string(from: birth)
+        
+        return network.requestObject(.register(phoneNumber, code, password.sha512(), name, date), type: Token.self)
             .asObservable()
             .do(onNext: { [weak self] response in
-                try self?.saveToken(response.data!)
-                self?.currentToken = response.data
-            })
-            .map { _ in }
-    }
-    
-    @discardableResult
-    func renewalToken() -> Observable<Void> {
-        let refreshToken = self.loadToken()?.refreshToken?.token
-        return network.requestObject(.refresh(refreshToken ?? ""), type: ResponseModel<Token>.self)
-            .asObservable()
-            .do(onNext: { [weak self] response in
-                try self?.saveToken(response.data!)
-                self?.currentToken = response.data
+                try self?.saveToken(response)
             })
             .map { _ in }
     }
@@ -65,7 +60,13 @@ final class AuthService: AuthServiceType {
         self.deleteToken()
     }
     
-    fileprivate func saveToken(_ token: Token) throws {
+    func createAuthCode(_ phoneNumber: String) -> Single<AuthCodeResponse> {
+        return network.requestObject(.createAuthCode(phoneNumber), type: AuthCodeResponse.self)
+    }
+    
+    func saveToken(_ token: Token) throws {
+        self.currentToken = token
+        
         let jsonEncoder: JSONEncoder = JSONEncoder()
         
         let accessTokenData = try jsonEncoder.encode(token.accessToken)

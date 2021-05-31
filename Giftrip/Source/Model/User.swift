@@ -24,7 +24,7 @@ struct User: ModelType {
         case name
         case phoneNumber
         case birth
-        case isAdmin
+        case isAdmin = "admin"
         case createdAt
     }
 }

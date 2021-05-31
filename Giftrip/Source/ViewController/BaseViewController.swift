@@ -7,11 +7,14 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
+import SwiftMessages
 
 class BaseViewController: UIViewController {
     
     // MARK: - Properties
     let activityIndicatorView = UIActivityIndicatorView(style: .large)
+    let messageManager = SwiftMessages()
     
     // MARK: - Initializing
     init() {
@@ -35,6 +38,9 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         self.view.setNeedsUpdateConstraints()
+        
+        self.setupStyle()
+        self.view.addSubview(self.activityIndicatorView)
     }
     
     override func updateViewConstraints() {
@@ -45,11 +51,22 @@ class BaseViewController: UIViewController {
         super.updateViewConstraints()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     func setupConstraints() {
-        // default
         activityIndicatorView.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
         }
     }
-    
+
+    func setupStyle() {
+        self.activityIndicatorView.color = .black
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        backItem.tintColor = .systemGray
+        self.view.backgroundColor = .systemBackground
+        self.navigationItem.backBarButtonItem = backItem
+    }
 }
