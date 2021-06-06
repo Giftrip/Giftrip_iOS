@@ -9,9 +9,9 @@ target 'Giftrip' do
   
   # UI
   pod 'SnapKit'
-  pod 'RxFlow'
   pod 'SwiftMessages'
   pod 'NMapsMap'
+  pod 'DrawerView'
   
   # Rx
   pod 'RxSwift', '5.1.1'
@@ -20,6 +20,7 @@ target 'Giftrip' do
   pod 'RxViewController'
   pod 'RxOptional'
   pod 'RxGesture'
+  pod 'RxFlow'
   
   # DB
   pod 'RealmSwift'
@@ -32,7 +33,6 @@ target 'Giftrip' do
   pod 'SwiftLint'
   pod 'R.swift'
   pod 'Then'
-  pod 'Swinject'
   
   # Security
   pod 'KeychainAccess'
