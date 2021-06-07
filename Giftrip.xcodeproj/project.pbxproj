@@ -61,6 +61,10 @@
 		F2A464BB262E65F300D4238E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464BA262E65F300D4238E /* Token.swift */; };
 		F2A464C0262E682300D4238E /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464BF262E682300D4238E /* ModelType.swift */; };
 		F2A464D0262E76D600D4238E /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464CF262E76D600D4238E /* AppServices.swift */; };
+		F2A5C827266E179C0075F351 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C826266E179C0075F351 /* Quiz.swift */; };
+		F2A5C829266E195A0075F351 /* QuizResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C828266E195A0075F351 /* QuizResult.swift */; };
+		F2A5C82B266E52E20075F351 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C82A266E52E20075F351 /* Spot.swift */; };
+		F2A5C82D266E55620075F351 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C82C266E55620075F351 /* List.swift */; };
 		F2D2FBB7265DED200010731F /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBB6265DED200010731F /* UIImageView+Kingfisher.swift */; };
 		F2D2FBBD265E0E5F0010731F /* KeyboardTopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBBC265E0E5F0010731F /* KeyboardTopButton.swift */; };
 		F2D2FBC0265E18450010731F /* AuthCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBBF265E18450010731F /* AuthCodeResponse.swift */; };
@@ -156,6 +160,10 @@
 		F2A464BA262E65F300D4238E /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		F2A464BF262E682300D4238E /* ModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
 		F2A464CF262E76D600D4238E /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
+		F2A5C826266E179C0075F351 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		F2A5C828266E195A0075F351 /* QuizResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResult.swift; sourceTree = "<group>"; };
+		F2A5C82A266E52E20075F351 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
+		F2A5C82C266E55620075F351 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		F2D2FBB6265DED200010731F /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 		F2D2FBBC265E0E5F0010731F /* KeyboardTopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardTopButton.swift; sourceTree = "<group>"; };
 		F2D2FBBF265E18450010731F /* AuthCodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeResponse.swift; sourceTree = "<group>"; };
@@ -364,7 +372,12 @@
 		F2618575262D54E400EA707C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F2D2FBC1265E184B0010731F /* Response */,
+				F2A5C82C266E55620075F351 /* List.swift */,
+				F2D2FBC4265E2FB50010731F /* ErrorResponse.swift */,
+				F2D2FBBF265E18450010731F /* AuthCodeResponse.swift */,
+				F2A5C826266E179C0075F351 /* Quiz.swift */,
+				F2A5C828266E195A0075F351 /* QuizResult.swift */,
+				F2A5C82A266E52E20075F351 /* Spot.swift */,
 				F2A464BF262E682300D4238E /* ModelType.swift */,
 				F2A464BA262E65F300D4238E /* Token.swift */,
 				F22ACDB7263022180070781D /* User.swift */,
@@ -483,13 +496,9 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		F2D2FBC1265E184B0010731F /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				F2D2FBC4265E2FB50010731F /* ErrorResponse.swift */,
-				F2D2FBBF265E18450010731F /* AuthCodeResponse.swift */,
 			);
-			path = Response;
 			sourceTree = "<group>";
 		};
 		F2D2FBD22664CE4C0010731F /* Home */ = {
@@ -758,18 +767,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2D2FBC3265E2F3A0010731F /* HandleResponse.swift in Sources */,
+				F2A5C82D266E55620075F351 /* List.swift in Sources */,
 				F2D2FBCA265F35800010731F /* RegisterAuthCodeViewReactor.swift in Sources */,
 				F279C6252643CF5D008EA8C4 /* HomeFlow.swift in Sources */,
 				F2D2FBB7265DED200010731F /* UIImageView+Kingfisher.swift in Sources */,
 				F2A464D0262E76D600D4238E /* AppServices.swift in Sources */,
 				F2D2FBC7265F1DCF0010731F /* DateFormatter.swift in Sources */,
 				F279C6492643EE17008EA8C4 /* RegisterInfoViewController.swift in Sources */,
+				F2A5C827266E179C0075F351 /* Quiz.swift in Sources */,
 				F22ACDE026314D940070781D /* UserService.swift in Sources */,
 				F279C6572644066B008EA8C4 /* GiftripPlainButton.swift in Sources */,
 				F279C63C2643EDC5008EA8C4 /* LoginViewReactor.swift in Sources */,
 				F279C6452643EE0C008EA8C4 /* RegisterPhoneViewController.swift in Sources */,
 				F2618514262D4C4F00EA707C /* AppDelegate.swift in Sources */,
 				F279C6292643CFB1008EA8C4 /* SettingsFlow.swift in Sources */,
+				F2A5C829266E195A0075F351 /* QuizResult.swift in Sources */,
 				F279C64F2643FC17008EA8C4 /* UIViewPreview.swift in Sources */,
 				F279C6272643CF6E008EA8C4 /* RankFlow.swift in Sources */,
 				F279C64B2643FBE2008EA8C4 /* CGFloatLiteral.swift in Sources */,
@@ -813,6 +825,7 @@
 				F279C6512643FC34008EA8C4 /* HapticFeedback.swift in Sources */,
 				F279C65C26440A65008EA8C4 /* PrivacyPolicyViewController.swift in Sources */,
 				F279C62B2643CFCB008EA8C4 /* NotificationFlow.swift in Sources */,
+				F2A5C82B266E52E20075F351 /* Spot.swift in Sources */,
 				F22ACDA6262FE47E0070781D /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
