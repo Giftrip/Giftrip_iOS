@@ -71,6 +71,7 @@
 		F2D2FBCB265F35800010731F /* RegisterAuthCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBC9265F35800010731F /* RegisterAuthCodeViewController.swift */; };
 		F2D2FBD52664CECB0010731F /* HomeViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBD32664CECB0010731F /* HomeViewReactor.swift */; };
 		F2D2FBD62664CECB0010731F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBD42664CECB0010731F /* HomeViewController.swift */; };
+		F2D2FBD82664FC0E0010731F /* CourseSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBD72664FC0E0010731F /* CourseSearchBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +166,7 @@
 		F2D2FBC9265F35800010731F /* RegisterAuthCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAuthCodeViewController.swift; sourceTree = "<group>"; };
 		F2D2FBD32664CECB0010731F /* HomeViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewReactor.swift; sourceTree = "<group>"; };
 		F2D2FBD42664CECB0010731F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F2D2FBD72664FC0E0010731F /* CourseSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSearchBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				F2D2FBBB265E0E480010731F /* Base */,
+				F2D2FBD72664FC0E0010731F /* CourseSearchBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -797,6 +800,7 @@
 				F279C62D2643DE34008EA8C4 /* GiftFlow.swift in Sources */,
 				F2D2FBBD265E0E5F0010731F /* KeyboardTopButton.swift in Sources */,
 				F2A464BB262E65F300D4238E /* Token.swift in Sources */,
+				F2D2FBD82664FC0E0010731F /* CourseSearchBarView.swift in Sources */,
 				F2A464A1262DA07900D4238E /* Network.swift in Sources */,
 				F279C6352643ED9F008EA8C4 /* SplashViewController.swift in Sources */,
 				F2350A7426340B9E000C523B /* AuthAPI.swift in Sources */,
