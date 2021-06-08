@@ -41,7 +41,7 @@ final class HomeFlow: Flow {
 
 extension HomeFlow {
     private func navigateToHome() -> FlowContributors {
-        let reactor = HomeViewReactor()
+        let reactor = HomeViewReactor(spotService: services.spotService)
         let viewController = HomeViewController(reactor: reactor)
         
         self.rootViewController.pushViewController(viewController, animated: false)

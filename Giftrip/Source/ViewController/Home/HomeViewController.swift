@@ -7,7 +7,7 @@
 
 import UIKit
 
-import NMapsMap
+import GoogleMaps
 import ReactorKit
 import RxGesture
 import DrawerView
@@ -33,9 +33,9 @@ final class HomeViewController: BaseViewController, ReactorKit.View {
     // MARK: - Properties
 
     // MARK: - UI
-    fileprivate let mapView = NMFNaverMapView().then {
-        $0.mapView.logoMargin.bottom = 60
-    }
+    fileprivate var camera: GMSCameraPosition!
+    fileprivate lazy var mapView = GMSMapView(frame: self.view.frame)
+    
     fileprivate let courseSearchBarView = CourseSearchBarView()
     
     fileprivate var drawerView: DrawerView!
@@ -56,13 +56,16 @@ final class HomeViewController: BaseViewController, ReactorKit.View {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        self.camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
+//        self.mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
+        
         self.view.addSubview(self.mapView)
         self.view.addSubview(self.courseSearchBarView)
         self.setupDrawer()
     }
     
     func setupDrawer() {
-        let reactor = SpotListViewReactor()
+        let reactor = SpotListViewReactor(spotService: self.reactor!.spotService)
         let viewController = SpotListViewController(reactor: reactor)
         self.drawerView = self.addDrawerView(withViewController: viewController)
         
@@ -79,10 +82,6 @@ final class HomeViewController: BaseViewController, ReactorKit.View {
     }
 
     override func setupConstraints() {
-        self.mapView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-        
         self.courseSearchBarView.snp.makeConstraints { make in
             make.top.equalTo(self.view.safeAreaLayoutGuide).offset(Metric.searchBarTop)
             make.left.equalToSuperview().offset(Metric.searchBarLeftRight)
@@ -93,15 +92,11 @@ final class HomeViewController: BaseViewController, ReactorKit.View {
 
     // MARK: - Configuring
     func bind(reactor: Reactor) {
-        // MARK: - input
 //        self.courseSearchBarView.rx.tapGesture()
 //            .when(.recognized)
 //            .map { Reactor.Action.presentCourseList }
 //            .bind(to: reactor.action)
 //            .disposed(by: disposeBag)
-        
-        // MARK: - output
-        
         
     }
 }

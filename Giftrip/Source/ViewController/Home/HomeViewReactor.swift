@@ -15,28 +15,34 @@ final class HomeViewReactor: Reactor, Stepper {
     var steps = PublishRelay<Step>()
 
     enum Action {
-
+        case selectSpot(Int)
     }
 
     enum Mutation {
-
+        case setLoading(Bool)
     }
 
     struct State {
-        let spotListViewReactor: SpotListViewReactor
+        var spotListViewReactor: SpotListViewReactor
+        var isLoading: Bool = false
     }
 
     let initialState: State
-    fileprivate let 
+    let spotService: SpotServiceType
 
-    init() {
+    init(
+        spotService: SpotServiceType
+    ) {
+        self.spotService = spotService
         
+        self.initialState = State(spotListViewReactor: SpotListViewReactor(spotService: spotService))
     }
 
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
-        case <#pattern#>:
-            <#code#>
+        case let .selectSpot(spotIdx):
+            self.steps.accept(GiftripStep.spotDetailIsRequired(idx: spotIdx))
+            return .empty()
         }
     }
 
@@ -44,8 +50,8 @@ final class HomeViewReactor: Reactor, Stepper {
         var state = state
 
         switch mutation {
-        case <#pattern#>:
-            <#code#>
+        case let .setLoading(isLoading):
+            state.isLoading = isLoading
         }
 
         return state

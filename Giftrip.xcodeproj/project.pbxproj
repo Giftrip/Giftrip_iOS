@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17CB3A8931EDEE246777A9B5 /* Pods_Giftrip_GiftripUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68511CB45661F5078F355C32 /* Pods_Giftrip_GiftripUITests.framework */; };
 		7777A14F58B87A751E5A4957 /* Pods_Giftrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9536DFD7786B9EF7F5123A93 /* Pods_Giftrip.framework */; };
-		B19554A3EE5BC3C5484F3624 /* Pods_Giftrip_GiftripTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30DDB4014B2BC55BE9072224 /* Pods_Giftrip_GiftripTests.framework */; };
+		A1E414AB3D903A4231855CFC /* Pods_GiftripTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD313B1DE6080E278DEF0A39 /* Pods_GiftripTests.framework */; };
 		F22ACDA6262FE47E0070781D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22ACDA5262FE47D0070781D /* AuthService.swift */; };
 		F22ACDB3262FF4B70070781D /* GiftripAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22ACDB2262FF4B70070781D /* GiftripAPI.swift */; };
 		F22ACDB8263022180070781D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22ACDB7263022180070781D /* User.swift */; };
@@ -61,10 +62,18 @@
 		F2A464BB262E65F300D4238E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464BA262E65F300D4238E /* Token.swift */; };
 		F2A464C0262E682300D4238E /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464BF262E682300D4238E /* ModelType.swift */; };
 		F2A464D0262E76D600D4238E /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A464CF262E76D600D4238E /* AppServices.swift */; };
+		F2A5C825266E0ACC0075F351 /* SpotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C824266E0ACC0075F351 /* SpotService.swift */; };
 		F2A5C827266E179C0075F351 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C826266E179C0075F351 /* Quiz.swift */; };
 		F2A5C829266E195A0075F351 /* QuizResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C828266E195A0075F351 /* QuizResult.swift */; };
 		F2A5C82B266E52E20075F351 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C82A266E52E20075F351 /* Spot.swift */; };
 		F2A5C82D266E55620075F351 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C82C266E55620075F351 /* List.swift */; };
+		F2C09D1F266F0C050070A5DA /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C09D1E266F0C050070A5DA /* BaseTableViewCell.swift */; };
+		F2C09D21266F0D0F0070A5DA /* SpotListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C09D20266F0D0F0070A5DA /* SpotListCell.swift */; };
+		F2C09D23266F0DE80070A5DA /* SpotListCellReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C09D22266F0DE80070A5DA /* SpotListCellReactor.swift */; };
+		F2C09D26266F127D0070A5DA /* SpotListViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C09D25266F127D0070A5DA /* SpotListViewSection.swift */; };
+		F2C09D28266F2ABE0070A5DA /* RefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C09D27266F2ABE0070A5DA /* RefreshControl.swift */; };
+		F2C09D2A266F5C570070A5DA /* UIScrollView+ScrollToBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C09D29266F5C570070A5DA /* UIScrollView+ScrollToBottom.swift */; };
+		F2C09D2D266F67F50070A5DA /* UIScrollView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C09D2C266F67F50070A5DA /* UIScrollView+Rx.swift */; };
 		F2D2FBB7265DED200010731F /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBB6265DED200010731F /* UIImageView+Kingfisher.swift */; };
 		F2D2FBBD265E0E5F0010731F /* KeyboardTopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBBC265E0E5F0010731F /* KeyboardTopButton.swift */; };
 		F2D2FBC0265E18450010731F /* AuthCodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBBF265E18450010731F /* AuthCodeResponse.swift */; };
@@ -76,6 +85,8 @@
 		F2D2FBD52664CECB0010731F /* HomeViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBD32664CECB0010731F /* HomeViewReactor.swift */; };
 		F2D2FBD62664CECB0010731F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBD42664CECB0010731F /* HomeViewController.swift */; };
 		F2D2FBD82664FC0E0010731F /* CourseSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBD72664FC0E0010731F /* CourseSearchBarView.swift */; };
+		F2D2FBDC26652F4F0010731F /* SpotListViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBDA26652F4F0010731F /* SpotListViewReactor.swift */; };
+		F2D2FBDD26652F4F0010731F /* SpotListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBDB26652F4F0010731F /* SpotListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,9 +107,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		30DDB4014B2BC55BE9072224 /* Pods_Giftrip_GiftripTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Giftrip_GiftripTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		141F064760E7636752786F12 /* Pods-Giftrip-GiftripUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giftrip-GiftripUITests.debug.xcconfig"; path = "Target Support Files/Pods-Giftrip-GiftripUITests/Pods-Giftrip-GiftripUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		27B7557EF7245E0D9BA83773 /* Pods-GiftripTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiftripTests.release.xcconfig"; path = "Target Support Files/Pods-GiftripTests/Pods-GiftripTests.release.xcconfig"; sourceTree = "<group>"; };
+		68511CB45661F5078F355C32 /* Pods_Giftrip_GiftripUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Giftrip_GiftripUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		687F4D9571E9CBE8643C43F7 /* Pods-Giftrip-GiftripUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giftrip-GiftripUITests.release.xcconfig"; path = "Target Support Files/Pods-Giftrip-GiftripUITests/Pods-Giftrip-GiftripUITests.release.xcconfig"; sourceTree = "<group>"; };
+		78FC2AD618736D19428AB189 /* Pods-GiftripTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiftripTests.debug.xcconfig"; path = "Target Support Files/Pods-GiftripTests/Pods-GiftripTests.debug.xcconfig"; sourceTree = "<group>"; };
 		89F50BA64AC3BF9CE28923D1 /* Pods-Giftrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giftrip.debug.xcconfig"; path = "Target Support Files/Pods-Giftrip/Pods-Giftrip.debug.xcconfig"; sourceTree = "<group>"; };
 		9536DFD7786B9EF7F5123A93 /* Pods_Giftrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Giftrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD313B1DE6080E278DEF0A39 /* Pods_GiftripTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GiftripTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9FA1D50A63A2057F853D66 /* Pods-Giftrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giftrip.release.xcconfig"; path = "Target Support Files/Pods-Giftrip/Pods-Giftrip.release.xcconfig"; sourceTree = "<group>"; };
 		DE0E70E245A6EB2B17207E15 /* Pods-Giftrip-GiftripTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giftrip-GiftripTests.debug.xcconfig"; path = "Target Support Files/Pods-Giftrip-GiftripTests/Pods-Giftrip-GiftripTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F1F3FE96D5D2CC71ED6DC7AB /* Pods-Giftrip-GiftripTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giftrip-GiftripTests.release.xcconfig"; path = "Target Support Files/Pods-Giftrip-GiftripTests/Pods-Giftrip-GiftripTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -160,10 +176,22 @@
 		F2A464BA262E65F300D4238E /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		F2A464BF262E682300D4238E /* ModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
 		F2A464CF262E76D600D4238E /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
+		F2A5C824266E0ACC0075F351 /* SpotService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotService.swift; sourceTree = "<group>"; };
 		F2A5C826266E179C0075F351 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		F2A5C828266E195A0075F351 /* QuizResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResult.swift; sourceTree = "<group>"; };
 		F2A5C82A266E52E20075F351 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		F2A5C82C266E55620075F351 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		F2C09D15266F09B70070A5DA /* Stubber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stubber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2C09D17266F0AFE0070A5DA /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2C09D19266F0AFE0070A5DA /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2C09D1B266F0AFE0070A5DA /* Stubber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stubber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2C09D1E266F0C050070A5DA /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		F2C09D20266F0D0F0070A5DA /* SpotListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListCell.swift; sourceTree = "<group>"; };
+		F2C09D22266F0DE80070A5DA /* SpotListCellReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListCellReactor.swift; sourceTree = "<group>"; };
+		F2C09D25266F127D0070A5DA /* SpotListViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListViewSection.swift; sourceTree = "<group>"; };
+		F2C09D27266F2ABE0070A5DA /* RefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshControl.swift; sourceTree = "<group>"; };
+		F2C09D29266F5C570070A5DA /* UIScrollView+ScrollToBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ScrollToBottom.swift"; sourceTree = "<group>"; };
+		F2C09D2C266F67F50070A5DA /* UIScrollView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Rx.swift"; sourceTree = "<group>"; };
 		F2D2FBB6265DED200010731F /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 		F2D2FBBC265E0E5F0010731F /* KeyboardTopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardTopButton.swift; sourceTree = "<group>"; };
 		F2D2FBBF265E18450010731F /* AuthCodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeResponse.swift; sourceTree = "<group>"; };
@@ -175,6 +203,8 @@
 		F2D2FBD32664CECB0010731F /* HomeViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewReactor.swift; sourceTree = "<group>"; };
 		F2D2FBD42664CECB0010731F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F2D2FBD72664FC0E0010731F /* CourseSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSearchBarView.swift; sourceTree = "<group>"; };
+		F2D2FBDA26652F4F0010731F /* SpotListViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListViewReactor.swift; sourceTree = "<group>"; };
+		F2D2FBDB26652F4F0010731F /* SpotListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B19554A3EE5BC3C5484F3624 /* Pods_Giftrip_GiftripTests.framework in Frameworks */,
+				A1E414AB3D903A4231855CFC /* Pods_GiftripTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +228,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17CB3A8931EDEE246777A9B5 /* Pods_Giftrip_GiftripUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +242,10 @@
 				DD9FA1D50A63A2057F853D66 /* Pods-Giftrip.release.xcconfig */,
 				DE0E70E245A6EB2B17207E15 /* Pods-Giftrip-GiftripTests.debug.xcconfig */,
 				F1F3FE96D5D2CC71ED6DC7AB /* Pods-Giftrip-GiftripTests.release.xcconfig */,
+				141F064760E7636752786F12 /* Pods-Giftrip-GiftripUITests.debug.xcconfig */,
+				687F4D9571E9CBE8643C43F7 /* Pods-Giftrip-GiftripUITests.release.xcconfig */,
+				78FC2AD618736D19428AB189 /* Pods-GiftripTests.debug.xcconfig */,
+				27B7557EF7245E0D9BA83773 /* Pods-GiftripTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -218,8 +253,13 @@
 		93BAC323D6565BF7CB2BE19F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F2C09D17266F0AFE0070A5DA /* Nimble.framework */,
+				F2C09D19266F0AFE0070A5DA /* Quick.framework */,
+				F2C09D1B266F0AFE0070A5DA /* Stubber.framework */,
+				F2C09D15266F09B70070A5DA /* Stubber.framework */,
 				9536DFD7786B9EF7F5123A93 /* Pods_Giftrip.framework */,
-				30DDB4014B2BC55BE9072224 /* Pods_Giftrip_GiftripTests.framework */,
+				68511CB45661F5078F355C32 /* Pods_Giftrip_GiftripUITests.framework */,
+				DD313B1DE6080E278DEF0A39 /* Pods_GiftripTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -281,6 +321,7 @@
 				F2618513262D4C4F00EA707C /* AppDelegate.swift */,
 				F2A464CF262E76D600D4238E /* AppServices.swift */,
 				F2A4642C262D73DC00D4238E /* Flow */,
+				F2C09D24266F122B0070A5DA /* Section */,
 				F2618571262D54C700EA707C /* ViewController */,
 				F2618570262D54C200EA707C /* View */,
 				F2618575262D54E400EA707C /* Model */,
@@ -315,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				F2D2FBBB265E0E480010731F /* Base */,
+				F2C09D1D266F0BD60070A5DA /* TableView */,
 				F2D2FBD72664FC0E0010731F /* CourseSearchBarView.swift */,
 			);
 			path = View;
@@ -330,6 +372,7 @@
 				F279C62E2643EB48008EA8C4 /* Login */,
 				F279C62F2643EB4E008EA8C4 /* Register */,
 				F2D2FBD22664CE4C0010731F /* Home */,
+				F2D2FBD926652F280010731F /* SpotList */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -339,6 +382,7 @@
 			children = (
 				F22ACDA5262FE47D0070781D /* AuthService.swift */,
 				F22ACDDF26314D940070781D /* UserService.swift */,
+				F2A5C824266E0ACC0075F351 /* SpotService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -357,6 +401,7 @@
 		F2618574262D54DD00EA707C /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				F2C09D2B266F67E20070A5DA /* Rx */,
 				F2D2FBC6265F1DCF0010731F /* DateFormatter.swift */,
 				F279C64A2643FBE2008EA8C4 /* CGFloatLiteral.swift */,
 				F279C64C2643FBFF008EA8C4 /* UIViewControllerPreview.swift */,
@@ -365,6 +410,7 @@
 				F279C6522643FC48008EA8C4 /* Message.swift */,
 				F279C6542643FC5D008EA8C4 /* ValidationResult.swift */,
 				F2D2FBB6265DED200010731F /* UIImageView+Kingfisher.swift */,
+				F2C09D29266F5C570070A5DA /* UIScrollView+ScrollToBottom.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -486,19 +532,41 @@
 			path = Plugin;
 			sourceTree = "<group>";
 		};
+		F2C09D1D266F0BD60070A5DA /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				F2C09D1E266F0C050070A5DA /* BaseTableViewCell.swift */,
+				F2C09D20266F0D0F0070A5DA /* SpotListCell.swift */,
+				F2C09D22266F0DE80070A5DA /* SpotListCellReactor.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		F2C09D24266F122B0070A5DA /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				F2C09D25266F127D0070A5DA /* SpotListViewSection.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		F2C09D2B266F67E20070A5DA /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				F2C09D2C266F67F50070A5DA /* UIScrollView+Rx.swift */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
 		F2D2FBBB265E0E480010731F /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				F279C6562644066B008EA8C4 /* GiftripPlainButton.swift */,
 				F279C65D26440CF2008EA8C4 /* GiftripTextField.swift */,
 				F2D2FBBC265E0E5F0010731F /* KeyboardTopButton.swift */,
+				F2C09D27266F2ABE0070A5DA /* RefreshControl.swift */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-			isa = PBXGroup;
-			children = (
-			);
 			sourceTree = "<group>";
 		};
 		F2D2FBD22664CE4C0010731F /* Home */ = {
@@ -508,6 +576,15 @@
 				F2D2FBD42664CECB0010731F /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		F2D2FBD926652F280010731F /* SpotList */ = {
+			isa = PBXGroup;
+			children = (
+				F2D2FBDA26652F4F0010731F /* SpotListViewReactor.swift */,
+				F2D2FBDB26652F4F0010731F /* SpotListViewController.swift */,
+			);
+			path = SpotList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -524,6 +601,7 @@
 				F261850D262D4C4F00EA707C /* Frameworks */,
 				F261850E262D4C4F00EA707C /* Resources */,
 				201FC71CAE7A7A4B824F7B54 /* [CP] Embed Pods Frameworks */,
+				B951F7E1813CAE14366EB35F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -558,9 +636,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2618540262D4C5100EA707C /* Build configuration list for PBXNativeTarget "GiftripUITests" */;
 			buildPhases = (
+				6F89E7CE1D5E6EF3D0245D40 /* [CP] Check Pods Manifest.lock */,
 				F261852D262D4C5100EA707C /* Sources */,
 				F261852E262D4C5100EA707C /* Frameworks */,
 				F261852F262D4C5100EA707C /* Resources */,
+				08D19041F5BEDA858881DC8E /* [CP] Embed Pods Frameworks */,
+				DB81F404FFBB44A01221DBBA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -643,6 +724,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		08D19041F5BEDA858881DC8E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Giftrip-GiftripUITests/Pods-Giftrip-GiftripUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Giftrip-GiftripUITests/Pods-Giftrip-GiftripUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Giftrip-GiftripUITests/Pods-Giftrip-GiftripUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		201FC71CAE7A7A4B824F7B54 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -675,7 +773,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Giftrip-GiftripTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-GiftripTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -704,21 +802,77 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6F89E7CE1D5E6EF3D0245D40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Giftrip-GiftripUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7E9DB3E80CABC385DC809849 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Giftrip-GiftripTests/Pods-Giftrip-GiftripTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-GiftripTests/Pods-GiftripTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Giftrip-GiftripTests/Pods-Giftrip-GiftripTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-GiftripTests/Pods-GiftripTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Giftrip-GiftripTests/Pods-Giftrip-GiftripTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GiftripTests/Pods-GiftripTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B951F7E1813CAE14366EB35F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Giftrip/Pods-Giftrip-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Giftrip/Pods-Giftrip-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Giftrip/Pods-Giftrip-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB81F404FFBB44A01221DBBA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Giftrip-GiftripUITests/Pods-Giftrip-GiftripUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Giftrip-GiftripUITests/Pods-Giftrip-GiftripUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Giftrip-GiftripUITests/Pods-Giftrip-GiftripUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F261857C262D561400EA707C /* R.swift */ = {
@@ -768,10 +922,12 @@
 			files = (
 				F2D2FBC3265E2F3A0010731F /* HandleResponse.swift in Sources */,
 				F2A5C82D266E55620075F351 /* List.swift in Sources */,
+				F2C09D2D266F67F50070A5DA /* UIScrollView+Rx.swift in Sources */,
 				F2D2FBCA265F35800010731F /* RegisterAuthCodeViewReactor.swift in Sources */,
 				F279C6252643CF5D008EA8C4 /* HomeFlow.swift in Sources */,
 				F2D2FBB7265DED200010731F /* UIImageView+Kingfisher.swift in Sources */,
 				F2A464D0262E76D600D4238E /* AppServices.swift in Sources */,
+				F2D2FBDD26652F4F0010731F /* SpotListViewController.swift in Sources */,
 				F2D2FBC7265F1DCF0010731F /* DateFormatter.swift in Sources */,
 				F279C6492643EE17008EA8C4 /* RegisterInfoViewController.swift in Sources */,
 				F2A5C827266E179C0075F351 /* Quiz.swift in Sources */,
@@ -787,14 +943,19 @@
 				F279C64B2643FBE2008EA8C4 /* CGFloatLiteral.swift in Sources */,
 				F279C6552643FC5D008EA8C4 /* ValidationResult.swift in Sources */,
 				F279C6212643CF3F008EA8C4 /* TabBarViewController.swift in Sources */,
+				F2C09D26266F127D0070A5DA /* SpotListViewSection.swift in Sources */,
 				F279C65B26440A65008EA8C4 /* PrivacyPolicyViewReactor.swift in Sources */,
 				F2D2FBD62664CECB0010731F /* HomeViewController.swift in Sources */,
 				F279C64D2643FBFF008EA8C4 /* UIViewControllerPreview.swift in Sources */,
+				F2D2FBDC26652F4F0010731F /* SpotListViewReactor.swift in Sources */,
+				F2A5C825266E0ACC0075F351 /* SpotService.swift in Sources */,
 				F279C6342643ED9F008EA8C4 /* SplashViewReactor.swift in Sources */,
 				F2D2FBD52664CECB0010731F /* HomeViewReactor.swift in Sources */,
+				F2C09D21266F0D0F0070A5DA /* SpotListCell.swift in Sources */,
 				F279C6442643EE0C008EA8C4 /* RegisterPhoneViewReactor.swift in Sources */,
 				F279C6482643EE17008EA8C4 /* RegisterInfoViewReactor.swift in Sources */,
 				F2A46432262D753F00D4238E /* BaseViewController.swift in Sources */,
+				F2C09D23266F0DE80070A5DA /* SpotListCellReactor.swift in Sources */,
 				F22ACDB8263022180070781D /* User.swift in Sources */,
 				F2A464C0262E682300D4238E /* ModelType.swift in Sources */,
 				F2D2FBCB265F35800010731F /* RegisterAuthCodeViewController.swift in Sources */,
@@ -814,6 +975,7 @@
 				F2A464BB262E65F300D4238E /* Token.swift in Sources */,
 				F2D2FBD82664FC0E0010731F /* CourseSearchBarView.swift in Sources */,
 				F2A464A1262DA07900D4238E /* Network.swift in Sources */,
+				F2C09D28266F2ABE0070A5DA /* RefreshControl.swift in Sources */,
 				F279C6352643ED9F008EA8C4 /* SplashViewController.swift in Sources */,
 				F2350A7426340B9E000C523B /* AuthAPI.swift in Sources */,
 				F2D2FBC0265E18450010731F /* AuthCodeResponse.swift in Sources */,
@@ -821,11 +983,13 @@
 				F279C6232643CF51008EA8C4 /* TabBarFlow.swift in Sources */,
 				F2A464A7262DA1A200D4238E /* RequestLoggingPlugin.swift in Sources */,
 				F279C61D2643CF19008EA8C4 /* AppFlow.swift in Sources */,
+				F2C09D2A266F5C570070A5DA /* UIScrollView+ScrollToBottom.swift in Sources */,
 				F279C61F2643CF2C008EA8C4 /* IntroFlow.swift in Sources */,
 				F279C6512643FC34008EA8C4 /* HapticFeedback.swift in Sources */,
 				F279C65C26440A65008EA8C4 /* PrivacyPolicyViewController.swift in Sources */,
 				F279C62B2643CFCB008EA8C4 /* NotificationFlow.swift in Sources */,
 				F2A5C82B266E52E20075F351 /* Spot.swift in Sources */,
+				F2C09D1F266F0C050070A5DA /* BaseTableViewCell.swift in Sources */,
 				F22ACDA6262FE47E0070781D /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -993,6 +1157,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89F50BA64AC3BF9CE28923D1 /* Pods-Giftrip.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1001,6 +1166,103 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"CryptoSwift\"",
+					"-framework",
+					"\"Differentiator\"",
+					"-framework",
+					"\"DrawerView\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"KeychainAccess\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"Metal\"",
+					"-framework",
+					"\"Moya\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"ReactorKit\"",
+					"-framework",
+					"\"Realm\"",
+					"-framework",
+					"\"RealmSwift\"",
+					"-framework",
+					"\"ReusableKit\"",
+					"-framework",
+					"\"Rswift\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxFlow\"",
+					"-framework",
+					"\"RxGesture\"",
+					"-framework",
+					"\"RxOptional\"",
+					"-framework",
+					"\"RxRelay\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"RxViewController\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"SwiftMessages\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"Then\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WeakMapTable\"",
+					"-weak_framework",
+					"\"Combine\"",
+					"-weak_framework",
+					"\"SwiftUI\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.flash21.Giftrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1013,6 +1275,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DD9FA1D50A63A2057F853D66 /* Pods-Giftrip.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1021,6 +1284,103 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"CryptoSwift\"",
+					"-framework",
+					"\"Differentiator\"",
+					"-framework",
+					"\"DrawerView\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"KeychainAccess\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"Metal\"",
+					"-framework",
+					"\"Moya\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"ReactorKit\"",
+					"-framework",
+					"\"Realm\"",
+					"-framework",
+					"\"RealmSwift\"",
+					"-framework",
+					"\"ReusableKit\"",
+					"-framework",
+					"\"Rswift\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxFlow\"",
+					"-framework",
+					"\"RxGesture\"",
+					"-framework",
+					"\"RxOptional\"",
+					"-framework",
+					"\"RxRelay\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"RxViewController\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"SwiftMessages\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"Then\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WeakMapTable\"",
+					"-weak_framework",
+					"\"Combine\"",
+					"-weak_framework",
+					"\"SwiftUI\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.flash21.Giftrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1031,7 +1391,7 @@
 		};
 		F261853E262D4C5100EA707C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE0E70E245A6EB2B17207E15 /* Pods-Giftrip-GiftripTests.debug.xcconfig */;
+			baseConfigurationReference = 78FC2AD618736D19428AB189 /* Pods-GiftripTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1054,7 +1414,7 @@
 		};
 		F261853F262D4C5100EA707C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1F3FE96D5D2CC71ED6DC7AB /* Pods-Giftrip-GiftripTests.release.xcconfig */;
+			baseConfigurationReference = 27B7557EF7245E0D9BA83773 /* Pods-GiftripTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1077,6 +1437,7 @@
 		};
 		F2618541262D4C5100EA707C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 141F064760E7636752786F12 /* Pods-Giftrip-GiftripUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1097,6 +1458,7 @@
 		};
 		F2618542262D4C5100EA707C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 687F4D9571E9CBE8643C43F7 /* Pods-Giftrip-GiftripUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
