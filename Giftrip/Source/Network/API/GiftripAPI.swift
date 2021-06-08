@@ -11,11 +11,15 @@ import Moya
 enum GiftripAPI {
     
     // MARK: - userController
-    
     case changePw(_ password: String)
-    case editMyInfo(_ name: String) // 프로필 이미지로 인해 멀티파트 업로드 해야함
+    case editMyInfo(_ name: String)
     case getMyInfo
     
+    // MARK: - spotController
+    case completeQuiz(_ idx: Int, _ answer: Bool, _ nfcCode: String)
+    case getQuizByNfc(_ idx: Int, _ nfcCode: String)
+    case getSpot(_ idx: Int)
+    case getSpots(_ page: Int, _ size: Int, _ courseIdx: Int)
 }
 
 extension GiftripAPI: BaseAPI, AuthorizedTargetType {
@@ -37,19 +41,28 @@ extension GiftripAPI: BaseAPI, AuthorizedTargetType {
             return "/user/getMyInfo"
         case .editMyInfo:
             return "/user/editMyInfo"
+            
+        case let .completeQuiz(idx, _, _):
+            return "/spot/completeQuiz/\(idx)"
+        case let .getQuizByNfc(idx, _):
+            return "/spot/getQuizByNfc/\(idx)"
+        case let .getSpot(idx):
+            return "/spot/getSpot/\(idx)"
+        case .getSpots:
+            return "/spot/getSpots"
         }
     }
     
     var method: Moya.Method {
         switch self {
-//        case :
-//            return .post
-            
-        case .getMyInfo:
-            return .get
+        case .completeQuiz:
+            return .post
             
         case .changePw, .editMyInfo:
             return .patch
+            
+        default:
+            return .get
         }
     }
     
@@ -69,6 +82,24 @@ extension GiftripAPI: BaseAPI, AuthorizedTargetType {
                 "name": name
             ]
             
+        case let .completeQuiz(_, answer, nfcCode):
+            return [
+                "answer": answer,
+                "nfcCode": nfcCode
+            ]
+            
+        case let .getQuizByNfc(_, nfcCode):
+            return [
+                "nfcCode": nfcCode
+            ]
+            
+        case let .getSpots(page, size, courseIdx):
+            return [
+                "page": page,
+                "size": size,
+                "courseIdx": courseIdx
+            ]
+            
         default:
             return nil
         }
@@ -76,6 +107,9 @@ extension GiftripAPI: BaseAPI, AuthorizedTargetType {
     
     public var parameterEncoding: ParameterEncoding {
         switch self {
+        case .getQuizByNfc, .getSpots:
+            return URLEncoding.queryString
+            
         default:
             return JSONEncoding.default
         }
