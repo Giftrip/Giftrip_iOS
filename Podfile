@@ -1,16 +1,22 @@
 platform :ios, '13.0'
 inhibit_all_warnings!
 
+def test_pods
+  pod 'Stubber'
+  pod 'Quick'
+  pod 'Nimble'
+end
+
 target 'Giftrip' do
   use_frameworks!
-
+  
   # Architecture
   pod 'ReactorKit'
   
   # UI
   pod 'SnapKit'
   pod 'SwiftMessages'
-  pod 'NMapsMap'
+  pod 'GoogleMaps'
   pod 'DrawerView'
   
   # Rx
@@ -33,23 +39,26 @@ target 'Giftrip' do
   pod 'SwiftLint'
   pod 'R.swift'
   pod 'Then'
+  pod 'ReusableKit/RxSwift'
   
   # Security
   pod 'KeychainAccess'
   pod 'CryptoSwift'
-
+  
   target 'GiftripTests' do
-    inherit! :complete
-    pod 'Stubber'
-    pod 'Quick'
-    pod 'Nimble'
+    inherit! :search_paths
+    test_pods
+  end
+  
+  target 'GiftripUITests' do
+    test_pods
   end
 end
 
 post_install do |installer|
- installer.pods_project.targets.each do |target|
-  target.build_configurations.each do |config|
-   config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+    end
   end
- end
 end
