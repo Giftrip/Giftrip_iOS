@@ -65,8 +65,6 @@ final class AuthService: AuthServiceType {
     }
     
     func saveToken(_ token: Token) throws {
-        self.currentToken = token
-        
         let jsonEncoder: JSONEncoder = JSONEncoder()
         
         let accessTokenData = try jsonEncoder.encode(token.accessToken)
@@ -78,6 +76,8 @@ final class AuthService: AuthServiceType {
             let refreshToken = String(data: refreshTokenData, encoding: .utf8)
             try self.keychain.set(refreshToken ?? "", key: "refresh_token")
         }
+        
+        self.currentToken = self.loadToken()
     }
     
     fileprivate func loadToken() -> Token? {
