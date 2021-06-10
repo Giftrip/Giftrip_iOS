@@ -365,6 +365,7 @@
 		F2618571262D54C700EA707C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F279C6202643CF3F008EA8C4 /* TabBarViewController.swift */,
 				F2A46431262D753F00D4238E /* BaseViewController.swift */,
 				F279C6312643EB5D008EA8C4 /* Splash */,
 				F279C6302643EB52008EA8C4 /* Intro */,
@@ -431,28 +432,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F279C61A2643CEF7008EA8C4 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				F279C6202643CF3F008EA8C4 /* TabBarViewController.swift */,
-				F279C6222643CF51008EA8C4 /* TabBarFlow.swift */,
-				F279C61B2643CF03008EA8C4 /* Tabs */,
-			);
-			path = TabBar;
-			sourceTree = "<group>";
-		};
-		F279C61B2643CF03008EA8C4 /* Tabs */ = {
-			isa = PBXGroup;
-			children = (
-				F279C6242643CF5D008EA8C4 /* HomeFlow.swift */,
-				F279C6262643CF6E008EA8C4 /* RankFlow.swift */,
-				F279C62C2643DE34008EA8C4 /* GiftFlow.swift */,
-				F279C62A2643CFCB008EA8C4 /* NotificationFlow.swift */,
-				F279C6282643CFB1008EA8C4 /* SettingsFlow.swift */,
-			);
-			path = Tabs;
-			sourceTree = "<group>";
-		};
 		F279C62E2643EB48008EA8C4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,7 +487,12 @@
 				F2A4647D262D791E00D4238E /* GiftripStep.swift */,
 				F279C61C2643CF19008EA8C4 /* AppFlow.swift */,
 				F279C61E2643CF2C008EA8C4 /* IntroFlow.swift */,
-				F279C61A2643CEF7008EA8C4 /* TabBar */,
+				F279C6222643CF51008EA8C4 /* TabBarFlow.swift */,
+				F279C6242643CF5D008EA8C4 /* HomeFlow.swift */,
+				F279C6262643CF6E008EA8C4 /* RankFlow.swift */,
+				F279C62C2643DE34008EA8C4 /* GiftFlow.swift */,
+				F279C62A2643CFCB008EA8C4 /* NotificationFlow.swift */,
+				F279C6282643CFB1008EA8C4 /* SettingsFlow.swift */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
