@@ -27,6 +27,7 @@ final class SpotListViewController: BaseViewController, View {
         static let barViewHeight = 4.f
         static let dividerViewLeftRight = 15.f
         static let dividerViewHeight = 0.5.f
+        static let tableViewTop = 10.f
     }
     
     struct Font {
@@ -57,8 +58,9 @@ final class SpotListViewController: BaseViewController, View {
     
     let tableView = UITableView(
         frame: .zero,
-        style: .grouped
+        style: .plain
     ).then {
+        $0.separatorStyle = .none
         $0.register(Reusable.spotListCell)
     }
     
@@ -72,7 +74,7 @@ final class SpotListViewController: BaseViewController, View {
                     return cell
                 }
             },
-            canEditRowAtIndexPath: { dataSource, indexPath in
+            canEditRowAtIndexPath: { _, _ in
                 return true
             }
         )
@@ -126,7 +128,7 @@ final class SpotListViewController: BaseViewController, View {
         }
         
         self.tableView.snp.makeConstraints { make in
-            make.top.equalTo(self.dividerView.snp.bottom).offset(10)
+            make.top.equalTo(self.dividerView.snp.bottom).offset(Metric.tableViewTop)
             make.left.right.equalToSuperview()
             make.bottom.equalToSuperview()
         }
@@ -159,14 +161,46 @@ final class SpotListViewController: BaseViewController, View {
             .bind(to: self.activityIndicatorView.rx.isAnimating)
             .disposed(by: disposeBag)
         
+        // MARK: - View
         self.tableView.rx.setDelegate(self)
             .disposed(by: disposeBag)
         
+        self.tableView.rx.itemSelected
+            .bind(to: self.tableView.rx.deselectRow)
+            .disposed(by: disposeBag)
+        
+        self.tableView.rx.itemSelected(dataSource: self.dataSource)
+            .subscribe(onNext: { [weak self] sectionItem in
+                switch sectionItem {
+                case let .spotItem(reactor):
+                    let action = Reactor.Action.spotSelected(reactor.spot)
+                    self?.reactor?.action.onNext(action)
+                }
+            })
+            .disposed(by: disposeBag)
     }
 }
 
 extension SpotListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let locationShortCutButton = UIContextualAction(style: .normal, title: nil) { action, view, success in
+            
+            switch self.dataSource[indexPath] {
+            case let .spotItem(reactor):
+                self.reactor?.action.onNext(Reactor.Action.swipeSpot(reactor.spot))
+            }
+            
+            success(true)
+            return
+        }
+        
+        locationShortCutButton.backgroundColor = R.color.accentColor()
+        locationShortCutButton.image = R.image.pinIcon()
+        
+        return UISwipeActionsConfiguration(actions: [locationShortCutButton])
     }
 }

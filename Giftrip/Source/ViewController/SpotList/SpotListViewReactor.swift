@@ -17,6 +17,8 @@ final class SpotListViewReactor: Reactor, Stepper {
     enum Action {
         case refresh
         case loadMore
+        case swipeSpot(Spot)
+        case spotSelected(Spot)
     }
 
     enum Mutation {
@@ -60,10 +62,17 @@ final class SpotListViewReactor: Reactor, Stepper {
                 self.spotService.getSpots(self.currentState.page, 15, 1)
                     .asObservable()
                     .map { list -> Mutation in
-                        return .setSpots(list.content)
+                        return .appendShots(list.content)
                     },
                 Observable.just(Mutation.setLoading(false))
             ])
+        case let .spotSelected(spot):
+            self.steps.accept(GiftripStep.spotDetailIsRequired(idx: spot.idx))
+            return .empty()
+            
+        case let .swipeSpot(spot):
+            setLocation.onNext(spot)
+            return .empty()
         }
     }
 
