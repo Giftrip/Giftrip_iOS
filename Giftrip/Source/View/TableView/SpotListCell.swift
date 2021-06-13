@@ -14,17 +14,18 @@ final class SpotListCell: BaseTableViewCell, View {
     typealias Reactor = SpotListCellReactor
     
     struct Font {
-        static let titleLabel = UIFont.systemFont(ofSize: 14, weight: .medium)
-        static let descriptionLabel = UIFont.systemFont(ofSize: 10, weight: .regular)
-        static let addressLabel = UIFont.systemFont(ofSize: 8, weight: .regular)
+        static let titleLabel = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        static let descriptionLabel = UIFont.systemFont(ofSize: 12, weight: .medium)
+        static let addressLabel = UIFont.systemFont(ofSize: 10, weight: .regular)
     }
     
     struct Metric {
-        static let thumbnailImageLeft = 10.f
-        static let thumbanilImageSize = 50.f
+        static let thumbanilImageSize = 80.f
         static let titleLabelLeft = 10.f
         static let descriptionLabelTop = 5.f
-        static let addressLabelBottom = 4.f
+        
+        static let cellLeftRightPadding = 15.f
+        static let cellTopBottomPadding = 15.f
     }
     
     let thumbnailImage = UIImageView().then {
@@ -39,6 +40,7 @@ final class SpotListCell: BaseTableViewCell, View {
     
     let descriptionLabel = UILabel().then {
         $0.font = Font.descriptionLabel
+        $0.numberOfLines = 2
     }
     
     let addressLabel = UILabel().then {
@@ -53,10 +55,11 @@ final class SpotListCell: BaseTableViewCell, View {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         
-        self.addSubview(self.thumbnailImage)
-        self.addSubview(self.titleLabel)
-        self.addSubview(self.descriptionLabel)
-        self.addSubview(self.addressLabel)
+        self.contentView.addSubview(self.thumbnailImage)
+        self.contentView.addSubview(self.titleLabel)
+        self.contentView.addSubview(self.descriptionLabel)
+        self.contentView.addSubview(self.addressLabel)
+        self.contentView.addSubview(self.completeIcon)
     }
     
     override func layoutSubviews() {
@@ -64,30 +67,29 @@ final class SpotListCell: BaseTableViewCell, View {
         
         self.thumbnailImage.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.left.equalToSuperview().offset(Metric.thumbnailImageLeft)
+            make.left.equalToSuperview().offset(Metric.cellLeftRightPadding)
             make.width.height.equalTo(Metric.thumbanilImageSize)
         }
         
         self.titleLabel.snp.makeConstraints { make in
             make.left.equalTo(self.thumbnailImage.snp.right).offset(Metric.titleLabelLeft)
-            make.top.equalTo(self.thumbnailImage.snp.top)
-            make.right.equalToSuperview()
+            make.top.equalToSuperview().offset(Metric.cellTopBottomPadding)
         }
         
         self.descriptionLabel.snp.makeConstraints { make in
             make.left.equalTo(self.titleLabel.snp.left)
             make.top.equalTo(self.titleLabel.snp.bottom).offset(Metric.descriptionLabelTop)
-            make.right.equalToSuperview()
+            make.right.equalToSuperview().offset(-Metric.cellLeftRightPadding)
         }
         
         self.addressLabel.snp.makeConstraints { make in
             make.left.equalTo(self.titleLabel.snp.left)
-            make.bottom.equalToSuperview().offset(Metric.addressLabelBottom)
+            make.bottom.equalToSuperview().offset(-Metric.cellTopBottomPadding)
             make.right.equalToSuperview()
         }
         
         self.completeIcon.snp.makeConstraints { make in
-            make.right.equalToSuperview().offset(5.f)
+            make.right.equalToSuperview().offset(-Metric.cellLeftRightPadding)
             make.top.equalTo(self.thumbnailImage.snp.top)
         }
     }
@@ -107,6 +109,10 @@ final class SpotListCell: BaseTableViewCell, View {
         
         reactor.state.map { $0.title }
             .bind(to: self.titleLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        reactor.state.map { $0.thumbnail }
+            .bind(to: self.thumbnailImage.rx.image())
             .disposed(by: disposeBag)
     }
 }
