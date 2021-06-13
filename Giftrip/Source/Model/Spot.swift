@@ -12,12 +12,13 @@ struct Spot: ModelType {
     
     var address: String
     var description: String
-    var lon: Int
+    var lon: Double
     var completed: Bool
     var idx: Int
     var courseIdx: Int
     var title: String
-    var lat: Int
+    var lat: Double
+    var thumbnails: [URL]
     
     enum CodingKeys: String, CodingKey {
         case address
@@ -28,5 +29,6 @@ struct Spot: ModelType {
         case courseIdx
         case title
         case lat
+        case thumbnails
     }
 }
