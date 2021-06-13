@@ -67,6 +67,7 @@
 		F2A5C829266E195A0075F351 /* QuizResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C828266E195A0075F351 /* QuizResult.swift */; };
 		F2A5C82B266E52E20075F351 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C82A266E52E20075F351 /* Spot.swift */; };
 		F2A5C82D266E55620075F351 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A5C82C266E55620075F351 /* List.swift */; };
+		F2BEBBFD267597CC0007E50A /* HomeFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BEBBFC267597CC0007E50A /* HomeFocusView.swift */; };
 		F2C09D1F266F0C050070A5DA /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C09D1E266F0C050070A5DA /* BaseTableViewCell.swift */; };
 		F2C09D21266F0D0F0070A5DA /* SpotListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C09D20266F0D0F0070A5DA /* SpotListCell.swift */; };
 		F2C09D23266F0DE80070A5DA /* SpotListCellReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C09D22266F0DE80070A5DA /* SpotListCellReactor.swift */; };
@@ -87,6 +88,7 @@
 		F2D2FBD82664FC0E0010731F /* CourseSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBD72664FC0E0010731F /* CourseSearchBarView.swift */; };
 		F2D2FBDC26652F4F0010731F /* SpotListViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBDA26652F4F0010731F /* SpotListViewReactor.swift */; };
 		F2D2FBDD26652F4F0010731F /* SpotListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBDB26652F4F0010731F /* SpotListViewController.swift */; };
+		F2D75663267356D00045F821 /* UITableView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D75662267356D00045F821 /* UITableView+Rx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +183,7 @@
 		F2A5C828266E195A0075F351 /* QuizResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResult.swift; sourceTree = "<group>"; };
 		F2A5C82A266E52E20075F351 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		F2A5C82C266E55620075F351 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		F2BEBBFC267597CC0007E50A /* HomeFocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFocusView.swift; sourceTree = "<group>"; };
 		F2C09D15266F09B70070A5DA /* Stubber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stubber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C09D17266F0AFE0070A5DA /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C09D19266F0AFE0070A5DA /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +208,7 @@
 		F2D2FBD72664FC0E0010731F /* CourseSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSearchBarView.swift; sourceTree = "<group>"; };
 		F2D2FBDA26652F4F0010731F /* SpotListViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListViewReactor.swift; sourceTree = "<group>"; };
 		F2D2FBDB26652F4F0010731F /* SpotListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListViewController.swift; sourceTree = "<group>"; };
+		F2D75662267356D00045F821 /* UITableView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Rx.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -358,6 +362,7 @@
 				F2D2FBBB265E0E480010731F /* Base */,
 				F2C09D1D266F0BD60070A5DA /* TableView */,
 				F2D2FBD72664FC0E0010731F /* CourseSearchBarView.swift */,
+				F2BEBBFC267597CC0007E50A /* HomeFocusView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -538,6 +543,7 @@
 			isa = PBXGroup;
 			children = (
 				F2C09D2C266F67F50070A5DA /* UIScrollView+Rx.swift */,
+				F2D75662267356D00045F821 /* UITableView+Rx.swift */,
 			);
 			path = Rx;
 			sourceTree = "<group>";
@@ -906,6 +912,7 @@
 			files = (
 				F2D2FBC3265E2F3A0010731F /* HandleResponse.swift in Sources */,
 				F2A5C82D266E55620075F351 /* List.swift in Sources */,
+				F2BEBBFD267597CC0007E50A /* HomeFocusView.swift in Sources */,
 				F2C09D2D266F67F50070A5DA /* UIScrollView+Rx.swift in Sources */,
 				F2D2FBCA265F35800010731F /* RegisterAuthCodeViewReactor.swift in Sources */,
 				F279C6252643CF5D008EA8C4 /* HomeFlow.swift in Sources */,
@@ -949,6 +956,7 @@
 				F279C63D2643EDC5008EA8C4 /* LoginViewController.swift in Sources */,
 				F2429BF1262D60A1009FD306 /* Preview.swift in Sources */,
 				F2429BC8262D5DB8009FD306 /* R.generated.swift in Sources */,
+				F2D75663267356D00045F821 /* UITableView+Rx.swift in Sources */,
 				F2A4647E262D791E00D4238E /* GiftripStep.swift in Sources */,
 				F279C6382643EDBC008EA8C4 /* IntroViewReactor.swift in Sources */,
 				F279C6392643EDBC008EA8C4 /* IntroViewController.swift in Sources */,

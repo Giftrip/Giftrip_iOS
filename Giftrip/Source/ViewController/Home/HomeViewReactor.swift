@@ -10,21 +10,27 @@ import RxCocoa
 import RxSwift
 import RxFlow
 
+let setLocation = PublishSubject<Spot>()
+
 final class HomeViewReactor: Reactor, Stepper {
 
     var steps = PublishRelay<Step>()
 
     enum Action {
         case selectSpot(Int)
+        case setLocation(Spot)
     }
 
     enum Mutation {
         case setLoading(Bool)
+        case setLocation(Spot)
     }
 
     struct State {
         var spotListViewReactor: SpotListViewReactor
         var isLoading: Bool = false
+        
+        var currentLocation: Spot?
     }
 
     let initialState: State
@@ -37,12 +43,19 @@ final class HomeViewReactor: Reactor, Stepper {
         
         self.initialState = State(spotListViewReactor: SpotListViewReactor(spotService: spotService))
     }
+    
+    func transform(action: Observable<Action>) -> Observable<Action> {
+        return Observable.merge(action, setLocation.map(Action.setLocation))
+    }
 
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case let .selectSpot(spotIdx):
             self.steps.accept(GiftripStep.spotDetailIsRequired(idx: spotIdx))
             return .empty()
+            
+        case let .setLocation(spot):
+            return Observable.just(Mutation.setLocation(spot))
         }
     }
 
@@ -52,6 +65,9 @@ final class HomeViewReactor: Reactor, Stepper {
         switch mutation {
         case let .setLoading(isLoading):
             state.isLoading = isLoading
+            
+        case let .setLocation(spot):
+            state.currentLocation = spot
         }
 
         return state
