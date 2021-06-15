@@ -45,7 +45,7 @@ extension TabBarFlow {
         let homeFlow = HomeFlow(services: services)
         let rankFlow = RankFlow()
         let giftFlow = GiftFlow()
-        let notificationFlow = NotificationFlow()
+        let notificationFlow = NotificationFlow(services: services)
         let settingsFlow = SettingsFlow()
         
         Flows.use(homeFlow,

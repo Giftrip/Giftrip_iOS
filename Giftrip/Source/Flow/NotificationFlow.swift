@@ -9,14 +9,21 @@ import RxFlow
 
 final class NotificationFlow: Flow {
     
+    private let services: AppServices
+    
     var root: Presentable {
         return self.rootViewController
     }
     
-    let rootViewController: UINavigationController
+    private lazy var rootViewController = UINavigationController().then {
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.backgroundColor = UIColor.systemGroupedBackground
+        navigationBarAppearance.shadowColor = nil
+        $0.navigationBar.standardAppearance = navigationBarAppearance
+    }
     
-    init() {
-        self.rootViewController = UINavigationController()
+    init(services: AppServices) {
+        self.services = services
     }
     
     deinit {
@@ -29,6 +36,10 @@ final class NotificationFlow: Flow {
         switch step {
         case .notificationIsRequired:
             return self.navigateToNotification()
+            
+        case let .notificationDetailIsRequired(idx):
+            return self.navigateToNotificationDetail(idx: idx)
+            
         default:
             return .none
         }
@@ -37,6 +48,18 @@ final class NotificationFlow: Flow {
 
 extension NotificationFlow {
     private func navigateToNotification() -> FlowContributors {
-        return .none
+        let reactor = NotificationViewReactor(noticeService: self.services.noticeService)
+        let viewController = NotificationViewController(reactor: reactor)
+        
+        self.rootViewController.pushViewController(viewController, animated: false)
+        return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: reactor))
+    }
+    
+    private func navigateToNotificationDetail(idx: Int) -> FlowContributors {
+        let reactor = NotificationDetailViewReactor(noticeService: self.services.noticeService, idx: idx)
+        let viewController = NotificationDetailViewController(reactor: reactor)
+        
+        self.rootViewController.pushViewController(viewController, animated: false)
+        return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: reactor))
     }
 }

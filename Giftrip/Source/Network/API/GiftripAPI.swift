@@ -20,6 +20,10 @@ enum GiftripAPI {
     case getQuizByNfc(_ idx: Int, _ nfcCode: String)
     case getSpot(_ idx: Int)
     case getSpots(_ page: Int, _ size: Int, _ courseIdx: Int)
+    
+    // MARK: - noticeController
+    case getNotice(_ idx: Int)
+    case getNotices(_ page: Int, _ size: Int)
 }
 
 extension GiftripAPI: BaseAPI, AuthorizedTargetType {
@@ -50,6 +54,11 @@ extension GiftripAPI: BaseAPI, AuthorizedTargetType {
             return "/spot/getSpot/\(idx)"
         case .getSpots:
             return "/spot/getSpots"
+            
+        case let .getNotice(idx):
+            return "notice/getNotice/\(idx)"
+        case .getNotices:
+            return "notice/getNotices"
         }
     }
     
@@ -100,6 +109,12 @@ extension GiftripAPI: BaseAPI, AuthorizedTargetType {
                 "courseIdx": courseIdx
             ]
             
+        case let .getNotices(page, size):
+            return [
+                "page": page,
+                "size": size
+            ]
+            
         default:
             return nil
         }
@@ -107,7 +122,7 @@ extension GiftripAPI: BaseAPI, AuthorizedTargetType {
     
     public var parameterEncoding: ParameterEncoding {
         switch self {
-        case .getQuizByNfc, .getSpots:
+        case .getQuizByNfc, .getSpots, .getNotices:
             return URLEncoding.queryString
             
         default:

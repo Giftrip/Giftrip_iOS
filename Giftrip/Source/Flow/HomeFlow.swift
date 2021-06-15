@@ -15,7 +15,7 @@ final class HomeFlow: Flow {
         return self.rootViewController
     }
     
-    let rootViewController = UINavigationController().then {
+    private lazy var rootViewController = UINavigationController().then {
         $0.isNavigationBarHidden = true
     }
     

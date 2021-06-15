@@ -37,6 +37,7 @@ enum GiftripStep: Step {
     
     // MARK: - Notification
     case notificationIsRequired
+    case notificationDetailIsRequired(idx: Int)
     
     // MARK: - Settings
     case settingsIsRequired
