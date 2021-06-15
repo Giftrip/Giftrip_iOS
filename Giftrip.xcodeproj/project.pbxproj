@@ -89,6 +89,7 @@
 		F2D2FBDC26652F4F0010731F /* SpotListViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBDA26652F4F0010731F /* SpotListViewReactor.swift */; };
 		F2D2FBDD26652F4F0010731F /* SpotListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2FBDB26652F4F0010731F /* SpotListViewController.swift */; };
 		F2D75663267356D00045F821 /* UITableView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D75662267356D00045F821 /* UITableView+Rx.swift */; };
+		F2E31BC626782C2E009C79FB /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E31BC526782C2E009C79FB /* Notice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +210,7 @@
 		F2D2FBDA26652F4F0010731F /* SpotListViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListViewReactor.swift; sourceTree = "<group>"; };
 		F2D2FBDB26652F4F0010731F /* SpotListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListViewController.swift; sourceTree = "<group>"; };
 		F2D75662267356D00045F821 /* UITableView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Rx.swift"; sourceTree = "<group>"; };
+		F2E31BC526782C2E009C79FB /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -433,6 +435,7 @@
 				F2A464BF262E682300D4238E /* ModelType.swift */,
 				F2A464BA262E65F300D4238E /* Token.swift */,
 				F22ACDB7263022180070781D /* User.swift */,
+				F2E31BC526782C2E009C79FB /* Notice.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -969,6 +972,7 @@
 				F2A464A1262DA07900D4238E /* Network.swift in Sources */,
 				F2C09D28266F2ABE0070A5DA /* RefreshControl.swift in Sources */,
 				F279C6352643ED9F008EA8C4 /* SplashViewController.swift in Sources */,
+				F2E31BC626782C2E009C79FB /* Notice.swift in Sources */,
 				F2350A7426340B9E000C523B /* AuthAPI.swift in Sources */,
 				F2D2FBC0265E18450010731F /* AuthCodeResponse.swift in Sources */,
 				F2A46499262DA07200D4238E /* BaseAPI.swift in Sources */,
