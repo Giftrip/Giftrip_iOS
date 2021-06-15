@@ -33,6 +33,17 @@ final class HomeFlow: Flow {
         switch step {
         case .homeIsRequired:
             return self.navigateToHome()
+            
+        case let .spotDetailIsRequired(spot):
+            return self.navigateToSpotDetail(spot: spot)
+            
+        case .courseListIsrequired:
+            return self.navigateToCourseList()
+            
+        case .popViewController:
+            self.rootViewController.popViewController(animated: true)
+            return .none
+            
         default:
             return .none
         }
@@ -46,5 +57,21 @@ extension HomeFlow {
         
         self.rootViewController.pushViewController(viewController, animated: false)
         return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: reactor))
+    }
+    
+    private func navigateToSpotDetail(spot: Spot) -> FlowContributors {
+        let reactor = SpotDetailViewReactor(spot: spot)
+        let viewController = SpotDetailViewController(reactor: reactor)
+        
+        self.rootViewController.pushViewController(viewController, animated: true)
+        return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: reactor))
+    }
+    
+    private func navigateToCourseList() -> FlowContributors {
+//        let reactor = CourseListViewReactor()
+//        let viewController = CourseViewController(reactor: reactor)
+//
+//        self.rootViewController.present(viewController, animated: true)
+        return .none
     }
 }

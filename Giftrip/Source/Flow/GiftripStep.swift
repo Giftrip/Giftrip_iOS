@@ -26,7 +26,7 @@ enum GiftripStep: Step {
     
     // MARK: - Home
     case homeIsRequired
-    case spotDetailIsRequired(idx: Int)
+    case spotDetailIsRequired(spot: Spot)
     case courseListIsrequired
     
     // MARK: - Rank

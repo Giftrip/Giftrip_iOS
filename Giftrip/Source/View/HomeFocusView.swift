@@ -24,6 +24,8 @@ final class HomeFocusView: UIView {
         static let viewTopBottomPadding = 15.f
     }
     
+    var currentSpot: Spot?
+    
     let innerView = UIView()
     
     let thumbnailImage = UIImageView()
@@ -75,6 +77,7 @@ final class HomeFocusView: UIView {
     }
     
     func setSpot(spot: Spot) {
+        self.currentSpot = spot
         self.thumbnailImage.kf.setImage(with: spot.thumbnails.first)
         self.titleLabel.text = spot.title
         self.descriptionLabel.text = spot.description
