@@ -77,7 +77,7 @@ final class HomeViewController: BaseViewController, ReactorKit.View {
     }
     
     func setupDrawer() {
-        let reactor = SpotListViewReactor(spotService: self.reactor!.spotService)
+        guard let reactor = self.reactor?.spotListViewReactor else { return }
         let viewController = SpotListViewController(reactor: reactor)
         self.drawerView = self.addDrawerView(withViewController: viewController)
         
@@ -111,11 +111,11 @@ final class HomeViewController: BaseViewController, ReactorKit.View {
     
     // MARK: - Configuring
     func bind(reactor: Reactor) {
-        //        self.courseSearchBarView.rx.tapGesture()
-        //            .when(.recognized)
-        //            .map { Reactor.Action.presentCourseList }
-        //            .bind(to: reactor.action)
-        //            .disposed(by: disposeBag)
+        self.courseSearchBarView.rx.tapGesture()
+            .when(.recognized)
+            .map { _ in Reactor.Action.presentCourseList }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
         
         reactor.state.map { $0.currentLocation }
             .filterNil()
@@ -141,11 +141,13 @@ final class HomeViewController: BaseViewController, ReactorKit.View {
             })
             .disposed(by: disposeBag)
         
-        //        self.homeFocusView.rx.tapGesture()
-        //            .when(.recognized)
-        //            .map { Reactor.Action.selectSpot(<#T##Int#>) }
-        //            .bind(to: reactor.action)
-        //            .disposed(by: disposeBag)
+            self.homeFocusView.rx.tapGesture()
+                .when(.recognized)
+                .map { _ in
+                    Reactor.Action.selectSpot(self.homeFocusView.currentSpot!)
+                }
+                .bind(to: reactor.action)
+                .disposed(by: disposeBag)
         
     }
 }

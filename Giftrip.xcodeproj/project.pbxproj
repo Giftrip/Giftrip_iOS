@@ -95,6 +95,8 @@
 		F2E31BCB26782DA5009C79FB /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E31BC926782DA5009C79FB /* NotificationViewController.swift */; };
 		F2E31BCF26782F88009C79FB /* NotificationDetailViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E31BCD26782F88009C79FB /* NotificationDetailViewReactor.swift */; };
 		F2E31BD026782F88009C79FB /* NotificationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E31BCE26782F88009C79FB /* NotificationDetailViewController.swift */; };
+		F2E31BD426786867009C79FB /* SpotDetailViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E31BD226786867009C79FB /* SpotDetailViewReactor.swift */; };
+		F2E31BD526786867009C79FB /* SpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E31BD326786867009C79FB /* SpotDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +223,8 @@
 		F2E31BC926782DA5009C79FB /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		F2E31BCD26782F88009C79FB /* NotificationDetailViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetailViewReactor.swift; sourceTree = "<group>"; };
 		F2E31BCE26782F88009C79FB /* NotificationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetailViewController.swift; sourceTree = "<group>"; };
+		F2E31BD226786867009C79FB /* SpotDetailViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailViewReactor.swift; sourceTree = "<group>"; };
+		F2E31BD326786867009C79FB /* SpotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -391,6 +395,7 @@
 				F279C62F2643EB4E008EA8C4 /* Register */,
 				F2D2FBD22664CE4C0010731F /* Home */,
 				F2D2FBD926652F280010731F /* SpotList */,
+				F2E31BD126786859009C79FB /* SpotDetail */,
 				F2E31BC726782D85009C79FB /* Notification */,
 				F2E31BCC26782F6E009C79FB /* NotificationDetail */,
 			);
@@ -609,6 +614,15 @@
 				F2E31BCE26782F88009C79FB /* NotificationDetailViewController.swift */,
 			);
 			path = NotificationDetail;
+			sourceTree = "<group>";
+		};
+		F2E31BD126786859009C79FB /* SpotDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F2E31BD226786867009C79FB /* SpotDetailViewReactor.swift */,
+				F2E31BD326786867009C79FB /* SpotDetailViewController.swift */,
+			);
+			path = SpotDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -959,6 +973,7 @@
 				F22ACDE026314D940070781D /* UserService.swift in Sources */,
 				F279C6572644066B008EA8C4 /* GiftripPlainButton.swift in Sources */,
 				F279C63C2643EDC5008EA8C4 /* LoginViewReactor.swift in Sources */,
+				F2E31BD526786867009C79FB /* SpotDetailViewController.swift in Sources */,
 				F279C6452643EE0C008EA8C4 /* RegisterPhoneViewController.swift in Sources */,
 				F2618514262D4C4F00EA707C /* AppDelegate.swift in Sources */,
 				F279C6292643CFB1008EA8C4 /* SettingsFlow.swift in Sources */,
@@ -986,6 +1001,7 @@
 				F22ACDB8263022180070781D /* User.swift in Sources */,
 				F2A464C0262E682300D4238E /* ModelType.swift in Sources */,
 				F2D2FBCB265F35800010731F /* RegisterAuthCodeViewController.swift in Sources */,
+				F2E31BD426786867009C79FB /* SpotDetailViewReactor.swift in Sources */,
 				F2D2FBC5265E2FB50010731F /* ErrorResponse.swift in Sources */,
 				F279C6532643FC48008EA8C4 /* Message.swift in Sources */,
 				F279C65E26440CF2008EA8C4 /* GiftripTextField.swift in Sources */,

@@ -12,7 +12,7 @@ import RxFlow
 
 final class SpotListViewReactor: Reactor, Stepper {
 
-    var steps = PublishRelay<Step>()
+    var steps: PublishRelay<Step>
 
     enum Action {
         case refresh
@@ -38,9 +38,11 @@ final class SpotListViewReactor: Reactor, Stepper {
     fileprivate let spotService: SpotServiceType
 
     init(
-        spotService: SpotServiceType
+        spotService: SpotServiceType,
+        steps: PublishRelay<Step>
     ) {
         self.spotService = spotService
+        self.steps = steps
     }
 
     func mutate(action: Action) -> Observable<Mutation> {
@@ -67,7 +69,7 @@ final class SpotListViewReactor: Reactor, Stepper {
                 Observable.just(Mutation.setLoading(false))
             ])
         case let .spotSelected(spot):
-            self.steps.accept(GiftripStep.spotDetailIsRequired(idx: spot.idx))
+            self.steps.accept(GiftripStep.spotDetailIsRequired(spot: spot))
             return .empty()
             
         case let .swipeSpot(spot):

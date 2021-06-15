@@ -18,6 +18,7 @@ target 'Giftrip' do
   pod 'SwiftMessages'
   pod 'GoogleMaps'
   pod 'DrawerView'
+  pod "ImageSlideshow/Kingfisher"
   
   # Rx
   pod 'RxSwift', '5.1.1'
