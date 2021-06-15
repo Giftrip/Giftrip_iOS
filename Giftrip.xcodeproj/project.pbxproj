@@ -225,6 +225,7 @@
 		F2E31BCE26782F88009C79FB /* NotificationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetailViewController.swift; sourceTree = "<group>"; };
 		F2E31BD226786867009C79FB /* SpotDetailViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailViewReactor.swift; sourceTree = "<group>"; };
 		F2E31BD326786867009C79FB /* SpotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailViewController.swift; sourceTree = "<group>"; };
+		F2E31BD626789592009C79FB /* Giftrip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Giftrip.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +310,7 @@
 		F2618512262D4C4F00EA707C /* Giftrip */ = {
 			isa = PBXGroup;
 			children = (
+				F2E31BD626789592009C79FB /* Giftrip.entitlements */,
 				F2429BF0262D60A1009FD306 /* Preview.swift */,
 				F2618564262D545500EA707C /* Source */,
 				F2618565262D547400EA707C /* Resource */,
@@ -1208,6 +1210,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Giftrip/Giftrip.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7278J676A8;
 				INFOPLIST_FILE = Giftrip/SupportFile/Info.plist;
@@ -1326,6 +1329,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Giftrip/Giftrip.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7278J676A8;
 				INFOPLIST_FILE = Giftrip/SupportFile/Info.plist;
