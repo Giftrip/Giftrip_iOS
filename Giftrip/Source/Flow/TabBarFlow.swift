@@ -12,12 +12,15 @@ final class TabBarFlow: Flow {
     
     private var rootViewController: UITabBarController
     
+    private let services: AppServices
+    
     var root: Presentable {
         return rootViewController
     }
     
-    init() {
+    init(_ services: AppServices) {
         self.rootViewController = TabBarViewController()
+        self.services = services
     }
     
     deinit {
@@ -39,10 +42,10 @@ final class TabBarFlow: Flow {
 
 extension TabBarFlow {
     private func navigateToTabBar() -> FlowContributors {
-        let homeFlow = HomeFlow()
+        let homeFlow = HomeFlow(services: services)
         let rankFlow = RankFlow()
         let giftFlow = GiftFlow()
-        let notificationFlow = NotificationFlow()
+        let notificationFlow = NotificationFlow(services: services)
         let settingsFlow = SettingsFlow()
         
         Flows.use(homeFlow,

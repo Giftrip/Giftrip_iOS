@@ -16,6 +16,8 @@ class AppServices {
     
     let authService: AuthServiceType
     let userService: UserServiceType
+    let spotService: SpotServiceType
+    let noticeService: NoticeServiceType
     
     private init() {
         self.authService = AuthService()
@@ -29,5 +31,7 @@ class AppServices {
         )
         
         self.userService = UserService(network: network)
+        self.spotService = SpotService(network: network)
+        self.noticeService = NoticeService(network: network)
     }
 }

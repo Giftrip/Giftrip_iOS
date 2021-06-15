@@ -9,14 +9,18 @@ import RxFlow
 
 final class HomeFlow: Flow {
     
+    private let services: AppServices
+    
     var root: Presentable {
         return self.rootViewController
     }
     
-    let rootViewController: UINavigationController
+    private lazy var rootViewController = UINavigationController().then {
+        $0.isNavigationBarHidden = true
+    }
     
-    init() {
-        self.rootViewController = UINavigationController()
+    init(services: AppServices) {
+        self.services = services
     }
     
     deinit {
@@ -37,6 +41,10 @@ final class HomeFlow: Flow {
 
 extension HomeFlow {
     private func navigateToHome() -> FlowContributors {
-        return .none
+        let reactor = HomeViewReactor(spotService: services.spotService)
+        let viewController = HomeViewController(reactor: reactor)
+        
+        self.rootViewController.pushViewController(viewController, animated: false)
+        return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: reactor))
     }
 }
