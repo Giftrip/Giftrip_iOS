@@ -9,9 +9,9 @@ import UIKit
 
 import ReactorKit
 import ImageSlideshow
+import CoreNFC
 
 final class SpotDetailViewController: BaseViewController, View {
-    
     typealias Reactor = SpotDetailViewReactor
     
     // MARK: Constants
@@ -33,9 +33,9 @@ final class SpotDetailViewController: BaseViewController, View {
         static let addressLabel = UIFont.systemFont(ofSize: 16, weight: .regular)
         static let descriptionLabel = UIFont.systemFont(ofSize: 16, weight: .regular)
     }
-
+    
     // MARK: - Properties
-
+    
     // MARK: - UI
     let imageSlideShow = ImageSlideshow().then {
         $0.contentScaleMode = .scaleToFill
@@ -62,7 +62,7 @@ final class SpotDetailViewController: BaseViewController, View {
     let nfcButton = GiftripPlainButton().then {
         $0.setTitle("NFC 인증하기", for: .normal)
     }
-
+    
     // MARK: - Initializing
     init(
         reactor: Reactor
@@ -70,11 +70,11 @@ final class SpotDetailViewController: BaseViewController, View {
         defer { self.reactor = reactor }
         super.init()
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,7 +86,7 @@ final class SpotDetailViewController: BaseViewController, View {
         self.view.addSubview(self.mapButton)
         self.view.addSubview(self.nfcButton)
     }
-
+    
     override func setupConstraints() {
         super.setupConstraints()
         
@@ -128,7 +128,7 @@ final class SpotDetailViewController: BaseViewController, View {
             make.bottom.equalTo(self.view.safeAreaLayoutGuide).offset(-Metric.buttonBottom)
         }
     }
-
+    
     // MARK: - Configuring
     func bind(reactor: Reactor) {
         // MARK: - action
@@ -160,11 +160,92 @@ final class SpotDetailViewController: BaseViewController, View {
             })
             .disposed(by: disposeBag)
         
+        reactor.alertTrigger
+            .subscribe(onNext: {
+                let alert = UIAlertController(title: "관련 영상 시청", message: "취소시 즉시 퀴즈로 넘어갑니다.", preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "취소", style: .destructive) { _ in
+                    reactor.action.onNext(.showQuiz)
+                }
+                
+                let okAction = UIAlertAction(title: "확인", style: .default) { _ in
+                    reactor.action.onNext(.showYouTube)
+                }
+                [cancelAction, okAction].forEach(alert.addAction)
+                self.present(alert, animated: true)
+            })
+            .disposed(by: disposeBag)
+        
+        reactor.state.map { $0.error }
+            .filterNil()
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] error in
+                self?.messageManager.show(config: Message.bottomConfig, view: Message.faildView(error.message))
+            })
+            .disposed(by: disposeBag)
+        
+        reactor.state.map { $0.isLoading }
+            .distinctUntilChanged()
+            .bind(to: self.activityIndicatorView.rx.isAnimating)
+            .disposed(by: disposeBag)
+        
         // MARK: - view
         self.imageSlideShow.rx.tapGesture()
             .when(.recognized)
             .subscribe(onNext: { [weak self] _ in
                 self?.imageSlideShow.presentFullScreenController(from: self!)
             }).disposed(by: disposeBag)
+        
+        self.nfcButton.rx.tap
+            .subscribe(onNext: { _ in
+                let session = NFCNDEFReaderSession(
+                    delegate: self,
+                    queue: nil,
+                    invalidateAfterFirstRead: true
+                )
+                
+                session.alertMessage = "스캔하는 동안 핸드폰을 고정해주세요."
+                session.begin()
+            })
+            .disposed(by: disposeBag)
     }
+}
+
+extension SpotDetailViewController: NFCNDEFReaderSessionDelegate {
+    
+    func readerSessionDidBecomeActive(_ session: NFCNDEFReaderSession) {
+        print("태그 스캔 시작")
+    }
+    
+    func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
+        if messages.count > 1 {
+            // Restart polling in 500 milliseconds.
+            let retryInterval = DispatchTimeInterval.milliseconds(500)
+            session.alertMessage = "More than 1 tag is detected. Please remove all tags and try again."
+            DispatchQueue.global().asyncAfter(deadline: .now() + retryInterval, execute: {
+                session.restartPolling()
+            })
+            return
+        }
+        
+        guard
+            let message = messages.first,
+            let record = message.records.first,
+            let nfcCode = String(data: record.payload, encoding: .utf8)
+        else {
+            return
+        }
+        
+        print(nfcCode)
+        session.alertMessage = "태그 읽기 성공"
+        
+        DispatchQueue.main.async {
+            self.reactor?.action.onNext(.nfcTagRead(nfcCode))
+        }
+    }
+    
+    func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
+        session.alertMessage = "다시 시도해주세요!"
+        return
+    }
+    
 }

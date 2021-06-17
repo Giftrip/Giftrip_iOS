@@ -8,7 +8,6 @@
 import RxFlow
 
 enum GiftripStep: Step {
-    
     case popViewController
     case dismiss
     
@@ -27,7 +26,8 @@ enum GiftripStep: Step {
     // MARK: - Home
     case homeIsRequired
     case spotDetailIsRequired(spot: Spot)
-    case courseListIsrequired
+    case courseListIsRequired
+    case quizIsRequired(quiz: String, nfcCode: String)
     
     // MARK: - Rank
     case rankIsRequired

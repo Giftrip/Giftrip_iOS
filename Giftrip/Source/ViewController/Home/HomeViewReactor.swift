@@ -59,7 +59,7 @@ final class HomeViewReactor: Reactor, Stepper {
             return Observable.just(Mutation.setLocation(spot))
             
         case .presentCourseList:
-            self.steps.accept(GiftripStep.courseListIsrequired)
+            self.steps.accept(GiftripStep.courseListIsRequired)
             return .empty()
         }
     }
