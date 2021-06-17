@@ -37,7 +37,7 @@ final class HomeFlow: Flow {
         case let .spotDetailIsRequired(spot):
             return self.navigateToSpotDetail(spot: spot)
             
-        case .courseListIsrequired:
+        case .courseListIsRequired:
             return self.navigateToCourseList()
             
         case .popViewController:
@@ -60,7 +60,7 @@ extension HomeFlow {
     }
     
     private func navigateToSpotDetail(spot: Spot) -> FlowContributors {
-        let reactor = SpotDetailViewReactor(spot: spot)
+        let reactor = SpotDetailViewReactor(spotService: services.spotService, spot: spot)
         let viewController = SpotDetailViewController(reactor: reactor)
         
         self.rootViewController.pushViewController(viewController, animated: true)
